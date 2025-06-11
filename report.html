@@ -52,6 +52,22 @@
             background-color: #0A9396;
             border: 3px solid #f0f4f8;
         }
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .btn-primary {
+            background-color: #0A9396;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #005F73;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -135,12 +151,23 @@
             </div>
         </section>
 
+        <section id="sales-details" class="mb-16 text-center">
+            <div class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
+                <h2 class="text-3xl font-bold mb-4 text-[#005F73]">🔍 Analisi Dettagliata delle Vendite (Canale Vendor)</h2>
+                <p class="text-lg max-w-3xl mx-auto mb-6">Comprendere l'andamento delle vendite sul canale Vendor è fondamentale. Questi dati, derivanti unicamente da Amazon, ci forniscono un benchmark storico e stagionale essenziale per misurare l'impatto futuro del nuovo canale Seller. L'analisi ci ha permesso di identificare i primi segnali di crescita legati alle nostre ottimizzazioni e di confermare la stabilità del fatturato prima del lancio.</p>
+                <a href="https://melaservices.github.io/Naturwaren/naturwaren_report.html" target="_blank" class="btn btn-primary mt-4">Visualizza Report Vendite Dettagliato</a>
+            </div>
+        </section>
+
         <section id="campaigns" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-8 text-[#005F73]">📊 Performance Campagne Pubblicitarie</h2>
             <p class="text-center text-lg max-w-3xl mx-auto mb-12">A maggio sono state lanciate due campagne strategiche sul canale Vendor. La campagna "Solari" ha intercettato la domanda stagionale, mentre la campagna "Stock Clearance" ha smaltito le giacenze di prodotti invernali con ottima efficacia.</p>
             <div class="bg-white rounded-lg shadow-lg p-6">
                 <div class="chart-container h-96">
                     <canvas id="campaignsChart"></canvas>
+                </div>
+                <div class="text-center mt-8">
+                     <a href="https://melaservices.github.io/Naturwaren/adv.html" target="_blank" class="btn btn-primary">Visualizza Report ADV Dettagliato</a>
                 </div>
             </div>
         </section>
