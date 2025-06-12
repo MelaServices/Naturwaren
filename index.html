@@ -8,89 +8,50 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f0f4f8;
-        }
-        .chart-container {
-            position: relative;
-            width: 100%;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            height: 300px;
-            max-height: 400px;
-        }
-        @media (min-width: 768px) {
-            .chart-container {
-                height: 350px;
-            }
-        }
-        .kpi-card {
-            background-color: white;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            text-align: center;
-            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .kpi-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* bg-slate-50 */
         }
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -31px;
+            left: -33px; /* Adjust based on padding */
             top: 50%;
             transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            border-radius: 50%;
-            background-color: #0A9396;
-            border: 3px solid #f0f4f8;
-        }
-        .btn {
-            display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem;
-            font-weight: 600;
-            text-align: center;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-        }
-        .btn-primary {
-            background-color: #0A9396;
-            color: white;
-        }
-        .btn-primary:hover {
-            background-color: #005F73;
-            transform: translateY(-2px);
+            width: 24px;
+            height: 24px;
+            border-radius: 9999px;
+            background-color: #14b8a6; /* bg-teal-500 */
+            border: 4px solid #f8fafc; /* bg-slate-50 */
         }
     </style>
 </head>
-<body class="text-gray-800">
+<body class="text-gray-700">
 
     <div class="container mx-auto p-4 md:p-8">
 
-        <header class="text-center mb-12">
-            <h1 class="text-4xl md:text-5xl font-bold text-[#005F73]">Progetto Naturwaren su Amazon</h1>
-            <p class="text-xl text-[#0A9396] mt-2">Rapporto di Avanzamento: Gennaio – Giugno 2025</p>
+        <!-- Header -->
+        <header class="text-center mb-16">
+            <img src="https://mela.services/wp-content/uploads/2020/05/logo-mela-x2.png" alt="Logo Mela" class="h-12 mx-auto mb-4">
+            <h1 class="text-4xl md:text-5xl font-bold text-slate-800">Progetto Naturwaren su Amazon</h1>
+            <p class="text-xl text-teal-600 mt-2">Rapporto di Avanzamento: Gennaio – Giugno 2025</p>
         </header>
         
+        <!-- Strategic Vision -->
         <section id="strategy" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#005F73]">🎯 La Nostra Visione Strategica Omnicanale</h2>
-            <div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
-                 <p class="text-center text-lg mb-6">L'obiettivo è espandere la presenza di Naturwaren su Amazon in modo intelligente, potenziando il business senza cannibalizzare i canali tradizionali. Abbiamo creato una chiara differenziazione tra i canali per massimizzare le opportunità.</p>
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">🎯 La Nostra Visione Strategica Omnicanale</h2>
+            <div class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
+                <p class="text-center text-lg mb-8">L'obiettivo è espandere la presenza di Naturwaren su Amazon in modo intelligente, potenziando il business senza cannibalizzare i canali tradizionali. Abbiamo creato una chiara differenziazione tra i canali per massimizzare le opportunità.</p>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-                    <div class="border-2 border-[#0A9396] rounded-lg p-6">
-                        <h3 class="text-2xl font-semibold text-[#005F73] mb-2">Canale Vendor 📦</h3>
+                    <div class="bg-teal-50 border-2 border-teal-500 rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold text-teal-800 mb-2">Canale Vendor 📦</h3>
                         <p class="text-lg font-bold">Referenze Singole Standard</p>
                         <p class="mt-2 text-gray-600">Mantenere continuità e volumi con Amazon, gestendo il catalogo di prodotti classici.</p>
                     </div>
-                    <div class="border-2 border-[#EE9B00] rounded-lg p-6">
-                        <h3 class="text-2xl font-semibold text-[#CA6702] mb-2">Canale Seller ✨</h3>
+                    <div class="bg-amber-50 border-2 border-amber-500 rounded-lg p-6">
+                        <h3 class="text-2xl font-semibold text-amber-800 mb-2">Canale Seller ✨</h3>
                         <p class="text-lg font-bold">Bundle e Multipack Esclusivi</p>
                         <p class="mt-2 text-gray-600">Aumentare il valore medio dell'ordine e i margini con offerte uniche e non comparabili.</p>
                     </div>
@@ -98,225 +59,134 @@
             </div>
         </section>
 
+        <!-- Timeline -->
         <section id="timeline" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-12 text-[#005F73]">🗺️ La Nostra Roadmap: Traguardi Raggiunti</h2>
-            <div class="relative max-w-2xl mx-auto border-l-4 border-[#94D2BD] pl-8 py-4">
-                
-                <div class="mb-10 pl-8 relative timeline-item">
-                    <h3 class="text-xl font-semibold text-[#0A9396]">Gennaio - Febbraio 2025</h3>
-                    <p class="text-gray-700 mt-1">Fase di avvio con analisi di mercato approfondita, definizione della strategia e kickoff ufficiale del progetto per allineare gli obiettivi.</p>
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">🗺️ La Nostra Roadmap: Traguardi Raggiunti</h2>
+            <div class="relative max-w-3xl mx-auto border-l-4 border-teal-300 pl-12 py-4">
+                <div class="mb-12 pl-8 relative timeline-item">
+                    <h3 class="text-xl font-semibold text-teal-700">Gennaio - Febbraio 2025</h3>
+                    <p class="text-gray-600 mt-1">Fase di avvio con analisi di mercato approfondita, definizione della strategia e kickoff ufficiale del progetto per allineare gli obiettivi.</p>
                 </div>
-
-                <div class="mb-10 pl-8 relative timeline-item">
-                    <h3 class="text-xl font-semibold text-[#0A9396]">Marzo - Aprile 2025</h3>
-                    <p class="text-gray-700 mt-1">Apertura e verifica dell'account Seller. Definizione dei prodotti di lancio, logistica FBA e avvio dell'ottimizzazione delle schede prodotto.</p>
+                <div class="mb-12 pl-8 relative timeline-item">
+                    <h3 class="text-xl font-semibold text-teal-700">Marzo - Aprile 2025</h3>
+                    <p class="text-gray-600 mt-1">Apertura e verifica dell'account Seller. Definizione dei prodotti di lancio, logistica FBA e avvio dell'ottimizzazione delle schede prodotto.</p>
                 </div>
-
-                <div class="mb-10 pl-8 relative timeline-item">
-                    <h3 class="text-xl font-semibold text-[#0A9396]">Maggio - Giugno 2025</h3>
-                    <p class="text-gray-700 mt-1">Lancio delle prime campagne ADV sul canale Vendor con ottimi risultati. Preparazione della spedizione FBA e definizione degli ultimi dettagli per il go-live.</p>
-                </div>
-
-                <div class="pl-8 relative timeline-item">
-                     <h3 class="text-xl font-bold text-[#EE9B00]">🚀 GO-LIVE Canale Seller</h3>
-                     <p class="text-gray-700 mt-1 font-semibold">Tutto è pronto per il lancio effettivo delle vendite entro metà giugno 2025.</p>
+                <div class="mb-12 pl-8 relative timeline-item">
+                    <h3 class="text-xl font-semibold text-teal-700">Maggio - Giugno 2025</h3>
+                    <p class="text-gray-600 mt-1">Lancio delle prime campagne ADV sul canale Vendor, preparazione della spedizione FBA e definizione degli ultimi dettagli per il go-live del canale Seller.</p>
                 </div>
             </div>
         </section>
 
-        <section id="kpis" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#005F73]">📈 KPI e Risultati Chiave (Maggio 2025)</h2>
-            <p class="text-center text-lg max-w-3xl mx-auto mb-12">Le prime attività di marketing sul canale Vendor, in attesa del lancio Seller, hanno già prodotto risultati estremamente incoraggianti, validando le strategie pubblicitarie e di targeting adottate.</p>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="kpi-card">
-                    <div class="text-5xl font-bold text-[#0A9396]">2:1</div>
-                    <div class="text-xl font-semibold mt-2">Ritorno sull'Investimento (ROI)</div>
-                    <p class="text-gray-600 mt-1">Per ogni 1€ investito in pubblicità, ne sono stati generati ~2€ in vendite.</p>
-                </div>
-                 <div class="kpi-card">
-                    <div class="text-5xl font-bold text-[#0A9396]">~8%</div>
-                    <div class="text-xl font-semibold mt-2">Tasso di Conversione</div>
-                    <p class="text-gray-600 mt-1">Gli utenti che cliccano sulle inserzioni mostrano un forte interesse all'acquisto.</p>
-                </div>
-                <div class="kpi-card">
-                    <div class="text-5xl font-bold text-[#0A9396]">+10%</div>
-                    <div class="text-xl font-semibold mt-2">Vendite Incrementali</div>
-                    <p class="text-gray-600 mt-1">Aumento stimato sulle vendite dei prodotti promossi a maggio.</p>
-                </div>
-                <div class="kpi-card">
-                    <div class="text-5xl font-bold text-[#EE9B00]">4.0 ★</div>
-                    <div class="text-xl font-semibold mt-2">Rating Medio Prodotti</div>
-                    <p class="text-gray-600 mt-1">I prodotti godono di una buona reputazione, consolidata dall'unione delle varianti.</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="sales-details" class="mb-16 text-center">
+        <!-- Initial Results -->
+        <section id="initial-results" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">📈 Primi Risultati (Canale Vendor)</h2>
             <div class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
-                <h2 class="text-3xl font-bold mb-4 text-[#005F73]">🔍 Analisi Dettagliata delle Vendite (Canale Vendor)</h2>
-                <p class="text-lg max-w-3xl mx-auto mb-6">Comprendere l'andamento delle vendite sul canale Vendor è fondamentale. Questi dati, derivanti unicamente da Amazon, ci forniscono un benchmark storico e stagionale essenziale per misurare l'impatto futuro del nuovo canale Seller. L'analisi ci ha permesso di identificare i primi segnali di crescita legati alle nostre ottimizzazioni e di confermare la stabilità del fatturato prima del lancio.</p>
-                <a href="https://melaservices.github.io/Naturwaren/naturwaren_report.html" target="_blank" class="btn btn-primary mt-4">Visualizza Report Vendite Dettagliato</a>
+                <p class="text-center text-lg">Le prime attività di marketing avviate a Maggio sul canale Vendor hanno mostrato segnali incoraggianti. In particolare, le campagne pubblicitarie iniziali hanno validato l'interesse del mercato per i prodotti selezionati, confermando l'efficacia delle strategie di targeting adottate e fornendo una solida base di dati per le future ottimizzazioni.</p>
             </div>
         </section>
 
-        <section id="campaigns" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-[#005F73]">📊 Performance Campagne Pubblicitarie</h2>
-            <p class="text-center text-lg max-w-3xl mx-auto mb-12">A maggio sono state lanciate due campagne strategiche sul canale Vendor. La campagna "Solari" ha intercettato la domanda stagionale, mentre la campagna "Stock Clearance" ha smaltito le giacenze di prodotti invernali con ottima efficacia.</p>
-            <div class="bg-white rounded-lg shadow-lg p-6">
-                <div class="chart-container h-96">
-                    <canvas id="campaignsChart"></canvas>
-                </div>
-                <div class="text-center mt-8">
-                     <a href="https://melaservices.github.io/Naturwaren/adv.html" target="_blank" class="btn btn-primary">Visualizza Report ADV Dettagliato</a>
+        <!-- Reports Links -->
+        <section id="reports" class="mb-16">
+            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">🔍 Archivio Report</h2>
+            <div class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
+                <div class="space-y-6">
+                    <!-- Giugno 2025 -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Giugno 2025</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <a href="https://melaservices.github.io/Naturwaren/report_vendite_vendor_gen_giu.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
+                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
+                            </a>
+                            <a href="https://melaservices.github.io/Naturwaren/adv_vendor.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
+                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
+                            </a>
+                             <div class="bg-slate-200 p-4 rounded-lg opacity-60">
+                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
+                                <p class="text-sm text-gray-500">Disponibile dopo il primo mese di vendite.</p>
+                            </div>
+                            <div class="bg-slate-200 p-4 rounded-lg opacity-60">
+                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
+                                <p class="text-sm text-gray-500">Disponibile dopo il primo mese di vendite.</p>
+                            </div>
+                             <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
+                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Prossimi mesi verranno aggiunti qui -->
                 </div>
             </div>
         </section>
 
+        <!-- Challenges -->
         <section id="challenges" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-12 text-[#005F73]">🚧 Sfide Superate: Agilità e Problem Solving</h2>
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">🚧 Sfide Superate: Agilità e Problem Solving</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-[#005F73] mb-3">Accesso al Brand Registry 🛡️</h3>
-                    <p><strong class="text-[#CA6702]">Problema:</strong> Impossibilità di pubblicare a causa di una registrazione preesistente del marchio.</p>
-                    <p><strong class="text-[#0A9396]">Soluzione:</strong> Accesso temporaneo ottenuto e "Piano B" con prove fotografiche inviato ad Amazon.</p>
+                    <h3 class="text-xl font-semibold text-slate-700 mb-3">Accesso al Brand Registry 🛡️</h3>
+                    <p><strong>Problema:</strong> Impossibilità di pubblicare a causa di una registrazione preesistente del marchio.</p>
+                    <p class="mt-2"><strong>Soluzione:</strong> Accesso temporaneo ottenuto e "Piano B" con prove fotografiche inviato ad Amazon.</p>
                 </div>
                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-[#005F73] mb-3">Conflitto Prezzi Vendor/Seller 💸</h3>
-                    <p><strong class="text-[#CA6702]">Problema:</strong> Rischio di concorrenza interna e perdita della Buy Box.</p>
-                    <p><strong class="text-[#0A9396]">Soluzione:</strong> Catalogo Seller definito con soli bundle complementari, escludendo prodotti sovrapposti.</p>
+                    <h3 class="text-xl font-semibold text-slate-700 mb-3">Conflitto Prezzi Vendor/Seller 💸</h3>
+                    <p><strong>Problema:</strong> Rischio di concorrenza interna e perdita della Buy Box.</p>
+                    <p class="mt-2"><strong>Soluzione:</strong> Catalogo Seller definito con soli bundle complementari, escludendo prodotti sovrapposti.</p>
                 </div>
-                 <div class="bg-white p-6 rounded-lg shadow-md">
-                    <h3 class="text-xl font-semibold text-[#005F73] mb-3">Listing Bloccati da Terzi 📝</h3>
-                    <p><strong class="text-[#CA6702]">Problema:</strong> Impossibilità di ottimizzare schede prodotto create da altri rivenditori.</p>
-                    <p><strong class="text-[#0A9396]">Soluzione:</strong> Apertura ticket di supporto e creazione di nuovi bundle per aggirare il problema.</p>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold text-slate-700 mb-3">Listing Bloccati da Terzi 📝</h3>
+                    <p><strong>Problema:</strong> Impossibilità di ottimizzare schede prodotto create da altri rivenditori.</p>
+                    <p class="mt-2"><strong>Soluzione:</strong> Apertura ticket di supporto e creazione di nuovi bundle per aggirare il problema.</p>
                 </div>
             </div>
         </section>
         
+        <!-- Next Steps -->
         <section id="next-steps">
-            <h2 class="text-3xl font-bold text-center mb-12 text-[#005F73]">➡️ Prossimi Passi: Verso il Successo</h2>
-             <div class="bg-white rounded-lg shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">➡️ Prossimi Passi: Verso il Successo</h2>
+            <div class="bg-white rounded-lg shadow-lg p-8">
                 <ol class="space-y-6">
                     <li class="flex items-start">
-                        <div class="bg-[#0A9396] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">1</div>
+                        <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">1</div>
                         <div>
-                            <h3 class="text-xl font-semibold text-[#005F73]">Lancio e Monitoraggio (Giugno)</h3>
+                            <h3 class="text-xl font-semibold text-slate-700">Lancio e Monitoraggio (Giugno)</h3>
                             <p class="text-gray-600 mt-1">Attivazione delle vendite Seller e analisi in tempo reale dei dati per ottimizzare la strategia di lancio.</p>
                         </div>
                     </li>
                     <li class="flex items-start">
-                        <div class="bg-[#0A9396] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">2</div>
+                        <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">2</div>
                         <div>
-                            <h3 class="text-xl font-semibold text-[#005F73]">Potenziamento Pubblicitario (Luglio)</h3>
+                            <h3 class="text-xl font-semibold text-slate-700">Potenziamento Pubblicitario (Luglio)</h3>
                             <p class="text-gray-600 mt-1">Lancio di campagne mirate sui nuovi bundle e preparazione di offerte dedicate per l'evento Amazon Prime Day.</p>
                         </div>
                     </li>
-                     <li class="flex items-start">
-                        <div class="bg-[#0A9396] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">3</div>
+                    <li class="flex items-start">
+                        <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">3</div>
                         <div>
-                            <h3 class="text-xl font-semibold text-[#005F73]">Raccolta Recensioni e Ottimizzazione (Luglio-Agosto)</h3>
+                            <h3 class="text-xl font-semibold text-slate-700">Raccolta Recensioni e Ottimizzazione (Luglio-Agosto)</h3>
                             <p class="text-gray-600 mt-1">Attivazione del programma Amazon Vine e restyling completo del Brand Store per migliorare l'esperienza utente.</p>
                         </div>
                     </li>
-                     <li class="flex items-start">
-                        <div class="bg-[#0A9396] text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">4</div>
+                    <li class="flex items-start">
+                        <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">4</div>
                         <div>
-                            <h3 class="text-xl font-semibold text-[#005F73]">Espansione Futura (Q4 2025)</h3>
+                            <h3 class="text-xl font-semibold text-slate-700">Espansione Futura (Q4 2025)</h3>
                             <p class="text-gray-600 mt-1">Aggiunta progressiva di nuovi bundle e valutazione del lancio su altri marketplace europei (DE, FR, ES).</p>
                         </div>
                     </li>
                 </ol>
-             </div>
+            </div>
         </section>
 
+        <!-- Footer -->
         <footer class="text-center mt-16 border-t pt-8">
-            <p class="text-lg font-semibold text-[#005F73]">Grazie per la fiducia e la proficua collaborazione!</p>
+            <p class="text-lg font-semibold text-slate-700">Grazie per la fiducia e la proficua collaborazione!</p>
             <p class="text-gray-600">Team Mela Services</p>
         </footer>
-
     </div>
 
-    <script>
-        const tooltipTitleCallback = (tooltipItems) => {
-            const item = tooltipItems[0];
-            let label = item.chart.data.labels[item.dataIndex];
-            if (Array.isArray(label)) {
-                return label.join(' ');
-            }
-            return label;
-        };
-
-        const wrapLabel = (label) => {
-            const maxLength = 16;
-            if (label.length <= maxLength) {
-                return label;
-            }
-            const words = label.split(' ');
-            const lines = [];
-            let currentLine = '';
-            words.forEach(word => {
-                if ((currentLine + word).length > maxLength) {
-                    lines.push(currentLine.trim());
-                    currentLine = '';
-                }
-                currentLine += word + ' ';
-            });
-            lines.push(currentLine.trim());
-            return lines;
-        };
-
-        const campaignsCtx = document.getElementById('campaignsChart').getContext('2d');
-        const campaignsChart = new Chart(campaignsCtx, {
-            type: 'bar',
-            data: {
-                labels: ['Campagna "Solari"', 'Campagna "Stock Clearance (Sciroppi)"'].map(wrapLabel),
-                datasets: [{
-                    label: 'CTR (%)',
-                    data: [0.5, 0.35],
-                    backgroundColor: '#0A9396',
-                    borderColor: '#005F73',
-                    borderWidth: 1
-                }, {
-                    label: 'Tasso di Conversione (%)',
-                    data: [8, 10], 
-                    backgroundColor: '#EE9B00',
-                    borderColor: '#CA6702',
-                    borderWidth: 1
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                scales: {
-                    y: {
-                        beginAtZero: true,
-                        ticks: {
-                            callback: function(value) {
-                                return value + '%'
-                            }
-                        }
-                    }
-                },
-                plugins: {
-                    title: {
-                        display: true,
-                        text: 'Confronto Performance Campagne (CTR vs Conversione)',
-                        font: {
-                            size: 18
-                        },
-                        padding: {
-                            top: 10,
-                            bottom: 30
-                        }
-                    },
-                    tooltip: {
-                        callbacks: {
-                            title: tooltipTitleCallback
-                        }
-                    }
-                }
-            }
-        });
-    </script>
 </body>
 </html>
