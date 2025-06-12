@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazon Vendor Central - Trend Analysis</title>
+    <title>Amazon Vendor - Report Vendite</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +23,7 @@
             <!-- Header -->
             <div class="bg-white rounded-lg shadow-lg p-6 mb-8 text-center">
                 <img src="https://mela.services/wp-content/uploads/2020/05/logo-mela-x2.png" alt="Logo Mela" class="h-12 mx-auto mb-4">
-                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Amazon Vendor Central - Trend Analysis</h1>
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Amazon Vendor - Report Vendite</h1>
                 <p class="text-sm md:text-base text-gray-600">Naturwaren Italia | Gennaio-Maggio 2025 | Business Report</p>
             </div>
 
@@ -72,6 +72,7 @@
                     <div class="relative h-72 md:h-96">
                         <canvas id="trendChart"></canvas>
                     </div>
+                    <div id="trend-legend" class="mt-4 text-xs text-center text-gray-600 grid grid-cols-2 sm:grid-cols-5 gap-2"></div>
                 </div>
             </div>
 
@@ -84,10 +85,10 @@
                         <table class="w-full text-sm">
                             <thead>
                                 <tr class="border-b text-left">
-                                    <th class="p-2 font-semibold">Brand</th>
-                                    <th class="p-2 font-semibold text-right">Ricavi</th>
-                                    <th class="p-2 font-semibold text-right">Share</th>
-                                    <th class="p-2 font-semibold text-right">Margine</th>
+                                    <th class="font-semibold">Brand</th>
+                                    <th class="font-semibold text-right">Ricavi</th>
+                                    <th class="font-semibold text-right">Share</th>
+                                    <th class="font-semibold text-right">Margine</th>
                                 </tr>
                             </thead>
                             <tbody id="brandTableBody">
@@ -102,6 +103,7 @@
                     <div class="relative h-72 md:h-80">
                         <canvas id="brandPieChart"></canvas>
                     </div>
+                    <div id="pie-legend" class="mt-4 text-xs text-gray-600 space-y-1"></div>
                 </div>
             </div>
 
@@ -205,10 +207,10 @@
                 }
 
                 row.innerHTML = `
-                    <td class="p-2 font-bold text-gray-700">${brand.brand}</td>
-                    <td class="p-2 text-right">€${brand.ricavi.toLocaleString()}</td>
-                    <td class="p-2 text-right font-bold">${brand.share}%</td>
-                    <td class="p-2 text-right">
+                    <td class="font-bold text-gray-700">${brand.brand}</td>
+                    <td class="text-right">€${brand.ricavi.toLocaleString()}</td>
+                    <td class="text-right font-bold">${brand.share}%</td>
+                    <td class="text-right">
                         <span class="px-2 py-1 rounded-full text-xs font-semibold ${marginClass}">
                             ${brand.margine.toFixed(1)}%
                         </span>
@@ -232,7 +234,7 @@
             });
 
 
-            // --- INIZIALIZZAZIONE GRAFICI ---
+            // --- INIZIALIZZAZIONE GRAFICI E LEGGENDE ---
 
             // 1. Grafico Andamento Ricavi e Volumi
             const trendCtx = document.getElementById('trendChart').getContext('2d');
@@ -280,6 +282,7 @@
                         }
                     },
                     plugins: {
+                        legend: { display: false },
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
@@ -300,6 +303,18 @@
                     }
                 }
             });
+
+            // Legenda per Grafico Trend
+            const trendLegend = document.getElementById('trend-legend');
+            monthlyTrends.forEach(item => {
+                const legendItem = document.createElement('div');
+                legendItem.innerHTML = `
+                    <strong>${item.month}:</strong> 
+                    <span class="text-blue-600">€${item.ricavi.toLocaleString()}</span> | 
+                    <span class="text-orange-600">${item.unita.toLocaleString()} Unità</span>
+                `;
+                trendLegend.appendChild(legendItem);
+            });
             
             // 2. Grafico Ripartizione Ricavi per Brand
             const pieCtx = document.getElementById('brandPieChart').getContext('2d');
@@ -316,9 +331,7 @@
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: {
-                            position: 'bottom',
-                        },
+                        legend: { display: false },
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
@@ -332,6 +345,19 @@
                         }
                     }
                 }
+            });
+
+            // Legenda per Grafico a Torta
+            const pieLegend = document.getElementById('pie-legend');
+            brandData.forEach((item, index) => {
+                const legendItem = document.createElement('div');
+                legendItem.className = 'flex items-center';
+                legendItem.innerHTML = `
+                    <span class="h-3 w-3 mr-2" style="background-color: ${COLORS[index % COLORS.length]}"></span>
+                    <strong>${item.brand}:</strong>
+                    <span class="ml-auto">${item.share}% (€${item.ricavi.toLocaleString()})</span>
+                `;
+                pieLegend.appendChild(legendItem);
             });
         });
     </script>
