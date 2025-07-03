@@ -115,7 +115,7 @@
                     </div>
                     <div class="relative h-72 md:h-80">
                         <canvas id="brandPieChart"></canvas>
-                        <div id="pie-legend" class="mt-4 text-xs text-gray-600 space-y-1"></div>
+                        <div id="pie-legend" class="mt-4 text-xs text-gray-600 space-y-2"></div>
                     </div>
                 </div>
             </section>
@@ -382,8 +382,14 @@
             const pieLegend = document.getElementById('pie-legend');
             brandData.forEach((item, index) => {
                 const legendItem = document.createElement('div');
-                legendItem.className = 'flex items-center';
-                legendItem.innerHTML = `<span class="h-3 w-3 mr-2" style="background-color: ${COLORS[index % COLORS.length]}"></span><strong>${item.brand}:</strong><span class="ml-auto">${item.share}% (€${item.ricavi.toLocaleString()})</span>`;
+                legendItem.className = 'flex flex-wrap justify-between items-center';
+                legendItem.innerHTML = `
+                    <div class="flex items-center">
+                        <span class="h-3 w-3 mr-2" style="background-color: ${COLORS[index % COLORS.length]}"></span>
+                        <strong>${item.brand}:</strong>
+                    </div>
+                    <span class="font-semibold">${item.share}% (€${item.ricavi.toLocaleString()})</span>
+                `;
                 pieLegend.appendChild(legendItem);
             });
         });
