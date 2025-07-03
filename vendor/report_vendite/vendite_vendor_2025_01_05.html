@@ -15,70 +15,70 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-700">
+<body class="bg-slate-50 text-gray-700">
 
-    <div class="p-4 md:p-6 min-h-screen font-sans">
+    <div class="p-4 md:p-8 min-h-screen font-sans">
         <div class="max-w-7xl mx-auto">
             
             <!-- Header -->
-            <div class="bg-white rounded-lg shadow-lg p-6 mb-8 text-center">
+            <header class="bg-white rounded-lg shadow-lg p-6 mb-12 text-center">
                 <img src="https://mela.services/wp-content/uploads/2020/05/logo-mela-x2.png" alt="Logo Mela" class="h-12 mx-auto mb-4">
-                <h1 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">Amazon Vendor - Report Vendite</h1>
-                <p class="text-sm md:text-base text-gray-600">Naturwaren Italia | Gennaio-Maggio 2025 | Business Report</p>
-            </div>
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Amazon Vendor - Report Vendite</h1>
+                <p class="text-base md:text-lg text-gray-600">Naturwaren Italia | Gennaio-Maggio 2025 | Business Report</p>
+            </header>
 
             <!-- KPI Dashboard -->
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 mb-8">
-                <div class="bg-white p-4 rounded-lg shadow text-center">
-                    <h3 class="text-xs md:text-sm font-medium text-gray-500">Ricavi Gen-Mag '25</h3>
-                    <p class="text-2xl md:text-3xl font-bold text-blue-600 mt-1" id="kpiRicavi">€0</p>
+            <section class="mb-12">
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+                    <div class="bg-white p-4 rounded-lg shadow text-center">
+                        <h3 class="text-sm font-medium text-gray-500">Ricavi Gen-Mag '25</h3>
+                        <p class="text-3xl font-bold text-blue-600 mt-1" id="kpiRicavi">€0</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow text-center">
+                        <h3 class="text-sm font-medium text-gray-500">Unità Totali</h3>
+                        <p class="text-3xl font-bold text-green-600 mt-1" id="kpiUnita">0</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow text-center">
+                        <h3 class="text-sm font-medium text-gray-500">Margine Avg Amazon</h3>
+                        <p class="text-3xl font-bold text-red-600 mt-1" id="kpiMargine">0%</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow text-center">
+                        <h3 class="text-sm font-medium text-gray-500">ASP</h3>
+                        <p class="text-3xl font-bold text-orange-600 mt-1" id="kpiAsp">€0</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow text-center">
+                        <h3 class="text-sm font-medium text-gray-500">SKU Attivi</h3>
+                        <p class="text-3xl font-bold text-purple-600 mt-1" id="kpiSku">0</p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow text-center">
+                        <h3 class="text-sm font-medium text-gray-500">Tasso Resi</h3>
+                        <p class="text-3xl font-bold text-teal-600 mt-1" id="kpiResi">0%</p>
+                    </div>
                 </div>
-                <div class="bg-white p-4 rounded-lg shadow text-center">
-                    <h3 class="text-xs md:text-sm font-medium text-gray-500">Unità Totali</h3>
-                    <p class="text-2xl md:text-3xl font-bold text-green-600 mt-1" id="kpiUnita">0</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow text-center">
-                    <h3 class="text-xs md:text-sm font-medium text-gray-500">Margine Avg Amazon</h3>
-                    <p class="text-2xl md:text-3xl font-bold text-red-600 mt-1" id="kpiMargine">0%</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow text-center">
-                    <h3 class="text-xs md:text-sm font-medium text-gray-500">ASP</h3>
-                    <p class="text-2xl md:text-3xl font-bold text-orange-600 mt-1" id="kpiAsp">€0</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow text-center">
-                    <h3 class="text-xs md:text-sm font-medium text-gray-500">SKU Attivi</h3>
-                    <p class="text-2xl md:text-3xl font-bold text-purple-600 mt-1" id="kpiSku">0</p>
-                </div>
-                <div class="bg-white p-4 rounded-lg shadow text-center">
-                    <h3 class="text-xs md:text-sm font-medium text-gray-500">Tasso Resi</h3>
-                    <p class="text-2xl md:text-3xl font-bold text-teal-600 mt-1" id="kpiResi">0%</p>
-                </div>
-            </div>
+            </section>
 
             <!-- Note Metodologiche -->
-            <div class="bg-white border-l-4 border-gray-300 p-4 rounded-r-lg shadow mb-8 text-sm">
+            <section class="bg-white border-l-4 border-gray-300 p-4 rounded-r-lg shadow mb-12 text-sm">
                 <h4 class="font-bold text-gray-700 mb-2">📊 Note Metodologiche</h4>
                 <ul class="list-none space-y-1 text-gray-600">
                     <li><strong>ASP (Average Selling Price):</strong> Ricavi ÷ Unità. Indica il prezzo medio di vendita per singolo prodotto.</li>
                     <li><strong>Margine Amazon:</strong> (Ricavi - COGS) ÷ Ricavi. Rappresenta il margine che Amazon applica rivendendo i prodotti.</li>
                     <li><strong>Tasso Resi:</strong> Resi Cliente ÷ Unità Spedite. Percentuale di prodotti restituiti dai clienti.</li>
                 </ul>
-            </div>
+            </section>
 
             <!-- Main Trend Chart -->
-            <div class="grid grid-cols-1 gap-8 mb-8">
-                <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg">
-                    <h2 class="text-lg md:text-xl font-bold mb-4 text-center">📈 Andamento Ricavi e Volumi 2025</h2>
-                    <div class="relative h-72 md:h-96">
-                        <canvas id="trendChart"></canvas>
-                    </div>
-                    <div id="trend-legend" class="mt-4 text-xs text-center text-gray-600 grid grid-cols-2 sm:grid-cols-5 gap-2"></div>
+            <section class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-12">
+                <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">📈 Andamento Ricavi e Volumi 2025</h2>
+                <div class="relative h-72 md:h-96">
+                    <canvas id="trendChart"></canvas>
                 </div>
-            </div>
+                <div id="trend-legend" class="mt-4 text-xs text-center text-gray-600 grid grid-cols-2 sm:grid-cols-5 gap-2"></div>
+            </section>
 
             <!-- Year-over-Year Comparison -->
-            <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-8">
-                <h2 class="text-lg md:text-xl font-bold mb-4 text-center">🔄 Confronto Anno su Anno (2024 vs 2025)</h2>
+            <section class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-12">
+                <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">🔄 Confronto Anno su Anno (2024 vs 2025)</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center mb-6">
                     <div class="bg-slate-100 p-4 rounded-lg">
                         <h3 class="text-sm font-medium text-gray-500">Variazione Fatturato (YoY)</h3>
@@ -92,20 +92,20 @@
                 <div class="relative h-72 md:h-96">
                     <canvas id="yoyChart"></canvas>
                 </div>
-            </div>
+                <div id="yoy-legend" class="mt-4 text-xs text-center text-gray-600 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4"></div>
+            </section>
 
             <!-- Brand Analysis -->
-            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 mb-8">
-                <!-- Brand Performance Table -->
-                <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg lg:col-span-3">
-                    <h2 class="text-lg md:text-xl font-bold mb-4">🏆 Performance per Brand (5 Mesi)</h2>
+            <section class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-12">
+                <h2 class="text-xl md:text-2xl font-bold mb-6 text-center">🏆 Performance per Brand (5 Mesi)</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
                     <div class="overflow-x-auto">
                         <table class="w-full text-sm">
                             <thead>
                                 <tr class="border-b text-left">
-                                    <th class="font-semibold">Brand</th>
-                                    <th class="font-semibold text-right">Ricavi</th>
-                                    <th class="font-semibold text-right">Share</th>
+                                    <th class="font-semibold py-2">Brand</th>
+                                    <th class="font-semibold text-right py-2">Ricavi</th>
+                                    <th class="font-semibold text-right py-2">Share</th>
                                 </tr>
                             </thead>
                             <tbody id="brandTableBody">
@@ -113,35 +113,31 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
-                <!-- Market Share Pie -->
-                <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg lg:col-span-2">
-                    <h2 class="text-lg md:text-xl font-bold mb-4 text-center">🥧 Ripartizione Ricavi per Brand</h2>
                     <div class="relative h-72 md:h-80">
                         <canvas id="brandPieChart"></canvas>
+                        <div id="pie-legend" class="mt-4 text-xs text-gray-600 space-y-1"></div>
                     </div>
-                    <div id="pie-legend" class="mt-4 text-xs text-gray-600 space-y-1"></div>
                 </div>
-            </div>
+            </section>
 
             <!-- Top Products Analysis 2025 -->
-            <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-8">
-                <h2 class="text-lg md:text-xl font-bold mb-4">🎯 Top 5 ASIN - Performance (Gen-Mag 2025)</h2>
+            <section class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-12">
+                <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">🎯 Top 5 ASIN - Performance (Gen-Mag 2025)</h2>
                 <div id="topProductsGrid2025" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                     <!-- Data populated by JS -->
                 </div>
-            </div>
+            </section>
 
             <!-- Top Products Analysis 2024 -->
-            <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-8">
-                <h2 class="text-lg md:text-xl font-bold mb-4">🎯 Top 5 ASIN - Performance (Gen-Mag 2024)</h2>
+            <section class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-12">
+                <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">🎯 Top 5 ASIN - Performance (Gen-Mag 2024)</h2>
                 <div id="topProductsGrid2024" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                     <!-- Data populated by JS -->
                 </div>
-            </div>
+            </section>
             
             <!-- Seller Channel Updates -->
-            <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-8">
+            <section class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-12">
                 <h2 class="text-xl md:text-2xl font-bold mb-6 text-center">Aggiornamenti Canale Seller</h2>
                 <div class="border-l-4 border-green-500 pl-4 py-2">
                         <h3 class="font-bold text-green-700 mb-2 text-lg">Lancio Imminente e Strategia Bundle</h3>
@@ -149,11 +145,11 @@
                             Tutto è pronto per la partenza: la prima spedizione FBA è in preparazione e verrà inviata nei prossimi giorni. Come già definito, la strategia di differenziazione tramite bundle e multipack esclusivi rimane un pilastro fondamentale del canale Seller. Questa tattica ci permetterà di creare proposte uniche, incrementare l'ASP (Average Selling Price) e rafforzare la nostra posizione sul mercato.
                         </p>
                     </div>
-            </div>
+            </section>
 
             <!-- Next Steps -->
-            <section id="next-steps" class="mb-16">
-                <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">➡️ Prossimi Passi</h2>
+            <section id="next-steps" class="mb-12">
+                <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">➡️ Prossimi Passi</h2>
                 <div class="bg-white rounded-lg shadow-lg p-8">
                     <ol class="space-y-6">
                         <li class="flex items-start">
@@ -214,45 +210,7 @@
                 { month: 'Apr', ricavi: 48118.73, unita: 9406 },
                 { month: 'Mag', ricavi: 38792.93, unita: 8029 }
             ];
-
-            const topProducts2024ByMonth = {
-                "Gennaio": [
-                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 16768.86 },
-                    { name: "Allga San Burro Speciale Piedi", revenue: 15629.28 },
-                    { name: "Dr. Theiss Arnica Gel Forte", revenue: 3676.89 },
-                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2314.90 },
-                    { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 2174.97 }
-                ],
-                "Febbraio": [
-                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11787.70 },
-                    { name: "Allga San Burro Speciale Piedi", revenue: 5075.85 },
-                    { name: "Dr. Theiss Arnica Gel Forte", revenue: 4579.39 },
-                    { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 2271.75 },
-                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2063.31 }
-                ],
-                "Marzo": [
-                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11238.94 },
-                    { name: "Allga San Burro Speciale Piedi", revenue: 8006.26 },
-                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2136.85 },
-                    { name: "Dr Theiss Via-Dol Patch", revenue: 2034.24 },
-                    { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 1877.04 }
-                ],
-                "Aprile": [
-                    { name: "Allga San Burro Speciale Piedi", revenue: 11801.17 },
-                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11135.94 },
-                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2404.87 },
-                    { name: "Dr Theiss Via-Dol Patch", revenue: 2390.10 },
-                    { name: "Lacalut Aktiv Igiene Dentale", revenue: 1734.39 }
-                ],
-                "Maggio": [
-                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11578.28 },
-                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2661.08 },
-                    { name: "Dr Theiss Via-Dol Patch", revenue: 2100.74 },
-                    { name: "Lacalut Aktiv Igiene Dentale", revenue: 1753.36 },
-                    { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 1493.32 }
-                ]
-            };
-
+            
             const brandData = [
                 { brand: 'Dr. Theiss', ricavi: 116969, share: 80.4, margine: 7.2 },
                 { brand: 'Allga San', ricavi: 12938, share: 8.9, margine: 9.9 },
@@ -278,6 +236,14 @@
                 { asin: 'B08ZFJSSZ7', nome: 'Vitamina D3 K2', ricavi: 4096, brand: 'Dr. Theiss' }
             ];
 
+            const topProducts2024ByMonth = {
+                "Gennaio": [ { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 16768.86 }, { name: "Allga San Burro Speciale Piedi", revenue: 15629.28 }, { name: "Dr. Theiss Arnica Gel Forte", revenue: 3676.89 }, { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2314.90 }, { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 2174.97 } ],
+                "Febbraio": [ { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11787.70 }, { name: "Allga San Burro Speciale Piedi", revenue: 5075.85 }, { name: "Dr. Theiss Arnica Gel Forte", revenue: 4579.39 }, { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 2271.75 }, { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2063.31 } ],
+                "Marzo": [ { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11238.94 }, { name: "Allga San Burro Speciale Piedi", revenue: 8006.26 }, { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2136.85 }, { name: "Dr Theiss Via-Dol Patch", revenue: 2034.24 }, { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 1877.04 } ],
+                "Aprile": [ { name: "Allga San Burro Speciale Piedi", revenue: 11801.17 }, { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11135.94 }, { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2404.87 }, { name: "Dr Theiss Via-Dol Patch", revenue: 2390.10 }, { name: "Lacalut Aktiv Igiene Dentale", revenue: 1734.39 } ],
+                "Maggio": [ { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11578.28 }, { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2661.08 }, { name: "Dr Theiss Via-Dol Patch", revenue: 2100.74 }, { name: "Lacalut Aktiv Igiene Dentale", revenue: 1753.36 }, { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 1493.32 } ]
+            };
+
             const COLORS = ['#118AB2', '#06D6A0', '#FFD166', '#EF476F', '#073B4C'];
 
             // --- POPOLAMENTO KPI ---
@@ -295,9 +261,9 @@
                 row.className = 'border-b hover:bg-gray-50';
                 
                 row.innerHTML = `
-                    <td class="font-bold text-gray-700">${brand.brand}</td>
-                    <td class="text-right">€${brand.ricavi.toLocaleString()}</td>
-                    <td class="text-right font-bold">${brand.share}%</td>
+                    <td class="py-2 font-bold text-gray-700">${brand.brand}</td>
+                    <td class="py-2 text-right">€${brand.ricavi.toLocaleString()}</td>
+                    <td class="py-2 text-right font-bold">${brand.share}%</td>
                 `;
                 brandTableBody.appendChild(row);
             });
@@ -341,10 +307,7 @@
                 topProductsGrid2024.appendChild(card);
             });
 
-
             // --- INIZIALIZZAZIONE GRAFICI E LEGGENDE ---
-
-            // 1. Grafico Andamento Ricavi e Volumi 2025
             const trendCtx = document.getElementById('trendChart').getContext('2d');
             new Chart(trendCtx, {
                 type: 'bar',
@@ -365,7 +328,6 @@
                 }
             });
 
-            // Legenda per Grafico Trend 2025
             const trendLegend = document.getElementById('trend-legend');
             monthlyTrends2025.forEach(item => {
                 const legendItem = document.createElement('div');
@@ -373,7 +335,6 @@
                 trendLegend.appendChild(legendItem);
             });
 
-            // 2. Grafico Confronto Anno su Anno
             const yoyCtx = document.getElementById('yoyChart').getContext('2d');
             new Chart(yoyCtx, {
                 type: 'bar',
@@ -390,8 +351,21 @@
                     plugins: { legend: { position: 'top' } }
                 }
             });
+
+            const yoyLegend = document.getElementById('yoy-legend');
+            monthlyTrends2025.forEach((item, index) => {
+                const legendItem = document.createElement('div');
+                const data2024 = monthlyTrends2024[index];
+                legendItem.innerHTML = `
+                    <strong>${item.month}:</strong> 
+                    <div class="text-sm">
+                        <span class="text-blue-500">2024: €${data2024.ricavi.toLocaleString('it-IT', {minimumFractionDigits: 2})} (${data2024.unita.toLocaleString('it-IT')} Unità)</span><br>
+                        <span class="text-red-400">2025: €${item.ricavi.toLocaleString('it-IT')} (${item.unita.toLocaleString('it-IT')} Unità)</span>
+                    </div>
+                `;
+                yoyLegend.appendChild(legendItem);
+            });
             
-            // 3. Grafico Ripartizione Ricavi per Brand
             const pieCtx = document.getElementById('brandPieChart').getContext('2d');
             new Chart(pieCtx, {
                 type: 'pie',
@@ -405,7 +379,6 @@
                 }
             });
 
-            // Legenda per Grafico a Torta
             const pieLegend = document.getElementById('pie-legend');
             brandData.forEach((item, index) => {
                 const legendItem = document.createElement('div');
