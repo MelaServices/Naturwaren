@@ -79,15 +79,8 @@
             <!-- Year-over-Year Comparison -->
             <section class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-12">
                 <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">🔄 Confronto Anno su Anno (2024 vs 2025)</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center mb-6">
-                    <div class="bg-slate-100 p-4 rounded-lg">
-                        <h3 class="text-sm font-medium text-gray-500">Variazione Fatturato (YoY)</h3>
-                        <p class="text-3xl font-bold text-red-500" id="yoyRevenue">-42.0%</p>
-                    </div>
-                    <div class="bg-slate-100 p-4 rounded-lg">
-                        <h3 class="text-sm font-medium text-gray-500">Variazione Unità (YoY)</h3>
-                        <p class="text-3xl font-bold text-red-500" id="yoyUnits">-49.1%</p>
-                    </div>
+                <div class="bg-slate-100 p-4 rounded-lg mb-6 text-center">
+                     <p class="text-sm text-gray-600">L'obiettivo dei prossimi mesi è costruire basi solide per una crescita più sostenibile nel tempo, lavorando su una strategia che privilegi la qualità delle vendite e un progressivo miglioramento dei margini.</p>
                 </div>
                 <div class="relative h-72 md:h-96">
                     <canvas id="yoyChart"></canvas>
@@ -117,7 +110,7 @@
                 </div>
                 <!-- Market Share Pie -->
                 <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg lg:col-span-2">
-                    <h2 class="text-lg md:text-xl font-bold mb-4 text-center">🥧 Ripartizione Ricavi per Brand</h2>
+                    <h2 class="text-lg md:text-xl font-bold mb-4 text-center">� Ripartizione Ricavi per Brand</h2>
                     <div class="relative h-72 md:h-80">
                         <canvas id="brandPieChart"></canvas>
                     </div>
@@ -346,8 +339,8 @@
                 data: {
                     labels: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag'],
                     datasets: [
-                        { label: 'Fatturato 2024', data: monthlyTrends2024.map(d => d.ricavi), backgroundColor: 'rgba(54, 162, 235, 0.5)', borderColor: 'rgb(54, 162, 235)', borderWidth: 1 },
-                        { label: 'Fatturato 2025', data: monthlyTrends2025.map(d => d.ricavi), backgroundColor: 'rgba(255, 99, 132, 0.5)', borderColor: 'rgb(255, 99, 132)', borderWidth: 1 }
+                        { label: 'Fatturato 2024', data: monthlyTrends2024.map(d => d.ricavi), backgroundColor: 'rgba(156, 163, 175, 0.5)', borderColor: 'rgb(156, 163, 175)', borderWidth: 1 },
+                        { label: 'Fatturato 2025', data: monthlyTrends2025.map(d => d.ricavi), backgroundColor: 'rgba(59, 130, 246, 0.5)', borderColor: 'rgb(59, 130, 246)', borderWidth: 1 }
                     ]
                 },
                 options: {
@@ -364,8 +357,8 @@
                 legendItem.innerHTML = `
                     <strong>${item.month}:</strong> 
                     <div class="text-sm">
-                        <span class="text-blue-500">2024: €${data2024.ricavi.toLocaleString('it-IT', {minimumFractionDigits: 2})} (${data2024.unita.toLocaleString('it-IT')} Unità)</span><br>
-                        <span class="text-red-400">2025: €${item.ricavi.toLocaleString('it-IT')} (${item.unita.toLocaleString('it-IT')} Unità)</span>
+                        <span class="text-gray-500">2024: €${data2024.ricavi.toLocaleString('it-IT', {minimumFractionDigits: 2})} (${data2024.unita.toLocaleString('it-IT')} Unità)</span><br>
+                        <span class="text-blue-500">2025: €${item.ricavi.toLocaleString('it-IT')} (${item.unita.toLocaleString('it-IT')} Unità)</span>
                     </div>
                 `;
                 yoyLegend.appendChild(legendItem);
@@ -401,3 +394,4 @@
     </script>
 </body>
 </html>
+�
