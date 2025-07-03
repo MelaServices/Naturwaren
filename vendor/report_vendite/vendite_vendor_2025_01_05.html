@@ -68,11 +68,29 @@
             <!-- Main Trend Chart -->
             <div class="grid grid-cols-1 gap-8 mb-8">
                 <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg">
-                    <h2 class="text-lg md:text-xl font-bold mb-4 text-center">📈 Andamento Ricavi e Volumi</h2>
+                    <h2 class="text-lg md:text-xl font-bold mb-4 text-center">📈 Andamento Ricavi e Volumi 2025</h2>
                     <div class="relative h-72 md:h-96">
                         <canvas id="trendChart"></canvas>
                     </div>
                     <div id="trend-legend" class="mt-4 text-xs text-center text-gray-600 grid grid-cols-2 sm:grid-cols-5 gap-2"></div>
+                </div>
+            </div>
+
+            <!-- Year-over-Year Comparison -->
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-8">
+                <h2 class="text-lg md:text-xl font-bold mb-4 text-center">🔄 Confronto Anno su Anno (2024 vs 2025)</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-center mb-6">
+                    <div class="bg-slate-100 p-4 rounded-lg">
+                        <h3 class="text-sm font-medium text-gray-500">Variazione Fatturato (YoY)</h3>
+                        <p class="text-3xl font-bold text-red-500" id="yoyRevenue">-42.0%</p>
+                    </div>
+                    <div class="bg-slate-100 p-4 rounded-lg">
+                        <h3 class="text-sm font-medium text-gray-500">Variazione Unità (YoY)</h3>
+                        <p class="text-3xl font-bold text-red-500" id="yoyUnits">-49.1%</p>
+                    </div>
+                </div>
+                <div class="relative h-72 md:h-96">
+                    <canvas id="yoyChart"></canvas>
                 </div>
             </div>
 
@@ -106,10 +124,18 @@
                 </div>
             </div>
 
-            <!-- Top Products Analysis -->
+            <!-- Top Products Analysis 2025 -->
             <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-8">
-                <h2 class="text-lg md:text-xl font-bold mb-4">🎯 Top 5 ASIN - Performance (5 Mesi)</h2>
-                <div id="topProductsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                <h2 class="text-lg md:text-xl font-bold mb-4">🎯 Top 5 ASIN - Performance (Gen-Mag 2025)</h2>
+                <div id="topProductsGrid2025" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <!-- Data populated by JS -->
+                </div>
+            </div>
+
+            <!-- Top Products Analysis 2024 -->
+            <div class="bg-white p-4 md:p-6 rounded-lg shadow-lg mb-8">
+                <h2 class="text-lg md:text-xl font-bold mb-4">🎯 Top 5 ASIN - Performance (Gen-Mag 2024)</h2>
+                <div id="topProductsGrid2024" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
                     <!-- Data populated by JS -->
                 </div>
             </div>
@@ -173,13 +199,59 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // --- DATI DELLA DASHBOARD ---
-            const monthlyTrends = [
+            const monthlyTrends2025 = [
                 { month: 'Gen', ricavi: 32780, unita: 5670 },
                 { month: 'Feb', ricavi: 31311, unita: 5445 },
                 { month: 'Mar', ricavi: 30105, unita: 5905 },
                 { month: 'Apr', ricavi: 24924, unita: 4715 },
                 { month: 'Mag', ricavi: 26402, unita: 4919 }
             ];
+
+            const monthlyTrends2024 = [
+                { month: 'Gen', ricavi: 68509.59, unita: 11691 },
+                { month: 'Feb', ricavi: 51072.36, unita: 9424 },
+                { month: 'Mar', ricavi: 44500.11, unita: 8562 },
+                { month: 'Apr', ricavi: 48118.73, unita: 9406 },
+                { month: 'Mag', ricavi: 38792.93, unita: 8029 }
+            ];
+
+            const topProducts2024ByMonth = {
+                "Gennaio": [
+                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 16768.86 },
+                    { name: "Allga San Burro Speciale Piedi", revenue: 15629.28 },
+                    { name: "Dr. Theiss Arnica Gel Forte", revenue: 3676.89 },
+                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2314.90 },
+                    { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 2174.97 }
+                ],
+                "Febbraio": [
+                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11787.70 },
+                    { name: "Allga San Burro Speciale Piedi", revenue: 5075.85 },
+                    { name: "Dr. Theiss Arnica Gel Forte", revenue: 4579.39 },
+                    { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 2271.75 },
+                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2063.31 }
+                ],
+                "Marzo": [
+                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11238.94 },
+                    { name: "Allga San Burro Speciale Piedi", revenue: 8006.26 },
+                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2136.85 },
+                    { name: "Dr Theiss Via-Dol Patch", revenue: 2034.24 },
+                    { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 1877.04 }
+                ],
+                "Aprile": [
+                    { name: "Allga San Burro Speciale Piedi", revenue: 11801.17 },
+                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11135.94 },
+                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2404.87 },
+                    { name: "Dr Theiss Via-Dol Patch", revenue: 2390.10 },
+                    { name: "Lacalut Aktiv Igiene Dentale", revenue: 1734.39 }
+                ],
+                "Maggio": [
+                    { name: "Dr. Theiss Arnica Crema Effetto Termico", revenue: 11578.28 },
+                    { name: "Allga San Sali da Bagno Per Pediluvio Piedi", revenue: 2661.08 },
+                    { name: "Dr Theiss Via-Dol Patch", revenue: 2100.74 },
+                    { name: "Lacalut Aktiv Igiene Dentale", revenue: 1753.36 },
+                    { name: "Dr. Thiess Mucoplant Kids Tuss", revenue: 1493.32 }
+                ]
+            };
 
             const brandData = [
                 { brand: 'Dr. Theiss', ricavi: 116969, share: 80.4, margine: 7.2 },
@@ -197,8 +269,8 @@
                 skuMedio: 68,
                 tassoResi: 0.5
             };
-
-            const topASINs = [
+            
+            const topASINs2025 = [
                 { asin: 'B00VXD970W', nome: 'Arnica Crema Effetto Termico', ricavi: 62168, brand: 'Dr. Theiss' },
                 { asin: 'B08VT6RYFL', nome: 'Mucoplant Kids Tuss', ricavi: 6999, brand: 'Dr. Theiss' },
                 { asin: 'B08D6SW7GR', nome: 'Mucoplant Piantaggine', ricavi: 5226, brand: 'Dr. Theiss' },
@@ -230,9 +302,9 @@
                 brandTableBody.appendChild(row);
             });
 
-            // --- POPOLAMENTO GRIGLIA TOP ASIN ---
-            const topProductsGrid = document.getElementById('topProductsGrid');
-            topASINs.forEach((product, index) => {
+            // --- POPOLAMENTO GRIGLIA TOP ASIN 2025 ---
+            const topProductsGrid2025 = document.getElementById('topProductsGrid2025');
+            topASINs2025.forEach((product, index) => {
                 const card = document.createElement('div');
                 card.className = "border rounded-lg p-4 hover:shadow-md transition-shadow flex flex-col";
                 card.innerHTML = `
@@ -241,120 +313,95 @@
                     <div class="font-mono text-xs text-blue-600 mb-2">${product.asin}</div>
                     <div class="text-xl font-bold text-green-700">€${product.ricavi.toLocaleString()}</div>
                 `;
-                topProductsGrid.appendChild(card);
+                topProductsGrid2025.appendChild(card);
+            });
+
+            // --- AGGREGAZIONE E POPOLAMENTO TOP 5 ASIN 2024 ---
+            const topProducts2024Aggregated = {};
+            Object.values(topProducts2024ByMonth).forEach(monthProducts => {
+                monthProducts.forEach(product => {
+                    topProducts2024Aggregated[product.name] = (topProducts2024Aggregated[product.name] || 0) + product.revenue;
+                });
+            });
+
+            const sortedTopProducts2024 = Object.entries(topProducts2024Aggregated)
+                .map(([name, revenue]) => ({ name, revenue }))
+                .sort((a, b) => b.revenue - a.revenue)
+                .slice(0, 5);
+
+            const topProductsGrid2024 = document.getElementById('topProductsGrid2024');
+            sortedTopProducts2024.forEach((product, index) => {
+                const card = document.createElement('div');
+                card.className = "border rounded-lg p-4 hover:shadow-md transition-shadow flex flex-col";
+                card.innerHTML = `
+                    <div class="text-xs text-gray-500 mb-1"><strong>#${index + 1}</strong></div>
+                    <div class="text-sm font-semibold mb-2 flex-grow">${product.name}</div>
+                    <div class="text-xl font-bold text-green-700">€${product.revenue.toLocaleString('it-IT', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</div>
+                `;
+                topProductsGrid2024.appendChild(card);
             });
 
 
             // --- INIZIALIZZAZIONE GRAFICI E LEGGENDE ---
 
-            // 1. Grafico Andamento Ricavi e Volumi
+            // 1. Grafico Andamento Ricavi e Volumi 2025
             const trendCtx = document.getElementById('trendChart').getContext('2d');
             new Chart(trendCtx, {
                 type: 'bar',
                 data: {
-                    labels: monthlyTrends.map(d => d.month),
+                    labels: monthlyTrends2025.map(d => d.month),
                     datasets: [
-                        {
-                            type: 'bar',
-                            label: 'Ricavi',
-                            data: monthlyTrends.map(d => d.ricavi),
-                            backgroundColor: COLORS[0],
-                            yAxisID: 'yLeft',
-                        },
-                        {
-                            type: 'line',
-                            label: 'Unità',
-                            data: monthlyTrends.map(d => d.unita),
-                            borderColor: COLORS[2],
-                            backgroundColor: 'transparent',
-                            borderWidth: 3,
-                            yAxisID: 'yRight',
-                        }
+                        { type: 'bar', label: 'Ricavi', data: monthlyTrends2025.map(d => d.ricavi), backgroundColor: COLORS[0], yAxisID: 'yLeft' },
+                        { type: 'line', label: 'Unità', data: monthlyTrends2025.map(d => d.unita), borderColor: COLORS[2], backgroundColor: 'transparent', borderWidth: 3, yAxisID: 'yRight' }
                     ]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
+                    responsive: true, maintainAspectRatio: false,
                     scales: {
-                        yLeft: {
-                            type: 'linear',
-                            position: 'left',
-                            beginAtZero: true,
-                            title: { display: true, text: 'Ricavi (€)' },
-                            ticks: { callback: (val) => `€${val / 1000}k` }
-                        },
-                        yRight: {
-                            type: 'linear',
-                            position: 'right',
-                            beginAtZero: true,
-                            title: { display: true, text: 'Unità' },
-                            grid: { drawOnChartArea: false },
-                            ticks: { callback: (val) => `${val / 1000}k` }
-                        }
+                        yLeft: { type: 'linear', position: 'left', beginAtZero: true, title: { display: true, text: 'Ricavi (€)' }, ticks: { callback: (val) => `€${val / 1000}k` } },
+                        yRight: { type: 'linear', position: 'right', beginAtZero: true, title: { display: true, text: 'Unità' }, grid: { drawOnChartArea: false }, ticks: { callback: (val) => `${val / 1000}k` } }
                     },
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    let label = context.dataset.label || '';
-                                    if (label) {
-                                        label += ': ';
-                                    }
-                                    let value = context.parsed.y;
-                                    if (context.dataset.yAxisID === 'yLeft') {
-                                        label += new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(value);
-                                    } else {
-                                        label += new Intl.NumberFormat('it-IT').format(value);
-                                    }
-                                    return label;
-                                }
-                            }
-                        }
-                    }
+                    plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { let l = c.dataset.label || ''; if(l){l+=': '} let v = c.parsed.y; l += c.dataset.yAxisID === 'yLeft' ? new Intl.NumberFormat('it-IT', { style: 'currency', currency: 'EUR' }).format(v) : new Intl.NumberFormat('it-IT').format(v); return l; } } } }
                 }
             });
 
-            // Legenda per Grafico Trend
+            // Legenda per Grafico Trend 2025
             const trendLegend = document.getElementById('trend-legend');
-            monthlyTrends.forEach(item => {
+            monthlyTrends2025.forEach(item => {
                 const legendItem = document.createElement('div');
-                legendItem.innerHTML = `
-                    <strong>${item.month}:</strong> 
-                    <span class="text-blue-600">€${item.ricavi.toLocaleString()}</span> | 
-                    <span class="text-orange-600">${item.unita.toLocaleString()} Unità</span>
-                `;
+                legendItem.innerHTML = `<strong>${item.month}:</strong> <span class="text-blue-600">€${item.ricavi.toLocaleString()}</span> | <span class="text-orange-600">${item.unita.toLocaleString()} Unità</span>`;
                 trendLegend.appendChild(legendItem);
             });
+
+            // 2. Grafico Confronto Anno su Anno
+            const yoyCtx = document.getElementById('yoyChart').getContext('2d');
+            new Chart(yoyCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Gen', 'Feb', 'Mar', 'Apr', 'Mag'],
+                    datasets: [
+                        { label: 'Fatturato 2024', data: monthlyTrends2024.map(d => d.ricavi), backgroundColor: 'rgba(54, 162, 235, 0.5)', borderColor: 'rgb(54, 162, 235)', borderWidth: 1 },
+                        { label: 'Fatturato 2025', data: monthlyTrends2025.map(d => d.ricavi), backgroundColor: 'rgba(255, 99, 132, 0.5)', borderColor: 'rgb(255, 99, 132)', borderWidth: 1 }
+                    ]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, ticks: { callback: (val) => `€${val/1000}k` } } },
+                    plugins: { legend: { position: 'top' } }
+                }
+            });
             
-            // 2. Grafico Ripartizione Ricavi per Brand
+            // 3. Grafico Ripartizione Ricavi per Brand
             const pieCtx = document.getElementById('brandPieChart').getContext('2d');
             new Chart(pieCtx, {
                 type: 'pie',
                 data: {
                     labels: brandData.map(d => d.brand),
-                    datasets: [{
-                        data: brandData.map(d => d.ricavi),
-                        backgroundColor: COLORS,
-                    }]
+                    datasets: [{ data: brandData.map(d => d.ricavi), backgroundColor: COLORS }]
                 },
                 options: {
-                    responsive: true,
-                    maintainAspectRatio: false,
-                    plugins: {
-                        legend: { display: false },
-                        tooltip: {
-                            callbacks: {
-                                label: function(context) {
-                                    const label = context.label || '';
-                                    const value = context.parsed;
-                                    const sum = context.chart.data.datasets[0].data.reduce((a, b) => a + b, 0);
-                                    const percentage = ((value / sum) * 100).toFixed(1) + '%';
-                                    return `${label}: ${percentage}`;
-                                }
-                            }
-                        }
-                    }
+                    responsive: true, maintainAspectRatio: false,
+                    plugins: { legend: { display: false }, tooltip: { callbacks: { label: function(c) { const l = c.label||''; const v = c.parsed; const s = c.chart.data.datasets[0].data.reduce((a,b)=>a+b,0); const p = ((v/s)*100).toFixed(1)+'%'; return `${l}: ${p}`; } } } }
                 }
             });
 
@@ -363,11 +410,7 @@
             brandData.forEach((item, index) => {
                 const legendItem = document.createElement('div');
                 legendItem.className = 'flex items-center';
-                legendItem.innerHTML = `
-                    <span class="h-3 w-3 mr-2" style="background-color: ${COLORS[index % COLORS.length]}"></span>
-                    <strong>${item.brand}:</strong>
-                    <span class="ml-auto">${item.share}% (€${item.ricavi.toLocaleString()})</span>
-                `;
+                legendItem.innerHTML = `<span class="h-3 w-3 mr-2" style="background-color: ${COLORS[index % COLORS.length]}"></span><strong>${item.brand}:</strong><span class="ml-auto">${item.share}% (€${item.ricavi.toLocaleString()})</span>`;
                 pieLegend.appendChild(legendItem);
             });
         });
