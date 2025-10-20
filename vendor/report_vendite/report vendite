@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Vendite Naturwaren - Settembre 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-gray-700">
+
+    <div class="p-4 md:p-8 min-h-screen font-sans">
+        <div class="max-w-7xl mx-auto">
+            
+            <!-- Header -->
+            <header class="bg-white rounded-lg shadow-lg p-6 mb-12 text-center">
+                <img src="https://mela.services/wp-content/uploads/2020/05/logo-mela-x2.png" alt="Logo Mela" class="h-12 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/200x50/ffffff/333333?text=Logo+Mela';">
+                <h1 class="text-3xl md:text-4xl font-bold text-gray-800 mb-2">Amazon Vendor - Report Vendite</h1>
+                <p class="text-base md:text-lg text-gray-600">Naturwaren | Analisi Performance Vendor - Settembre 2025</p>
+            </header>
+
+            <!-- Performance Comparison Table -->
+            <section class="mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Confronto Performance: Settembre 2024 vs 2025</h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm md:text-base text-center">
+                            <thead>
+                                <tr class="border-b-2 border-slate-200">
+                                    <th class="py-2 px-4 font-semibold text-left">METRICA</th>
+                                    <th class="py-2 px-4 font-semibold">Settembre 2024</th>
+                                    <th class="py-2 px-4 font-semibold">Settembre 2025</th>
+                                    <th class="py-2 px-4 font-semibold">VARIAZIONE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 text-left">COGS Spedizioni</td>
+                                    <td class="py-3 px-4">€50.220</td>
+                                    <td class="py-3 px-4">€47.722</td>
+                                    <td class="py-3 px-4 font-bold text-red-500">-5,0%</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 text-left">Unità vendute</td>
+                                    <td class="py-3 px-4">9.507</td>
+                                    <td class="py-3 px-4">8.666</td>
+                                    <td class="py-3 px-4 font-bold text-red-500">-8,8%</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 text-left">COGS medio/unità</td>
+                                    <td class="py-3 px-4">€5,28</td>
+                                    <td class="py-3 px-4">€5,51</td>
+                                    <td class="py-3 px-4 font-bold text-green-500">+4,2%</td>
+                                </tr>
+                                 <tr>
+                                    <td class="py-3 px-4 text-left">SKU Attive</td>
+                                    <td class="py-3 px-4">78</td>
+                                    <td class="py-3 px-4">71</td>
+                                    <td class="py-3 px-4 font-bold text-gray-500">-7 SKU</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Monthly Summary -->
+            <section class="mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">📊 Riepilogo Performance - Settembre 2025</h2>
+                     <div class="bg-slate-100 p-4 rounded-lg">
+                        <h4 class="font-bold text-slate-800 mb-2">🎯 Insight del Mese:</h4>
+                        <ul class="list-disc list-inside text-sm text-gray-700 space-y-1">
+                            <li><strong>Razionalizzazione strategica del portfolio:</strong> Il calo dei COGS (-5,0%), legato alla riduzione di 7 SKU (-9%), non è un dato negativo ma riflette una precisa strategia di ottimizzazione. Con il nuovo focus sui prodotti ad alta performance, prevediamo un aumento delle vendite nei prossimi mesi.</li>
+                            <li><strong>Focus sulla marginalità:</strong> L'aumento del COGS medio per unità (+4,2% a €5,51) è il risultato di una strategia mirata non solo all'incremento del fatturato, ma soprattutto a una maggiore marginalità, favorendo la vendita di prodotti a più alto valore.</li>
+                            <li><strong>Miglioramento operativo:</strong> Il tasso di resi è diminuito da 0,7% a 0,6% (-25,7% in valore assoluto), indicando una migliore qualità percepita e customer satisfaction.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+
+            <!-- Top Products Comparison -->
+            <section class="mb-12">
+                 <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-800">🏆 Analisi Top 5 Seller (Settembre 2025)</h2>
+                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <!-- Prodotto 1 -->
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
+                        <h3 class="text-lg font-bold text-slate-700 mb-4">#1 Dr. Theiss Arnica Crema</h3>
+                        <div class="text-sm space-y-1 flex-grow">
+                            <p><strong>COGS 2024:</strong> €8.880</p>
+                            <p><strong>COGS 2025:</strong> €13.057</p>
+                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span class="font-bold text-green-500">+47,0%</span></p>
+                        </div>
+                        <p class="text-xs italic text-gray-500 mt-3">Insight: 2.473 unità - €5,28/unità. Crescita straordinaria, diventa il leader indiscusso del mese. Ha superato il precedente #1 (Burro Piedi) grazie a volumi eccezionali e mantiene un COGS/unità competitivo.</p>
+                    </div>
+
+                    <!-- Prodotto 2 -->
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
+                        <h3 class="text-lg font-bold text-slate-700 mb-4">#2 Allga San Burro Piedi</h3>
+                        <div class="text-sm space-y-1 flex-grow">
+                            <p><strong>COGS 2024:</strong> €10.954</p>
+                            <p><strong>COGS 2025:</strong> €12.971</p>
+                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span class="font-bold text-green-500">+18,4%</span></p>
+                        </div>
+                        <p class="text-xs italic text-gray-500 mt-3">Insight: 2.033 unità - €6,38/unità. Si conferma un pilastro fondamentale con il COGS unitario più alto della top 5. L'alto valore riconosciuto da Amazon lo rende ideale per investimenti ADV mirati.</p>
+                    </div>
+
+                    <!-- Prodotto 3 -->
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
+                        <h3 class="text-lg font-bold text-slate-700 mb-4">#3 Allga San Sali Pediluvio</h3>
+                         <div class="text-sm space-y-1 flex-grow">
+                             <p><strong>COGS 2024:</strong> €2.878</p>
+                             <p><strong>COGS 2025:</strong> €3.328</p>
+                             <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span class="font-bold text-green-500">+15,6%</span></p>
+                        </div>
+                        <p class="text-xs italic text-gray-500 mt-3">Insight: 622 unità - €5,35/unità. Crescita solida che rafforza il dominio di Allga San nella categoria cura piedi. La linea piedi (Burro + Sali) genera insieme €16.3K.</p>
+                    </div>
+                    
+                    <!-- Prodotto 4 -->
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
+                        <h3 class="text-lg font-bold text-slate-700 mb-4">#4 Dr. Theiss Dormitum</h3>
+                         <div class="text-sm space-y-1 flex-grow">
+                            <p><strong>COGS 2024:</strong> €6</p>
+                            <p><strong>COGS 2025:</strong> €1.850</p>
+                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span class="font-bold text-blue-500">Nuovo Ingresso</span></p>
+                        </div>
+                        <p class="text-xs italic text-gray-500 mt-3">Insight: 376 unità - €4,92/unità. Entra di prepotenza in Top 5, un nuovo motore di crescita nel segmento benessere/sonno. Da monitorare attentamente per capitalizzare sul momentum.</p>
+                    </div>
+
+                    <!-- Prodotto 5 -->
+                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
+                        <h3 class="text-lg font-bold text-slate-700 mb-4">#5 Dr. Theiss Vitamina D3 K2</h3>
+                         <div class="text-sm space-y-1 flex-grow">
+                            <p><strong>COGS 2024:</strong> €687</p>
+                            <p><strong>COGS 2025:</strong> €1.103</p>
+                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span class="font-bold text-green-500">+60,7%</span></p>
+                        </div>
+                        <p class="text-xs italic text-gray-500 mt-3">Insight: 185 unità - €5,96/unità. Crescita percentuale eccezionale con alto COGS unitario. Rappresenta la diversificazione verso il segmento integratori premium.</p>
+                    </div>
+
+                 </div>
+            </section>
+
+            <!-- Detailed Analysis & Opportunities -->
+            <section class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-800">🔍 Analisi e Opportunità</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Segnali Positivi -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-green-600 mb-4">Punti di Forza 🟢</h3>
+                        <ul class="space-y-3 text-sm list-disc list-inside">
+                            <li><strong>Leader in forte crescita:</strong> Arnica (+47%) e Burro Piedi (+18,4%) guidano le vendite con €26K.</li>
+                            <li><strong>Più valore per unità:</strong> Il COGS/unità cresce del +4,2%.</li>
+                            <li><strong>Nuovi prodotti emergenti:</strong> Dormitum e Vitamina D3 K2 entrano in Top 5, diversificando il portfolio.</li>
+                        </ul>
+                    </div>
+                    <!-- Punti di Attenzione -->
+                    <div class="bg-white p-6 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-bold text-yellow-600 mb-4">Opportunità 💡</h3>
+                        <ul class="space-y-3 text-sm list-disc list-inside">
+                             <li><strong>Calo volumi gestibile:</strong> Il calo delle unità (-8,8%) non è un dato allarmante, specialmente considerando il contestuale aumento del prezzo medio di vendita.</li>
+                             <li><strong>Gap nel mid-tail:</strong> Il calo dei volumi (-8,8%) superiore al calo SKU (-9%) suggerisce che i prodotti "mid-tail" stanno performando sotto potenziale. Serve analisi per identificare prodotti con alto potenziale bloccato.</li>
+                             <li><strong>Leva sul valore unitario:</strong> L'aumento del COGS/unità (+4,2%) crea un margine che ci permette di implementare scontistiche mirate per incentivare i volumi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Next Steps -->
+            <section id="next-steps" class="mb-12">
+                <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">➡️ Piano d'Azione Strategico</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                             <h3 class="text-xl font-bold text-slate-800 mb-4">Azioni a Breve Termine (Q4 2025)</h3>
+                            <ul class="list-disc list-inside space-y-4">
+                                <li><strong>Campagne Brand & Remarketing:</strong> Lanciare campagne ADV mirate per recuperare i carrelli abbandonati e attrarre nuovi clienti, aree attualmente in calo, per stimolare un'inversione di tendenza sulle vendite.</li>
+                                <li><strong>Capitalizzare su Mucoplant:</strong> Continuare a investire sulla campagna di Mucoplant, che sta generando un ottimo ROAS (ritorno sulla spesa pubblicitaria) superiore a 8, per massimizzarne il potenziale.</li>
+                            </ul>
+                        </div>
+                        <div>
+                             <h3 class="text-xl font-bold text-slate-800 mb-4">Analisi e Sviluppo (Continuo)</h3>
+                            <ul class="list-disc list-inside space-y-4">
+                                <li><strong>Analisi del Consuntivo:</strong> Avviare un'analisi approfondita sui dati storici per mappare i prodotti in calo e identificare le cause (stagionalità, concorrenza, etc.).</li>
+                                <li><strong>Identificare Nuove Opportunità:</strong> Parallelamente, l'analisi identificherà i nuovi prodotti performanti e le tendenze emergenti, fornendo un quadro completo per guidare le future decisioni di investimento.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+             <!-- Executive Conclusions -->
+            <section id="conclusions" class="mb-12">
+                <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">📈 Prospettive Future</h2>
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <p class="text-base text-gray-700 leading-relaxed">
+                        La strategia si sposta ora da una fase di ottimizzazione a una di <strong>crescita proattiva</strong>. L'obiettivo è chiaro: invertire il calo delle vendite attraverso un duplice approccio. Da un lato, azioni tattiche e immediate come le campagne di remarketing e il potenziamento di prodotti vincenti come Mucoplant. Dall'altro, un'analisi dati continua e approfondita per prendere decisioni di investimento più intelligenti e mirate a lungo termine. Questo approccio bilanciato ci permetterà di costruire una crescita solida e sostenibile per i prossimi trimestri.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Footer with Home Link -->
+            <footer class="text-center mt-16 py-8 border-t">
+                <a href="https://melaservices.github.io/Naturwaren/index.html" class="text-teal-600 hover:text-teal-800 font-semibold text-lg">&larr; Torna alla Home</a>
+            </footer>
+
+        </div>
+    </div>
+
+</body>
+</html>
+
