@@ -19,6 +19,46 @@
             text-align: center;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
+        .clickable-img {
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .clickable-img:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.85);
+            backdrop-filter: blur(4px);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 85%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
@@ -39,7 +79,7 @@
                  <p class="text-center text-gray-600 mb-6 text-sm max-w-3xl mx-auto">
                     Nel mese di settembre sono state attive tre campagne Sponsored Products, con una spesa complessiva di <strong>218,12 €</strong> e vendite totali pari a <strong>122,94 €</strong> per un ROAS medio di <strong>0,56</strong>. Due campagne risultano attualmente attive, mentre una è in pausa.
                 </p>
-                <img src="https://mela.services/wp-content/uploads/2025/10/Screenshot-2025-10-20-alle-16.24.45.png" alt="Panoramica campagne Seller di Settembre" class="w-full h-auto rounded-lg shadow-md mx-auto mb-6">
+                <img src="https://mela.services/wp-content/uploads/2025/10/Screenshot-2025-10-20-alle-16.24.45.png" alt="Panoramica campagne Seller di Settembre" class="w-full h-auto rounded-lg shadow-md mx-auto mb-6 clickable-img">
                  <!-- Summary Table -->
                 <div class="overflow-x-auto mt-8">
                     <table class="w-full text-sm text-left text-gray-500">
@@ -98,7 +138,7 @@
                             <p class="text-sm text-gray-600 mb-2"><strong>Prodotti coinvolti:</strong> inizialmente due SKU, di cui uno (600570) ora spento perché non riusciva a spendere, ma in famiglia con l’altro (600569).</p>
                             <p class="text-sm text-gray-600"><strong>Prossimi step:</strong> verranno aggiunti due nuovi prodotti (600572 e 600571) per ampliare la famiglia e migliorare la distribuzione del budget. La campagna rimarrà attiva e monitorata per verificare l’andamento delle performance complessive.</p>
                         </div>
-                        <img src="https://mela.services/wp-content/uploads/2025/10/Screenshot-2025-10-20-alle-16.28.19-scaled.png" alt="Dettaglio Campagna Kit Detersione" class="rounded-lg shadow-md">
+                        <img src="https://mela.services/wp-content/uploads/2025/10/Screenshot-2025-10-20-alle-16.28.19-scaled.png" alt="Dettaglio Campagna Kit Detersione" class="rounded-lg shadow-md clickable-img">
                     </div>
                 </div>
 
@@ -111,7 +151,7 @@
                              <p class="text-sm text-gray-600 mb-2">Ora che alcuni prodotti tornano disponibili (famiglia ArniPatch), la campagna sarà ottimizzata concentrando il budget sui prodotti più performanti e con disponibilità attiva.</p>
                             <p class="text-sm text-gray-600"><strong>Prossimi step:</strong> valutare l’attivazione progressiva dei prodotti rientrati a stock e ribilanciare l’offerta per migliorare il ROAS.</p>
                         </div>
-                        <img src="https://mela.services/wp-content/uploads/2025/10/Screenshot-2025-10-20-alle-16.27.54.png" alt="Dettaglio Campagna Arnica" class="rounded-lg shadow-md">
+                        <img src="https://mela.services/wp-content/uploads/2025/10/Screenshot-2025-10-20-alle-16.27.54.png" alt="Dettaglio Campagna Arnica" class="rounded-lg shadow-md clickable-img">
                     </div>
                 </div>
 
@@ -142,6 +182,41 @@
 
         </div>
     </div>
+
+    <!-- The Modal -->
+    <div id="imageModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImage">
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("modalImage");
+        var images = document.getElementsByClassName('clickable-img');
+
+        for (let i = 0; i < images.length; i++) {
+            images[i].onclick = function(){
+                modal.style.display = "flex";
+                modalImg.src = this.src;
+            }
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+        // Also close the modal if the user clicks anywhere on the background
+        modal.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
 
 </body>
 </html>
