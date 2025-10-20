@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Vendite Naturwaren - Settembre 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -43,9 +44,9 @@
                             <tbody>
                                 <tr class="border-b border-slate-100">
                                     <td class="py-3 px-4 text-left">COGS Spedizioni</td>
-                                    <td class="py-3 px-4">€50.220</td>
+                                    <td class="py-3 px-4">€48.648</td>
                                     <td class="py-3 px-4">€47.722</td>
-                                    <td class="py-3 px-4 font-bold text-red-500">-5,0%</td>
+                                    <td class="py-3 px-4 font-bold text-red-500">-1,9%</td>
                                 </tr>
                                 <tr class="border-b border-slate-100">
                                     <td class="py-3 px-4 text-left">Unità vendute</td>
@@ -55,9 +56,9 @@
                                 </tr>
                                 <tr class="border-b border-slate-100">
                                     <td class="py-3 px-4 text-left">COGS medio/unità</td>
-                                    <td class="py-3 px-4">€5,28</td>
+                                    <td class="py-3 px-4">€5,12</td>
                                     <td class="py-3 px-4">€5,51</td>
-                                    <td class="py-3 px-4 font-bold text-green-500">+4,2%</td>
+                                    <td class="py-3 px-4 font-bold text-green-500">+7,6%</td>
                                 </tr>
                                  <tr>
                                     <td class="py-3 px-4 text-left">SKU Attive</td>
@@ -67,6 +68,16 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Annual Sales Chart -->
+            <section class="mb-12">
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">📈 Andamento Annuale Vendite (YoY)</h2>
+                    <div class="h-96">
+                        <canvas id="annualSalesChart"></canvas>
                     </div>
                 </div>
             </section>
@@ -215,6 +226,70 @@
 
         </div>
     </div>
+
+    <script>
+        const ctx = document.getElementById('annualSalesChart');
+        const labels = ['Gen', 'Feb', 'Mar', 'Apr', 'Mag', 'Giu', 'Lug', 'Ago', 'Set', 'Ott', 'Nov', 'Dic'];
+        const data2024 = [68509.59, 51072.36, 44500.11, 48118.73, 38792.93, 39986.78, 62643.52, 44506.06, 48647.69, 56254.82, 57909.78, 54040.85];
+        const data2025 = [46618.34, 44731.09, 51627.47, 43976.43, 45712.98, 40546.89, 49925.90, 48166.97, 47722.34, null, null, null];
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Sell Out 2024 (€)',
+                    data: data2024,
+                    borderColor: 'rgb(100, 116, 139)',
+                    backgroundColor: 'rgba(100, 116, 139, 0.1)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    fill: false
+                }, {
+                    label: 'Sell Out 2025 (€)',
+                    data: data2025,
+                    borderColor: 'rgb(20, 184, 166)',
+                    backgroundColor: 'rgba(20, 184, 166, 0.1)',
+                    borderWidth: 3,
+                    tension: 0.3,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function(value, index, values) {
+                                return '€' + value.toLocaleString('it-IT');
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                let label = context.dataset.label || '';
+                                if (label) {
+                                    label += ': ';
+                                }
+                                if (context.parsed.y !== null) {
+                                    label += '€' + context.parsed.y.toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                                }
+                                return label;
+                            }
+                        }
+                    },
+                    legend: {
+                        position: 'top',
+                    }
+                }
+            }
+        });
+    </script>
 
 </body>
 </html>
