@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infografica Progetto Naturwaren | Gennaio - Agosto 2025</title>
+    <title>Infografica Progetto Naturwaren | Gennaio - Settembre 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -36,7 +36,7 @@
         <header class="text-center mb-16">
             <img src="https://mela.services/wp-content/uploads/2020/05/logo-mela-x2.png" alt="Logo Mela" class="h-12 mx-auto mb-4" onerror="this.onerror=null; this.src='https://placehold.co/200x50/ffffff/333333?text=Logo+Mela';">
             <h1 class="text-4xl md:text-5xl font-bold text-slate-800">Progetto Naturwaren su Amazon</h1>
-            <p class="text-xl text-teal-600 mt-2">Rapporto di Avanzamento: Gennaio – Agosto 2025</p>
+            <p class="text-xl text-teal-600 mt-2">Rapporto di Avanzamento: Gennaio – Settembre 2025</p>
         </header>
         
         <!-- Strategic Vision -->
@@ -59,134 +59,173 @@
             </div>
         </section>
 
+        <!-- Reports Links -->
+        <section id="reports" class="mb-16">
+             <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg">
+                <button onclick="toggleReports()" class="w-full text-left p-8 flex justify-between items-center transition-colors bg-teal-50 hover:bg-teal-100 rounded-t-lg border-b border-teal-200">
+                    <h2 class="text-3xl font-bold text-slate-800">🔍 Archivio Report</h2>
+                    <span id="toggleIcon" class="text-4xl font-extrabold text-teal-500 transform transition-transform">+</span>
+                </button>
+                <div id="reportsContainer" class="px-8 overflow-hidden" style="max-height: 0; transition: max-height 0.5s ease-out;">
+                    <div class="space-y-8 pb-8 pt-8">
+                        <!-- Settembre 2025 -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Settembre 2025</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                               <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_09.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
+                                    <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
+                                </a>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
+                                    <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Agosto 2025 -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Agosto 2025</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                               <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_08.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
+                                    <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
+                                </a>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
+                                    <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
+                                </a>
+                            </div>
+                        </div>
+                         <!-- Luglio 2025 -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Luglio 2025</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_07.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
+                                    <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
+                                </a>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
+                                    <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Giugno 2025 -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Giugno 2025</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_06.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
+                                    <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
+                                </a>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
+                                    <p class="text-sm text-gray-500">Non ancora disponibile.</p>
+                                </div>
+                                <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
+                                    <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
+                                </a>
+                            </div>
+                        </div>
+                         <!-- Gennaio - Maggio 2025 -->
+                        <div>
+                            <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Gennaio - Maggio 2025</h3>
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                <a href="vendor/report_vendite/vendite_vendor_2025_01_05.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
+                                    <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
+                                </a>
+                                <a href="vendor/report_adv/adv_vendor_2025_01_05.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
+                                    <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
+                                </a>
+                                 <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
+                                    <p class="text-sm text-gray-500">Disponibile dopo il primo mese di vendite.</p>
+                                </div>
+                                <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
+                                    <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
+                                    <p class="text-sm text-gray-500">Disponibile dopo il primo mese di vendite.</p>
+                                </div>
+                                 <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
+                                    <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
+                                    <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Timeline -->
         <section id="timeline" class="mb-16">
             <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">🗺️ La Nostra Roadmap: Traguardi Raggiunti</h2>
             <div class="relative max-w-3xl mx-auto border-l-4 border-teal-300 pl-12 py-4">
                 <div class="mb-12 pl-8 relative timeline-item">
                     <h3 class="text-xl font-semibold text-teal-700">Gennaio - Febbraio 2025</h3>
-                    <p class="text-gray-600 mt-1">Fase di avvio con analisi di mercato approfondita, definizione della strategia e kickoff ufficiale del progetto per allineare gli obiettivi.</p>
+                    <p class="text-gray-600 mt-1">Fase di avvio con analisi di mercato, definizione della strategia omnicanale e kickoff ufficiale del progetto.</p>
                 </div>
                 <div class="mb-12 pl-8 relative timeline-item">
                     <h3 class="text-xl font-semibold text-teal-700">Marzo - Aprile 2025</h3>
-                    <p class="text-gray-600 mt-1">Apertura e verifica dell'account Seller. Definizione dei prodotti di lancio, logistica FBA e avvio dell'ottimizzazione delle schede prodotto.</p>
+                    <p class="text-gray-600 mt-1">Apertura e verifica dell'account Seller. Definizione dei primi bundle, set-up logistica FBA e ottimizzazione schede prodotto.</p>
                 </div>
                 <div class="mb-12 pl-8 relative timeline-item">
                     <h3 class="text-xl font-semibold text-teal-700">Maggio - Giugno 2025</h3>
-                    <p class="text-gray-600 mt-1">Lancio delle prime campagne ADV sul canale Vendor, preparazione della spedizione FBA e definizione degli ultimi dettagli per il go-live del canale Seller.</p>
+                    <p class="text-gray-600 mt-1">Lancio delle prime campagne ADV sul canale Vendor e preparazione della spedizione FBA inaugurale per il canale Seller.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Reports Links -->
-        <section id="reports" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">🔍 Archivio Report</h2>
-            <div class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
-                <div class="space-y-8">
-                    <!-- Gennaio - Maggio 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Gennaio - Maggio 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="vendor/report_vendite/vendite_vendor_2025_01_05.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
-                            </a>
-                            <a href="vendor/report_adv/adv_vendor_2025_01_05.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                             <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
-                                <p class="text-sm text-gray-500">Disponibile dopo il primo mese di vendite.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-500">Disponibile dopo il primo mese di vendite.</p>
-                            </div>
-                             <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Giugno 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Giugno 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_06.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
-                            </a>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Luglio 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Luglio 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_07.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
-                            </a>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Agosto 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Agosto 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                           <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_08.html" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.</p>
-                            </a>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer" class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
+                <div class="mb-12 pl-8 relative timeline-item">
+                    <h3 class="text-xl font-semibold text-teal-700">Luglio - Agosto 2025</h3>
+                    <p class="text-gray-600 mt-1">Go-live del canale Seller con i primi bundle. Attivazione del programma Amazon Vine per la raccolta recensioni e potenziamento campagne ADV.</p>
+                </div>
+                 <div class="mb-12 pl-8 relative timeline-item">
+                    <h3 class="text-xl font-semibold text-teal-700">Settembre 2025</h3>
+                    <p class="text-gray-600 mt-1">Prima analisi dei dati di vendita aggregati. Definizione della strategia di remarketing e pianificazione delle attività promozionali per il Q4.</p>
                 </div>
             </div>
         </section>
@@ -221,29 +260,29 @@
                     <li class="flex items-start">
                         <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">1</div>
                         <div>
-                            <h3 class="text-xl font-semibold text-slate-700">Lancio e Monitoraggio (Giugno)</h3>
-                            <p class="text-gray-600 mt-1">Attivazione delle vendite Seller e analisi in tempo reale dei dati per ottimizzare la strategia di lancio e ottimizzazione su una rosa di prodotti su Vendor (TBD).</p>
+                            <h3 class="text-xl font-semibold text-slate-700">Potenziamento Pubblicitario (Q4)</h3>
+                            <p class="text-gray-600 mt-1">Lancio di campagne coupon sui nuovi bundle e preparazione di offerte dedicate per gli eventi chiave del Q4 (Black Friday, Natale).</p>
                         </div>
                     </li>
                     <li class="flex items-start">
                         <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">2</div>
                         <div>
-                            <h3 class="text-xl font-semibold text-slate-700">Potenziamento Pubblicitario (Luglio)</h3>
-                            <p class="text-gray-600 mt-1">Lancio di campagne coupon sui nuovi bundle e preparazione di offerte dedicate per l'evento Amazon Prime Day (TBD).</p>
+                            <h3 class="text-xl font-semibold text-slate-700">Restyling Brand Presence (Q4)</h3>
+                            <p class="text-gray-600 mt-1">Restyling completo del Brand Store per migliorare l'esperienza utente e la narrazione del marchio.</p>
                         </div>
                     </li>
                     <li class="flex items-start">
                         <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">3</div>
                         <div>
-                            <h3 class="text-xl font-semibold text-slate-700">Raccolta Recensioni e Ottimizzazione (Luglio-Agosto)</h3>
-                            <p class="text-gray-600 mt-1">Attivazione del programma Amazon Vine e restyling completo del Brand Store per migliorare l'esperienza utente.</p>
+                            <h3 class="text-xl font-semibold text-slate-700">Espansione Catalogo Seller (Continuo)</h3>
+                            <p class="text-gray-600 mt-1">Aggiunta progressiva di nuovi bundle strategici basati sull'analisi dei dati di vendita e delle richieste dei clienti.</p>
                         </div>
                     </li>
-                    <li class="flex items-start">
+                     <li class="flex items-start">
                         <div class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">4</div>
                         <div>
-                            <h3 class="text-xl font-semibold text-slate-700">Espansione Futura (Q4 2025)</h3>
-                            <p class="text-gray-600 mt-1">Aggiunta progressiva di nuovi bundle e valutazione del lancio su altri marketplace europei (DE, FR, ES).</p>
+                            <h3 class="text-xl font-semibold text-slate-700">Espansione Internazionale (2026)</h3>
+                            <p class="text-gray-600 mt-1">Valutazione del lancio su altri marketplace europei (DE, FR, ES) sulla base dei risultati consolidati in Italia.</p>
                         </div>
                     </li>
                 </ol>
@@ -256,6 +295,20 @@
             <p class="text-gray-600">Team Mela Services</p>
         </footer>
     </div>
+
+<script>
+    function toggleReports() {
+        const container = document.getElementById('reportsContainer');
+        const icon = document.getElementById('toggleIcon');
+        if (container.style.maxHeight === '0px' || container.style.maxHeight === '') {
+            container.style.maxHeight = container.scrollHeight + "px";
+            icon.classList.add('rotate-45');
+        } else {
+            container.style.maxHeight = '0px';
+            icon.classList.remove('rotate-45');
+        }
+    }
+</script>
 
 </body>
 </html>
