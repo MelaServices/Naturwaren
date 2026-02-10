@@ -21,51 +21,6 @@
             text-align: center;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
-
-        .clickable-img {
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-
-        .clickable-img:hover {
-            transform: scale(1.02);
-            opacity: 0.9;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.85);
-            backdrop-filter: blur(4px);
-        }
-
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 85%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #f1f1f1;
-            font-size: 40px;
-            font-weight: bold;
-            transition: 0.3s;
-            cursor: pointer;
-        }
     </style>
 </head>
 
@@ -87,91 +42,261 @@
             <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg mb-8">
                 <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">📊 Panoramica Generale</h2>
                 <p class="text-center text-gray-600 mb-6 text-sm max-w-3xl mx-auto">
-                    Dati di Gennaio in elaborazione.
+                    Nel mese di gennaio è stata attiva principalmente la campagna
+                    <strong>SP_MANU_Mucoplant_Bundle</strong>
+                    lanciata il 12 gennaio. Nonostante il ROAS apparentemente modesto di <strong>1,45</strong>, questa
+                    campagna ha avuto un impatto strategico significativo: ha contribuito a portare il prodotto Bundle
+                    Mucoplant a vendere <strong>oltre 20 unità</strong>, dimostrando l'efficacia del targeting manuale
+                    per il lancio di nuovi prodotti. La spesa totale di <strong>€102,03</strong> ha generato vendite
+                    per <strong>€147,51</strong> con <strong>9 ordini</strong> totali.
                 </p>
+                <img src="https://ik.imagekit.io/Mela/Naturwaren/gennaio%20seller%20adv.png"
+                    alt="Panoramica campagne Seller di Gennaio" class="w-full h-auto rounded-lg shadow-md mx-auto mb-6">
 
-                <div class="bg-gray-100 rounded-lg p-8 text-center mb-6">
-                    <p class="text-gray-500 italic">Grafico performance in elaborazione</p>
+                <!-- Key Metrics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
+                    <div class="stat-card border-t-4 border-red-400">
+                        <p class="text-gray-500 text-sm font-medium uppercase">Spesa Totale</p>
+                        <p class="text-3xl font-bold text-gray-800 mt-1">€102,03</p>
+                    </div>
+                    <div class="stat-card border-t-4 border-green-400">
+                        <p class="text-gray-500 text-sm font-medium uppercase">Vendite</p>
+                        <p class="text-3xl font-bold text-gray-800 mt-1">€147,51</p>
+                    </div>
+                    <div class="stat-card border-t-4 border-teal-400">
+                        <p class="text-gray-500 text-sm font-medium uppercase">ROAS</p>
+                        <p class="text-3xl font-bold text-teal-600 mt-1">1,45</p>
+                    </div>
+                    <div class="stat-card border-t-4 border-blue-400">
+                        <p class="text-gray-500 text-sm font-medium uppercase">Ordini</p>
+                        <p class="text-3xl font-bold text-gray-800 mt-1">9</p>
+                    </div>
                 </div>
 
-                <!-- Summary Table -->
-                <div class="overflow-x-auto mt-8">
-                    <table class="w-full text-sm text-left text-gray-500">
-                        <thead class="text-xs text-gray-700 uppercase bg-gray-100">
-                            <tr>
-                                <th scope="col" class="px-6 py-3 rounded-l-lg">Campagna</th>
-                                <th scope="col" class="px-6 py-3">Stato</th>
-                                <th scope="col" class="px-6 py-3">Spesa (€)</th>
-                                <th scope="col" class="px-6 py-3">Vendite (€)</th>
-                                <th scope="col" class="px-6 py-3 rounded-r-lg">ROAS</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr class="bg-white border-b">
-                                <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap">Totale
-                                </th>
-                                <td class="px-6 py-4">
-                                </td>
-                                <td class="px-6 py-4">---,--</td>
-                                <td class="px-6 py-4">---,--</td>
-                                <td class="px-6 py-4 font-bold">-,--</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                <!-- Campaign Details -->
+                <div
+                    class="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-lg border-l-4 border-green-500 mb-6">
+                    <h3 class="text-lg font-bold text-gray-800 mb-3">🏆 Campagna Principale: Mucoplant Bundle</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase">Spesa</p>
+                            <p class="text-2xl font-bold text-gray-800">€102,03</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase">Vendite</p>
+                            <p class="text-2xl font-bold text-green-600">€147,51</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase">ROAS</p>
+                            <p class="text-2xl font-bold text-teal-600">1,45</p>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-600 uppercase">Ordini</p>
+                            <p class="text-2xl font-bold text-gray-800">9</p>
+                        </div>
+                    </div>
+                    <div class="bg-green-100 p-4 rounded-lg">
+                        <p class="text-sm text-green-800 leading-relaxed">
+                            <strong>Impatto Strategico:</strong> Questa campagna ha avuto un ruolo chiave nel lancio del
+                            Bundle Mucoplant, contribuendo a generare oltre 20 unità vendute totali. Il targeting
+                            manuale
+                            ha permesso di raggiungere clienti interessati a soluzioni complete per problemi
+                            respiratori,
+                            posizionando efficacemente il nuovo prodotto bundle sul mercato.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analysis Section -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <!-- Punti di Forza -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-bold text-green-600 mb-4 flex items-center">
+                        <span class="mr-2">✅</span> Punti di Forza
+                    </h3>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 mt-1">●</span>
+                            <span><strong>Lancio prodotto efficace:</strong> Bundle Mucoplant ha raggiunto 20+ unità
+                                vendute grazie alla campagna</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 mt-1">●</span>
+                            <span><strong>ROAS positivo:</strong> 1,45 indica profittabilità della campagna</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 mt-1">●</span>
+                            <span><strong>Targeting manuale efficace:</strong> 9 ordini dimostrano buona
+                                conversione</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 mt-1">●</span>
+                            <span><strong>CPC contenuto:</strong> €0,52 per clic è molto competitivo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-green-500 mr-2 mt-1">●</span>
+                            <span><strong>Valore strategico:</strong> Campagna ha costruito visibilità per nuovo
+                                prodotto</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Aree di Miglioramento -->
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h3 class="text-lg font-bold text-amber-600 mb-4 flex items-center">
+                        <span class="mr-2">⚠️</span> Aree di Miglioramento
+                    </h3>
+                    <ul class="space-y-3 text-sm text-gray-700">
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2 mt-1">●</span>
+                            <span><strong>ROAS da ottimizzare:</strong> 1,45 è profittevole ma sotto il target ideale
+                                di 2,0+</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2 mt-1">●</span>
+                            <span><strong>Portfolio limitato:</strong> Solo una campagna attiva, manca
+                                diversificazione</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2 mt-1">●</span>
+                            <span><strong>Volume contenuto:</strong> 9 ordini sono pochi, opportunità di
+                                crescita</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-amber-500 mr-2 mt-1">●</span>
+                            <span><strong>Campagna in pausa:</strong> Attualmente non attiva, perdita di
+                                momentum</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Strategic Insights -->
+            <div
+                class="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-lg shadow-lg mb-8 border-l-4 border-blue-500">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">💡 Insights Strategici</h2>
+                <div class="space-y-4 text-sm text-gray-700">
+                    <p>
+                        <strong>Successo del lancio Bundle:</strong> La campagna SP_MANU_Mucoplant_Bundle ha dimostrato
+                        l'efficacia del targeting manuale per il lancio di nuovi prodotti. Con un investimento di
+                        €102,03, siamo riusciti a posizionare il Bundle Mucoplant sul mercato, raggiungendo oltre 20
+                        unità vendute totali. Questo risultato va oltre il semplice ROAS di 1,45, considerando il
+                        valore strategico di costruire awareness per un nuovo SKU.
+                    </p>
+                    <p>
+                        <strong>Targeting manuale vs automatico:</strong> A differenza di dicembre dove la campagna
+                        automatica aveva performato meglio (ROAS 2,32), gennaio ha visto il successo del targeting
+                        manuale. Questo suggerisce che per prodotti nuovi o bundle, il controllo preciso delle keyword
+                        è più efficace della scoperta automatica.
+                    </p>
+                    <p>
+                        <strong>Opportunità di scala:</strong> Con CPC di €0,52 e conversioni positive, c'è spazio per
+                        aumentare il budget e scalare la campagna. Il fatto che sia attualmente in pausa rappresenta
+                        un'opportunità persa di capitalizzare sul momentum creato.
+                    </p>
                 </div>
             </div>
 
             <!-- Action Plan -->
-            <div class="bg-white p-6 md:p-8 rounded-lg shadow-lg mt-8">
-                <h2 class="text-xl md:text-2xl font-bold mb-6 text-center">🔧 Azioni Previste per Febbraio</h2>
-                <ul class="text-sm text-gray-600 list-disc list-inside space-y-3 max-w-2xl mx-auto">
-                    <li><strong>Ottimizzazione:</strong> Analisi primi dati 2026.</li>
-                </ul>
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">🎯 Piano d'Azione per Febbraio 2026</h2>
+                <div class="space-y-3 text-sm text-gray-700">
+                    <div class="flex items-start">
+                        <span
+                            class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">1</span>
+                        <p><strong>Riattivare campagna Mucoplant Bundle:</strong> La campagna è in pausa ma ha
+                            dimostrato efficacia. Riattivare per mantenere momentum del prodotto.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">2</span>
+                        <p><strong>Ottimizzare keyword:</strong> Analizzare search terms e aggiungere keyword negative
+                            per migliorare ROAS da 1,45 a 2,0+.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">3</span>
+                        <p><strong>Testare campagne su altri prodotti:</strong> Replicare il successo del targeting
+                            manuale su altri prodotti top-seller.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">4</span>
+                        <p><strong>Aumentare budget gradualmente:</strong> Con CPC €0,52 competitivo, considerare
+                            aumento budget da €10 a €15-20/giorno.</p>
+                    </div>
+                    <div class="flex items-start">
+                        <span
+                            class="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">5</span>
+                        <p><strong>Diversificare portfolio:</strong> Lanciare 2-3 nuove campagne per ridurre
+                            dipendenza da singola campagna.</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Footer with Home Link -->
-            <footer class="text-center mt-16 py-8 border-t">
+            <!-- Comparison with December -->
+            <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+                <h2 class="text-xl font-bold mb-4 text-gray-800">📈 Confronto con Dicembre 2025</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left text-gray-500">
+                        <thead class="text-xs text-gray-700 uppercase bg-gray-100">
+                            <tr>
+                                <th scope="col" class="px-6 py-3 rounded-l-lg">Metrica</th>
+                                <th scope="col" class="px-6 py-3">Dicembre 2025</th>
+                                <th scope="col" class="px-6 py-3">Gennaio 2026</th>
+                                <th scope="col" class="px-6 py-3 rounded-r-lg">Variazione</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900">Spesa</th>
+                                <td class="px-6 py-4">€148,19</td>
+                                <td class="px-6 py-4">€102,03</td>
+                                <td class="px-6 py-4 font-bold text-green-600">-31%</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900">Vendite</th>
+                                <td class="px-6 py-4">€162,33</td>
+                                <td class="px-6 py-4">€147,51</td>
+                                <td class="px-6 py-4 font-bold text-red-600">-9%</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900">ROAS</th>
+                                <td class="px-6 py-4">1,10</td>
+                                <td class="px-6 py-4">1,45</td>
+                                <td class="px-6 py-4 font-bold text-green-600">+32%</td>
+                            </tr>
+                            <tr class="bg-white border-b">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900">Ordini</th>
+                                <td class="px-6 py-4">11</td>
+                                <td class="px-6 py-4">9</td>
+                                <td class="px-6 py-4 font-bold text-red-600">-18%</td>
+                            </tr>
+                            <tr class="bg-white">
+                                <th scope="row" class="px-6 py-4 font-medium text-gray-900">Campagne Attive</th>
+                                <td class="px-6 py-4">3</td>
+                                <td class="px-6 py-4">1</td>
+                                <td class="px-6 py-4 font-bold text-red-600">-67%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-sm text-gray-600 mt-4">
+                    <strong>Nota:</strong> Nonostante la riduzione di spesa e ordini, il ROAS è migliorato del 32%
+                    grazie al focus su una singola campagna ottimizzata. La strategia di gennaio ha privilegiato
+                    l'efficienza e il lancio strategico del Bundle Mucoplant rispetto al volume puro.
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <footer class="text-center mt-12 py-6 border-t">
                 <a href="https://melaservices.github.io/Naturwaren/index.html"
                     class="text-teal-600 hover:text-teal-800 font-semibold text-lg">&larr; Torna alla Home</a>
             </footer>
 
         </div>
     </div>
-
-    <!-- The Modal -->
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
-    </div>
-
-    <script>
-        // Get the modal
-        var modal = document.getElementById("imageModal");
-        var modalImg = document.getElementById("modalImage");
-        var images = document.getElementsByClassName('clickable-img');
-
-        for (let i = 0; i < images.length; i++) {
-            images[i].onclick = function () {
-                modal.style.display = "flex";
-                modalImg.src = this.src;
-            }
-        }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-
-        // Also close the modal if the user clicks anywhere on the background
-        modal.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        }
-    </script>
 
 </body>
 
