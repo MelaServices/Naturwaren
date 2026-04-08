@@ -179,6 +179,20 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+
+            <!-- Toggle per Report Precedenti -->
+            <button onclick="toggleReports()"
+                class="w-full text-left p-6 flex justify-between items-center transition-colors bg-teal-50 hover:bg-teal-100 rounded-lg border border-teal-200">
+                <h3 class="text-xl font-semibold text-slate-800">📁 Report Precedenti</h3>
+                <span id="toggleIcon"
+                    class="text-3xl font-extrabold text-teal-500 transform transition-transform">+</span>
+            </button>
+            <div id="reportsContainer" class="overflow-hidden"
+                style="max-height: 0; transition: max-height 0.5s ease-out;">
+                <div class="space-y-8 pb-4 pt-8">
+
                     <!-- Dicembre 2025 -->
                     <div>
                         <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Dicembre 2025</h3>
@@ -244,20 +258,6 @@
                             </a>
                         </div>
                     </div>
-
-                </div>
-            </div>
-
-            <!-- Toggle per Report Precedenti -->
-            <button onclick="toggleReports()"
-                class="w-full text-left p-6 flex justify-between items-center transition-colors bg-teal-50 hover:bg-teal-100 rounded-lg border border-teal-200">
-                <h3 class="text-xl font-semibold text-slate-800">📁 Report Precedenti</h3>
-                <span id="toggleIcon"
-                    class="text-3xl font-extrabold text-teal-500 transform transition-transform">+</span>
-            </button>
-            <div id="reportsContainer" class="overflow-hidden"
-                style="max-height: 0; transition: max-height 0.5s ease-out;">
-                <div class="space-y-8 pb-4 pt-8">
 
                     <!-- Ottobre 2025 -->
                     <div>
