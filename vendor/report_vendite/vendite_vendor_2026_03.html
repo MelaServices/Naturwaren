@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Report Vendite Naturwaren - Marzo 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -30,32 +31,36 @@
 
             <section class="mb-8">
                 <div class="bg-sky-50 border-l-4 border-sky-500 p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl font-bold text-sky-900 mb-3">Contesto del mese: prima vera fase di rilancio</h2>
+                    <h2 class="text-xl font-bold text-sky-900 mb-3">Contesto del mese</h2>
                     <p class="text-sm leading-relaxed mb-3">
-                        Marzo mostra la prima accelerazione concreta dopo il periodo di blocchi ASIN, resi anomali,
-                        richieste di conformita` e tensione negoziale con Amazon Vendor. Il canale torna a crescere,
-                        ma il recupero si regge su un equilibrio ancora delicato tra disponibilita`, pricing e
-                        investimento pubblicitario.
+                        A marzo il dato corretto da leggere resta il <strong>COGS spedizioni</strong>, cioe` il
+                        sell-in. Dopo il buco di gennaio e il recupero quasi completo di febbraio, marzo ci dice se
+                        Naturwaren sta tornando davvero sui livelli storici di sell-in verso Amazon.
                     </p>
-                    <ul class="list-disc list-inside space-y-2 text-sm">
-                        <li><strong>Arnica Effetto Termico</strong> diventa il motore assoluto del mese e spinge la
-                            ripresa del canale.</li>
-                        <li><strong>Amazon continua a premere</strong> su fee accessorie, una tantum e riduzioni di
-                            prezzo, che Naturwaren continua a respingere.</li>
-                        <li><strong>La lettura corretta del mese</strong> non e` solo commerciale: marzo misura quanto
-                            il piano marketing puo` compensare problemi operativi e difendere margini e ranking.</li>
-                    </ul>
+                    <p class="text-sm leading-relaxed">
+                        La risposta e` positiva ma non ancora definitiva: il gap rispetto a marzo 2025 si restringe
+                        molto, il recupero di Arnica si consolida, ma il profilo del mese resta fragile per via di resi,
+                        concentrazione del sell-in e pressione negoziale ancora aperta.
+                    </p>
                 </div>
             </section>
 
             <section class="mb-10">
                 <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
                     <div class="bg-white rounded-lg shadow p-4 text-center border-t-4 border-teal-500">
-                        <p class="text-xs uppercase tracking-wide text-gray-500">COGS Spedizioni</p>
+                        <p class="text-xs uppercase tracking-wide text-gray-500">Sell-In Marzo 2026</p>
                         <p class="text-2xl font-bold text-gray-800 mt-2">€49.604,20</p>
                     </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center border-t-4 border-slate-500">
+                        <p class="text-xs uppercase tracking-wide text-gray-500">Sell-In Marzo 2025</p>
+                        <p class="text-2xl font-bold text-gray-800 mt-2">€51.627,47</p>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-4 text-center border-t-4 border-rose-500">
+                        <p class="text-xs uppercase tracking-wide text-gray-500">Variazione YoY</p>
+                        <p class="text-2xl font-bold text-rose-600 mt-2">-3,9%</p>
+                    </div>
                     <div class="bg-white rounded-lg shadow p-4 text-center border-t-4 border-blue-500">
-                        <p class="text-xs uppercase tracking-wide text-gray-500">Ricavi Spedizioni</p>
+                        <p class="text-xs uppercase tracking-wide text-gray-500">Sell-Out Amazon</p>
                         <p class="text-2xl font-bold text-gray-800 mt-2">€45.808,54</p>
                     </div>
                     <div class="bg-white rounded-lg shadow p-4 text-center border-t-4 border-emerald-500">
@@ -66,67 +71,53 @@
                         <p class="text-xs uppercase tracking-wide text-gray-500">Resi Cliente</p>
                         <p class="text-2xl font-bold text-gray-800 mt-2">38</p>
                     </div>
-                    <div class="bg-white rounded-lg shadow p-4 text-center border-t-4 border-purple-500">
-                        <p class="text-xs uppercase tracking-wide text-gray-500">COGS Medio / Unità</p>
-                        <p class="text-2xl font-bold text-gray-800 mt-2">€5,32</p>
-                    </div>
-                    <div class="bg-white rounded-lg shadow p-4 text-center border-t-4 border-slate-500">
-                        <p class="text-xs uppercase tracking-wide text-gray-500">SKU Attive</p>
-                        <p class="text-2xl font-bold text-gray-800 mt-2">69</p>
-                    </div>
                 </div>
             </section>
 
             <section class="mb-12">
                 <div class="bg-white p-6 rounded-lg shadow-lg">
-                    <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Confronto Performance: Febbraio 2026 vs
-                        Marzo 2026</h2>
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">Confronto Sell-In: Marzo 2025 vs Marzo
+                        2026</h2>
                     <div class="overflow-x-auto">
                         <table class="w-full text-sm md:text-base text-center">
                             <thead>
                                 <tr class="border-b-2 border-slate-200">
                                     <th class="py-2 px-4 font-semibold text-left">METRICA</th>
-                                    <th class="py-2 px-4 font-semibold">Febbraio 2026</th>
+                                    <th class="py-2 px-4 font-semibold">Marzo 2025</th>
                                     <th class="py-2 px-4 font-semibold">Marzo 2026</th>
                                     <th class="py-2 px-4 font-semibold">VARIAZIONE</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="border-b border-slate-100">
-                                    <td class="py-3 px-4 text-left">COGS Spedizioni</td>
-                                    <td class="py-3 px-4">€42.756,11</td>
+                                    <td class="py-3 px-4 text-left">COGS Spedizioni (Sell-In)</td>
+                                    <td class="py-3 px-4">€51.627,47</td>
                                     <td class="py-3 px-4">€49.604,20</td>
-                                    <td class="py-3 px-4 font-bold text-green-600">+16,0%</td>
+                                    <td class="py-3 px-4 font-bold text-red-500">-3,9%</td>
                                 </tr>
                                 <tr class="border-b border-slate-100">
-                                    <td class="py-3 px-4 text-left">Ricavi Spedizioni</td>
-                                    <td class="py-3 px-4">€40.136,04</td>
+                                    <td class="py-3 px-4 text-left">Gap assoluto vs 2025</td>
+                                    <td class="py-3 px-4">-</td>
+                                    <td class="py-3 px-4">-€2.023,27</td>
+                                    <td class="py-3 px-4 font-bold text-amber-500">recupero quasi completo</td>
+                                </tr>
+                                <tr class="border-b border-slate-100">
+                                    <td class="py-3 px-4 text-left">Sell-Out Amazon</td>
+                                    <td class="py-3 px-4 text-gray-400">n.d.</td>
                                     <td class="py-3 px-4">€45.808,54</td>
-                                    <td class="py-3 px-4 font-bold text-green-600">+14,1%</td>
+                                    <td class="py-3 px-4 text-gray-500">dato secondario</td>
                                 </tr>
                                 <tr class="border-b border-slate-100">
-                                    <td class="py-3 px-4 text-left">Unità vendute</td>
-                                    <td class="py-3 px-4">8.289</td>
+                                    <td class="py-3 px-4 text-left">Unità Spedite</td>
+                                    <td class="py-3 px-4 text-gray-400">n.d.</td>
                                     <td class="py-3 px-4">9.331</td>
-                                    <td class="py-3 px-4 font-bold text-green-600">+12,6%</td>
-                                </tr>
-                                <tr class="border-b border-slate-100">
-                                    <td class="py-3 px-4 text-left">Resi cliente</td>
-                                    <td class="py-3 px-4">33</td>
-                                    <td class="py-3 px-4">38</td>
-                                    <td class="py-3 px-4 font-bold text-red-500">+15,2%</td>
-                                </tr>
-                                <tr class="border-b border-slate-100">
-                                    <td class="py-3 px-4 text-left">COGS medio / unità</td>
-                                    <td class="py-3 px-4">€5,16</td>
-                                    <td class="py-3 px-4">€5,32</td>
-                                    <td class="py-3 px-4 font-bold text-green-600">+3,1%</td>
+                                    <td class="py-3 px-4 text-gray-500">monitoraggio interno</td>
                                 </tr>
                                 <tr>
-                                    <td class="py-3 px-4 text-left">SKU Attive</td>
-                                    <td class="py-3 px-4">64</td>
-                                    <td class="py-3 px-4">69</td>
-                                    <td class="py-3 px-4 font-bold text-green-600">+5 SKU</td>
+                                    <td class="py-3 px-4 text-left">COGS medio / unità</td>
+                                    <td class="py-3 px-4 text-gray-400">n.d.</td>
+                                    <td class="py-3 px-4">€5,32</td>
+                                    <td class="py-3 px-4 text-gray-500">in recupero</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -135,77 +126,65 @@
             </section>
 
             <section class="mb-12">
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-800">🏆 Analisi Top 5 Seller
-                    (Marzo)</h2>
+                <div class="bg-white p-6 rounded-lg shadow-lg">
+                    <h2 class="text-xl md:text-2xl font-bold mb-4 text-center">📈 Sell-In 2025 vs 2026</h2>
+                    <p class="text-sm text-center text-gray-600 mb-4">
+                        La traiettoria gennaio-marzo racconta il recupero in modo chiaro: dopo un gennaio molto sotto
+                        benchmark, febbraio e marzo tornano molto vicini ai livelli 2025.
+                    </p>
+                    <div class="relative h-72 md:h-96">
+                        <canvas id="sellInChart"></canvas>
+                    </div>
+                    <p class="text-xs text-center text-gray-500 mt-4">
+                        Benchmark 2025 ricostruito dalla serie storica di sell-in gia` presente nei report annuali del
+                        progetto.
+                    </p>
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-800">🏆 Top 5 ASIN per Sell-In
+                    (Marzo 2026)</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
-                        <h3 class="text-lg font-bold text-slate-700 mb-4">#1 Arnica Crema Effetto Termico</h3>
-                        <div class="text-sm space-y-1 flex-grow">
-                            <p><strong>COGS Febbraio:</strong> €7.920,00</p>
-                            <p><strong>COGS Marzo:</strong> €14.435,52</p>
-                            <p><strong>Unità:</strong> 2.734</p>
-                            <p><strong>Resi:</strong> 4</p>
-                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span
-                                    class="font-bold text-green-600">+82,3%</span></p>
-                        </div>
-                        <p class="text-xs italic text-gray-500 mt-3">Insight: marzo certifica il pieno rientro del
-                            prodotto simbolo del trimestre e da solo spiega gran parte della ripresa Vendor.</p>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-bold text-slate-700 mb-3">#1 Arnica Crema Effetto Termico</h3>
+                        <p class="text-sm"><strong>COGS:</strong> €14.435,52</p>
+                        <p class="text-sm"><strong>Unità:</strong> 2.734</p>
+                        <p class="text-sm"><strong>Resi:</strong> 4</p>
+                        <p class="text-xs italic text-gray-500 mt-3">Vale il 29,1% del sell-in totale del mese: e` il
+                            motore assoluto del recupero.</p>
                     </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
-                        <h3 class="text-lg font-bold text-slate-700 mb-4">#2 Allga San Burro Speciale Piedi</h3>
-                        <div class="text-sm space-y-1 flex-grow">
-                            <p><strong>COGS Febbraio:</strong> €5.875,98</p>
-                            <p><strong>COGS Marzo:</strong> €6.341,72</p>
-                            <p><strong>Unità:</strong> 994</p>
-                            <p><strong>Resi:</strong> 5</p>
-                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span
-                                    class="font-bold text-green-600">+7,9%</span></p>
-                        </div>
-                        <p class="text-xs italic text-gray-500 mt-3">Insight: conferma solidita` e continuita` anche
-                            in un mese in cui Arnica assorbe gran parte della crescita del canale.</p>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-bold text-slate-700 mb-3">#2 Allga San Burro Speciale Piedi</h3>
+                        <p class="text-sm"><strong>COGS:</strong> €6.341,72</p>
+                        <p class="text-sm"><strong>Unità:</strong> 994</p>
+                        <p class="text-sm"><strong>Resi:</strong> 5</p>
+                        <p class="text-xs italic text-gray-500 mt-3">Pilastro molto stabile, utile per rendere meno
+                            dipendente il mese da un solo ASIN.</p>
                     </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
-                        <h3 class="text-lg font-bold text-slate-700 mb-4">#3 Allga San Sali Pediluvio</h3>
-                        <div class="text-sm space-y-1 flex-grow">
-                            <p><strong>COGS Febbraio:</strong> €3.712,90</p>
-                            <p><strong>COGS Marzo:</strong> €2.359,35</p>
-                            <p><strong>Unità:</strong> 441</p>
-                            <p><strong>Resi:</strong> 2</p>
-                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span
-                                    class="font-bold text-red-500">-36,5%</span></p>
-                        </div>
-                        <p class="text-xs italic text-gray-500 mt-3">Insight: resta in Top 5 ma rallenta sensibilmente;
-                            possibile effetto mix, spostamento domanda o pressione assortimentale.</p>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-bold text-slate-700 mb-3">#3 Allga San Sali Pediluvio</h3>
+                        <p class="text-sm"><strong>COGS:</strong> €2.359,35</p>
+                        <p class="text-sm"><strong>Unità:</strong> 441</p>
+                        <p class="text-sm"><strong>Resi:</strong> 2</p>
+                        <p class="text-xs italic text-gray-500 mt-3">Rallenta rispetto al mese precedente, ma resta
+                            nella fascia alta del portafoglio.</p>
                     </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
-                        <h3 class="text-lg font-bold text-slate-700 mb-4">#4 Allga San Bagno Riducente</h3>
-                        <div class="text-sm space-y-1 flex-grow">
-                            <p><strong>COGS Febbraio:</strong> €1.045,00</p>
-                            <p><strong>COGS Marzo:</strong> €2.325,00</p>
-                            <p><strong>Unità:</strong> 465</p>
-                            <p><strong>Resi:</strong> 2</p>
-                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span
-                                    class="font-bold text-green-600">+122,5%</span></p>
-                        </div>
-                        <p class="text-xs italic text-gray-500 mt-3">Insight: crescita molto forte, segnale che la
-                            categoria piedi continua a offrire spazio concreto di scalabilita`.</p>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-bold text-slate-700 mb-3">#4 Allga San Bagno Riducente</h3>
+                        <p class="text-sm"><strong>COGS:</strong> €2.325,00</p>
+                        <p class="text-sm"><strong>Unità:</strong> 465</p>
+                        <p class="text-sm"><strong>Resi:</strong> 2</p>
+                        <p class="text-xs italic text-gray-500 mt-3">Uno dei segnali piu` interessanti di espansione
+                            del sell-in oltre il cluster storico.</p>
                     </div>
-
-                    <div class="bg-white p-6 rounded-lg shadow flex flex-col">
-                        <h3 class="text-lg font-bold text-slate-700 mb-4">#5 Vitamina D3 K2 Spray</h3>
-                        <div class="text-sm space-y-1 flex-grow">
-                            <p><strong>COGS Febbraio:</strong> €1.782,90</p>
-                            <p><strong>COGS Marzo:</strong> €1.858,50</p>
-                            <p><strong>Unità:</strong> 295</p>
-                            <p><strong>Resi:</strong> 6</p>
-                            <p class="mt-2 pt-2 border-t border-slate-100"><strong>Trend COGS:</strong> <span
-                                    class="font-bold text-green-600">+4,2%</span></p>
-                        </div>
-                        <p class="text-xs italic text-gray-500 mt-3">Insight: crescita contenuta ma stabile; attenzione
-                            ai resi, che in marzo salgono e vanno monitorati da vicino.</p>
+                    <div class="bg-white p-6 rounded-lg shadow">
+                        <h3 class="text-lg font-bold text-slate-700 mb-3">#5 Vitamina D3 K2 Spray</h3>
+                        <p class="text-sm"><strong>COGS:</strong> €1.858,50</p>
+                        <p class="text-sm"><strong>Unità:</strong> 295</p>
+                        <p class="text-sm"><strong>Resi:</strong> 6</p>
+                        <p class="text-xs italic text-gray-500 mt-3">Buon contributo di sell-in, ma i resi sono da
+                            tenere sotto osservazione.</p>
                     </div>
                 </div>
             </section>
@@ -215,29 +194,27 @@
                     <div class="bg-white p-6 rounded-lg shadow-lg">
                         <h3 class="text-xl font-bold text-green-600 mb-4">Segnali Positivi 🟢</h3>
                         <ul class="space-y-3 text-sm list-disc list-inside">
-                            <li><strong>Secondo mese consecutivo di crescita:</strong> +16,0% COGS e +14,1% ricavi vs
-                                febbraio.</li>
-                            <li><strong>Arnica trascina il canale:</strong> €14.435,52 di COGS e 2.734 unita`, vero
-                                driver del recupero.</li>
-                            <li><strong>Catalogo piu` ampio:</strong> le SKU attive salgono da 64 a 69.</li>
-                            <li><strong>Mix medio migliore:</strong> il COGS medio per unita` risale a €5,32.</li>
-                            <li><strong>Nuovi segnali interessanti:</strong> Bagno Riducente e Mucoplant Piantaggine
-                                accelerano bene nel mese.</li>
+                            <li><strong>Sell-in quasi allineato al 2025:</strong> il gap vs marzo scorso si limita al
+                                3,9%.</li>
+                            <li><strong>Recupero molto netto rispetto a gennaio:</strong> da -22,2% a -3,9% sul
+                                benchmark storico in soli due mesi.</li>
+                            <li><strong>Arnica consolida il rientro:</strong> marzo conferma che il recupero non era un
+                                rimbalzo isolato.</li>
+                            <li><strong>Base piu` ampia:</strong> il mese si appoggia anche su Burro Piedi, Bagno
+                                Riducente e Vitamina D3.</li>
                         </ul>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-lg">
-                        <h3 class="text-xl font-bold text-yellow-600 mb-4">Punti di Attenzione 🟡</h3>
+                        <h3 class="text-xl font-bold text-yellow-600 mb-4">Segnali di Attenzione 🟡</h3>
                         <ul class="space-y-3 text-sm list-disc list-inside">
-                            <li><strong>Resi in risalita:</strong> da 33 a 38, con pressione su Vitamina D3, Burro
-                                Piedi, Mucoplant Kids e Arnica.</li>
-                            <li><strong>Ripresa concentrata:</strong> una quota troppo importante della crescita dipende
-                                da Arnica Effetto Termico.</li>
-                            <li><strong>Alcuni top seller rallentano:</strong> Sali Pediluvio -36,5% e Mucoplant Kids
-                                fuori dalla Top 5.</li>
-                            <li><strong>Contesto commerciale ancora teso:</strong> fee, pricing e marginalita` restano
-                                sotto pressione nel confronto con Amazon.</li>
-                            <li><strong>Compliance e creativita`:</strong> il rilancio marketing dovra` restare
-                                allineato ai limiti regolatori e alle policy di Amazon.</li>
+                            <li><strong>Benchmark non ancora battuto:</strong> marzo e` vicino al 2025, ma non lo
+                                supera ancora.</li>
+                            <li><strong>Concentrazione alta:</strong> Arnica pesa quasi un terzo del sell-in mensile.
+                            </li>
+                            <li><strong>Resi in aumento:</strong> 38 resi richiedono presidio, soprattutto su D3,
+                                Burro Piedi e Arnica.</li>
+                            <li><strong>Pressione commerciale e operativa ancora aperta:</strong> fee, pricing,
+                                compliance e inventario continuano a influenzare il recupero.</li>
                         </ul>
                     </div>
                 </div>
@@ -248,16 +225,14 @@
                     <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-slate-800">➡️ Priorita` per Aprile
                         2026</h2>
                     <ul class="list-disc list-inside space-y-4 text-sm md:text-base">
-                        <li><strong>Consolidare il ritorno di Arnica:</strong> difendere ranking e disponibilita` con
-                            ADV, stock e gestione accurata dei resi.</li>
-                        <li><strong>Allargare la crescita oltre un solo ASIN:</strong> spingere Burro Piedi, Bagno
-                            Riducente, Vitamina D3 e Mucoplant Piantaggine.</li>
-                        <li><strong>Ridurre cause di reso:</strong> lavorare su packaging, classificazioni magazzino e
-                            casi internazionali che scaricano rischio sull'azienda.</li>
-                        <li><strong>Tenere la linea in negoziazione:</strong> usare i volumi in ripresa come leva, non
-                            accettare automaticamente richieste di taglio prezzo o fee accessorie.</li>
-                        <li><strong>Coordinare marketing e compliance:</strong> investire di piu` solo sui prodotti con
-                            documentazione corretta e messaggi commerciali sicuri.</li>
+                        <li><strong>Chiudere il gap con il 2025:</strong> aprile deve diventare il mese del
+                            superamento, non solo del recupero quasi completo.</li>
+                        <li><strong>Allargare il sell-in oltre Arnica:</strong> aumentare il peso di ASIN secondari ad
+                            alta qualita` per ridurre dipendenza.</li>
+                        <li><strong>Integrare marketing e sell-in:</strong> usare gli investimenti ADV per proteggere
+                            i prodotti che stanno davvero riportando volumi a Naturwaren.</li>
+                        <li><strong>Ridurre i resi e i rischi operativi:</strong> packaging, classificazioni e casi
+                            aperti devono smettere di erodere il recupero commerciale.</li>
                     </ul>
                 </div>
             </section>
@@ -268,6 +243,57 @@
             </footer>
         </div>
     </div>
+
+    <script>
+        const marCtx = document.getElementById('sellInChart');
+        new Chart(marCtx, {
+            type: 'line',
+            data: {
+                labels: ['Gen', 'Feb', 'Mar'],
+                datasets: [{
+                    label: 'Sell-In 2025 (€)',
+                    data: [46618.34, 44731.09, 51627.47],
+                    borderColor: 'rgb(100, 116, 139)',
+                    backgroundColor: 'rgba(100, 116, 139, 0.12)',
+                    borderWidth: 2,
+                    tension: 0.3,
+                    fill: false
+                }, {
+                    label: 'Sell-In 2026 (€)',
+                    data: [36267.39, 42756.11, 49604.20],
+                    borderColor: 'rgb(20, 184, 166)',
+                    backgroundColor: 'rgba(20, 184, 166, 0.12)',
+                    borderWidth: 3,
+                    tension: 0.3,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            callback: function (value) {
+                                return '€' + value.toLocaleString('it-IT');
+                            }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: { position: 'top' },
+                    tooltip: {
+                        callbacks: {
+                            label: function (context) {
+                                return `${context.dataset.label}: €${context.parsed.y.toLocaleString('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>
