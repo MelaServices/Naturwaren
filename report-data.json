@@ -98,6 +98,12 @@
           "format": "eur"
         },
         {
+          "key": "displaySpend",
+          "label": "Spesa ADV / Sponsored Display",
+          "value": 0,
+          "format": "eur"
+        },
+        {
           "key": "adSpendTotal",
           "label": "Spesa ADV totale",
           "value": null,
@@ -115,7 +121,7 @@
         }
       ],
       "missing": [
-        "Altre componenti ADV non disponibili alla chiusura: report Sponsored Brands e Display non completati; totale ADV non disponibile."
+        "Sponsored Brands non disponibile alla chiusura: report non completato; totale ADV non disponibile. Sponsored Display recuperato: nessuna riga nel report di settembre, costo zero."
       ],
       "note": "Retail verificato sulla riga Totale di Vendor Retail Analytics, vista Produzione / programma Retail Italia, account Naturwaren Italia, periodo 1-30 settembre 2026. Le unità ordinate non sono un numero di ordini; ricavi ordinati, ricavi spedizioni e costo del venduto sono metriche distinte e non vanno sommati. ADV parziale: 783,31 € è la sola spesa Sponsored Products, non il totale ADV Vendor. Le vendite attribuite alla pubblicità non sono ricavi retail."
     },
