@@ -1,578 +1,111 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Infografica Progetto Naturwaren | Gennaio 2025 - Marzo 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            /* bg-slate-50 */
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -33px;
-            /* Adjust based on padding */
-            top: 50%;
-            transform: translateY(-50%);
-            width: 24px;
-            height: 24px;
-            border-radius: 9999px;
-            background-color: #14b8a6;
-            /* bg-teal-500 */
-            border: 4px solid #f8fafc;
-            /* bg-slate-50 */
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Naturwaren | Report settembre 2026</title>
+  <link rel="stylesheet" href="report.css">
+  <script src="report.js" defer></script>
 </head>
-
-<body class="text-gray-700">
-
-    <div class="container mx-auto p-4 md:p-8">
-
-        <!-- Header -->
-        <header class="text-center mb-16">
-            <img src="https://drive.google.com/thumbnail?id=17HFUIFnGVRU3rQFX62Y537h6aKTtgfmm&sz=w1000"
-                alt="Logo Mela" class="h-12 mx-auto mb-4" loading="eager" decoding="async"
-                onerror="this.onerror=null; this.src='https://drive.google.com/uc?export=view&id=17HFUIFnGVRU3rQFX62Y537h6aKTtgfmm';">
-            <h1 class="text-4xl md:text-5xl font-bold text-slate-800">Progetto Naturwaren su Amazon</h1>
-            <p class="text-xl text-teal-600 mt-2">Rapporto di Avanzamento: Gennaio 2025 – Marzo 2026</p>
-        </header>
-
-        <!-- Strategic Vision -->
-        <section id="strategy" class="mb-16">
-            <h2 class="text-3xl font-bold text-center mb-8 text-slate-800">🎯 La Nostra Visione Strategica Omnicanale
-            </h2>
-            <div class="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-lg">
-                <p class="text-center text-lg mb-8">L'obiettivo è espandere la presenza di Naturwaren su Amazon in modo
-                    intelligente, potenziando il business senza cannibalizzare i canali tradizionali. Abbiamo creato una
-                    chiara differenziazione tra i canali per massimizzare le opportunità.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
-                    <div class="bg-teal-50 border-2 border-teal-500 rounded-lg p-6">
-                        <h3 class="text-2xl font-semibold text-teal-800 mb-2">Canale Vendor 📦</h3>
-                        <p class="text-lg font-bold">Referenze Singole Standard</p>
-                        <p class="mt-2 text-gray-600">Mantenere continuità e volumi con Amazon, gestendo il catalogo di
-                            prodotti classici.</p>
-                    </div>
-                    <div class="bg-amber-50 border-2 border-amber-500 rounded-lg p-6">
-                        <h3 class="text-2xl font-semibold text-amber-800 mb-2">Canale Seller ✨</h3>
-                        <p class="text-lg font-bold">Bundle e Multipack Esclusivi</p>
-                        <p class="mt-2 text-gray-600">Aumentare il valore medio dell'ordine e i margini con offerte
-                            uniche e non comparabili.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Reports Links -->
-        <section id="reports" class="mb-16">
-            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8">
-                <h2 class="text-3xl font-bold text-slate-800 mb-8">🔍 Archivio Report</h2>
-
-                <!-- Ultimi Report (sempre visibili) -->
-                <div class="space-y-8 mb-8">
-                    <!-- Marzo 2026 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Marzo 2026</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="vendor/report_vendite/vendite_vendor_2026_03.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi vendite e performance prodotti.</p>
-                            </a>
-                            <a href="vendor/report_adv/adv_vendor_2026_03.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://docs.google.com/spreadsheets/d/18qyzmYcu-BSdGWYgsn5radPUiBILcHRs/export?format=xlsx"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📦 Report Vendite Seller</p>
-                                <p class="text-sm text-gray-600">Scarica il report dettagliato in formato .xlsx</p>
-                            </a>
-                            <a href="Seller/adv_seller_2026_03.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Febbraio 2026 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Febbraio 2026</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="vendor/report_vendite/vendite_vendor_2026_02.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi vendite e performance prodotti.</p>
-                            </a>
-                            <a href="vendor/report_adv/adv_vendor_2026_02.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://docs.google.com/spreadsheets/d/PLACEHOLDER_FEBBRAIO_2026/export?format=xlsx"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📦 Report Vendite Seller</p>
-                                <p class="text-sm text-gray-600">Scarica il report dettagliato in formato .xlsx</p>
-                            </a>
-                            <a href="Seller/adv_seller_2026_02.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Gennaio 2026 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Gennaio 2026</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="vendor/report_vendite/vendite_vendor_2026_01.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi vendite e performance prodotti.</p>
-                            </a>
-                            <a href="vendor/report_adv/adv_vendor_2026_01.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://docs.google.com/spreadsheets/d/14qzZ_xTOYGYnn-PByPJLygQIx3J_AWuF/export?format=xlsx"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📦 Report Vendite Seller</p>
-                                <p class="text-sm text-gray-600">Scarica il report dettagliato in formato .xlsx</p>
-                            </a>
-                            <a href="Seller/adv_seller_2026_01.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-            <!-- Toggle per Report Precedenti -->
-            <button onclick="toggleReports()"
-                class="w-full text-left p-6 flex justify-between items-center transition-colors bg-teal-50 hover:bg-teal-100 rounded-lg border border-teal-200">
-                <h3 class="text-xl font-semibold text-slate-800">📁 Report Precedenti</h3>
-                <span id="toggleIcon"
-                    class="text-3xl font-extrabold text-teal-500 transform transition-transform">+</span>
-            </button>
-            <div id="reportsContainer" class="overflow-hidden"
-                style="max-height: 0; transition: max-height 0.5s ease-out;">
-                <div class="space-y-8 pb-4 pt-8">
-
-                    <!-- Dicembre 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Dicembre 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="vendor/report_vendite/vendite_vendor_2025_12.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi vendite e performance prodotti.</p>
-                            </a>
-                            <a href="vendor/report_adv/adv_vendor_2025_12.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://docs.google.com/spreadsheets/d/19Eyp0YBxRiZ2gT3OtNdmHCl73l6dBJ5F/export?format=xlsx"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📦 Report Vendite Seller</p>
-                                <p class="text-sm text-gray-600">Scarica il report dettagliato in formato .xlsx</p>
-                            </a>
-                            <a href="Seller/adv_seller_2025_12.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Novembre 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Novembre 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_11.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi vendite e performance prodotti.</p>
-                            </a>
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_adv/adv_vendor_2025_11.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://docs.google.com/spreadsheets/d/1Tzb6Bj2yLkkniTgFMXQK3stpoDkGD0x3/export?format=xlsx"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📦 Report Vendite Seller</p>
-                                <p class="text-sm text-gray-600">Scarica il report dettagliato in formato .xlsx</p>
-                            </a>
-                            <a href="https://melaservices.github.io/Naturwaren/Seller/adv_seller_2025_11.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Ottobre 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Ottobre 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_10.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi vendite e performance prodotti.</p>
-                            </a>
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_adv/adv_vendor_2025_10.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://docs.google.com/spreadsheets/d/1RHbcDnya79xuNCiYooDDms5cQupZnHA9/export?format=xlsx"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📦 Report Vendite Seller</p>
-                                <p class="text-sm text-gray-600">Scarica il report dettagliato in formato .xlsx</p>
-                            </a>
-                            <a href="https://melaservices.github.io/Naturwaren/Seller/adv_seller_2025_10.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Agosto 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Agosto 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_08.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.
-                                </p>
-                            </a>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Luglio 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Luglio 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_07.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.
-                                </p>
-                            </a>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Giugno 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Giugno 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_06.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.
-                                </p>
-                            </a>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-500">Non ancora disponibile.</p>
-                            </div>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Gennaio - Maggio 2025 -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-slate-700 border-b pb-2 mb-4">Gennaio - Maggio 2025</h3>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                            <a href="vendor/report_vendite/vendite_vendor_2025_01_05.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📄 Report Vendite Vendor</p>
-                                <p class="text-sm text-gray-600">Analisi dettagliata delle performance di vendita.
-                                </p>
-                            </a>
-                            <a href="vendor/report_adv/adv_vendor_2025_01_05.html"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📈 Report Pubblicità Vendor</p>
-                                <p class="text-sm text-gray-600">Dettagli su campagne, ACOS e ROAS.</p>
-                            </a>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📦 Report Canale Seller</p>
-                                <p class="text-sm text-gray-500">Disponibile dopo il primo mese di vendite.</p>
-                            </div>
-                            <div class="bg-slate-200 p-4 rounded-lg opacity-60 cursor-not-allowed">
-                                <p class="font-semibold text-slate-600">📈 Report Pubblicità Seller</p>
-                                <p class="text-sm text-gray-500">Disponibile dopo il primo mese di vendite.</p>
-                            </div>
-                            <a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link"
-                                target="_blank" rel="noopener noreferrer"
-                                class="block bg-slate-100 p-4 rounded-lg hover:bg-slate-200 transition-colors">
-                                <p class="font-semibold text-slate-800">📝 Minute Riunione</p>
-                                <p class="text-sm text-gray-600">Archivio verbali e documentazione.</p>
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+<body>
+<a class="skip-link" href="#main">Vai al report</a>
+<header class="site-header">
+  <a class="wordmark" href="#main" aria-label="Naturwaren, inizio report">naturwaren<span>REPORT / MELA SERVICES</span></a>
+  <nav aria-label="Sezioni report"><a href="#performance">Settembre</a><a href="#operativo">Stato operativo</a><a href="#archivio">Archivio</a></nav>
+</header>
+<main id="main">
+  <section class="hero" aria-labelledby="title">
+    <div><p class="eyebrow">REPORT MENSILE / 09.2026</p><h1 id="title">Una visione chiara.<br><em>Canale per canale.</em></h1><p class="hero-copy">Performance di settembre e avanzamento operativo: due prospettive distinte, un unico punto di riferimento.</p><a class="hero-link" href="#performance">Esplora il report <span aria-hidden="true">&darr;</span></a></div>
+    <aside class="period-card" aria-label="Date e copertura">
+      <div><span class="eyebrow">PERIODO REPORT</span><strong>Settembre 2026</strong><p>1 &ndash; 30 settembre / Europe/Rome</p></div>
+      <div><span class="eyebrow">STATO OPERATIVO</span><strong>9 ottobre 2026</strong><p>Snapshot successivo al periodo report</p></div>
+      <span class="badge pending">Consolidamento dati in corso</span>
+    </aside>
+  </section>
+  <p id="load-status" class="data-notice" role="status">Caricamento dati verificati. I valori mancanti sono indicati come &ldquo;Da verificare&rdquo;.</p>
+  <noscript><p class="data-notice">Attiva JavaScript per consultare i dati del report. L'archivio resta accessibile qui sotto.</p></noscript>
+  <section id="performance" class="section" aria-labelledby="performance-title">
+    <div class="section-heading"><div><p class="eyebrow">01 / RISULTATI DEL MESE</p><h2 id="performance-title">Settembre, senza sovrapposizioni.</h2></div><span class="date-tag">01.09 &ndash; 30.09.2026</span></div>
+    <p class="section-intro">Vendite e pubblicità del periodo. Nessun valore operativo di ottobre è incluso nei risultati mensili.</p>
+    <div id="monthly-channels" class="channel-grid"></div>
+    <article class="panel adv-panel"><div class="panel-heading"><h3>Amazon ADV 2026</h3><span class="badge pending">Copertura parziale</span></div><p>Il perimetro annuale è distinto dai risultati di settembre. Totali e trend vengono mostrati solo con copertura documentata.</p><div id="adv-data"></div></article>
+  </section>
+  <section id="operativo" class="section" aria-labelledby="operations-title">
+    <div class="section-heading"><div><p class="eyebrow">02 / AVANZAMENTO OPERATIVO</p><h2 id="operations-title">Il punto al 9 ottobre.</h2></div><span class="date-tag">SNAPSHOT / NON VENDITE MENSILI</span></div>
+    <div class="operations-grid">
+      <article class="panel" id="ebay-operations"><div class="panel-heading"><h3>eBay / Catalogo e campagne</h3><span class="badge">9 ottobre 2026</span></div><div id="ebay-snapshots"></div></article>
+      <article class="panel"><div class="panel-heading"><h3>Klaviyo / Profili e piano</h3><span class="badge">9 ottobre 2026</span></div><div id="klaviyo-data"></div></article>
     </div>
-    </section>
-
-    <!-- Timeline -->
-    <section id="timeline" class="mb-16">
-        <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">🗺️ La Nostra Roadmap: Traguardi Raggiunti
-        </h2>
-        <div class="relative max-w-3xl mx-auto border-l-4 border-teal-300 pl-12 py-4">
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Gennaio - Febbraio 2025</h3>
-                <p class="text-gray-600 mt-1">Fase di avvio con analisi di mercato, definizione della strategia
-                    omnicanale e kickoff ufficiale del progetto.</p>
-            </div>
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Marzo - Aprile 2025</h3>
-                <p class="text-gray-600 mt-1">Apertura e verifica dell'account Seller. Definizione dei primi bundle,
-                    set-up logistica FBA e ottimizzazione schede prodotto.</p>
-            </div>
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Maggio - Giugno 2025</h3>
-                <p class="text-gray-600 mt-1">Lancio delle prime campagne ADV sul canale Vendor e preparazione della
-                    spedizione FBA inaugurale per il canale Seller.</p>
-            </div>
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Luglio - Agosto 2025</h3>
-                <p class="text-gray-600 mt-1">Go-live del canale Seller con i primi bundle. Attivazione del
-                    programma Amazon Vine per la raccolta recensioni e potenziamento campagne ADV.</p>
-            </div>
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Settembre 2025</h3>
-                <p class="text-gray-600 mt-1">Prima analisi dei dati di vendita aggregati. Definizione della
-                    strategia di remarketing e pianificazione delle attività promozionali per il Q4.</p>
-            </div>
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Ottobre 2025</h3>
-                <p class="text-gray-600 mt-1">Ottimizzazione delle performance e ampliamento catalogo.
-                    Implementazione delle strategie di remarketing e rifornimento stock in previsione del picco
-                    stagionale.</p>
-            </div>
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Novembre 2025</h3>
-                <p class="text-gray-600 mt-1">Gestione del picco stagionale (Black Friday/Cyber Monday).
-                    Monitoraggio intensivo delle campagne ADV e massimizzazione del conversion rate sui bundle
-                    best-seller.</p>
-            </div>
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Dicembre 2025</h3>
-                <p class="text-gray-600 mt-1">Chiusura anno fiscale e analisi performance di picco.</p>
-            </div>
-            <div class="mb-12 pl-8 relative timeline-item">
-                <h3 class="text-xl font-semibold text-teal-700">Gennaio 2026</h3>
-                <p class="text-gray-600 mt-1">Definizione nuova strategia annuale ed espansione canali.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Challenges -->
-    <section id="challenges" class="mb-16">
-        <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">🚧 Sfide Superate: Agilità e Problem Solving
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold text-slate-700 mb-3">Accesso al Brand Registry 🛡️</h3>
-                <p><strong>Problema:</strong> Impossibilità di pubblicare a causa di una registrazione preesistente
-                    del marchio.</p>
-                <p class="mt-2"><strong>Soluzione:</strong> Accesso temporaneo ottenuto e "Piano B" con prove
-                    fotografiche inviato ad Amazon.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold text-slate-700 mb-3">Conflitto Prezzi Vendor/Seller 💸</h3>
-                <p><strong>Problema:</strong> Rischio di concorrenza interna e perdita della Buy Box.</p>
-                <p class="mt-2"><strong>Soluzione:</strong> Catalogo Seller definito con soli bundle complementari,
-                    escludendo prodotti sovrapposti.</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-md">
-                <h3 class="text-xl font-semibold text-slate-700 mb-3">Listing Bloccati da Terzi 📝</h3>
-                <p><strong>Problema:</strong> Impossibilità di ottimizzare schede prodotto create da altri
-                    rivenditori.</p>
-                <p class="mt-2"><strong>Soluzione:</strong> Apertura ticket di supporto e creazione di nuovi bundle
-                    per aggirare il problema.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Next Steps -->
-    <section id="next-steps">
-        <h2 class="text-3xl font-bold text-center mb-12 text-slate-800">➡️ Prossimi Passi</h2>
-        <div class="bg-white rounded-lg shadow-lg p-8">
-            <ol class="space-y-6">
-                <li class="flex items-start">
-                    <div
-                        class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                        1</div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-700">Potenziamento Pubblicitario (Q4)</h3>
-                        <p class="text-gray-600 mt-1">Lancio di campagne coupon sui nuovi bundle e preparazione di
-                            offerte dedicate per gli eventi chiave del Q4 (Black Friday, Natale).</p>
-                    </div>
-                </li>
-                <li class="flex items-start">
-                    <div
-                        class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                        2</div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-700">Restyling Brand Presence (Q4)</h3>
-                        <p class="text-gray-600 mt-1">Restyling completo del Brand Store per migliorare l'esperienza
-                            utente e la narrazione del marchio.</p>
-                    </div>
-                </li>
-                <li class="flex items-start">
-                    <div
-                        class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                        3</div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-700">Espansione Catalogo Seller (Continuo)</h3>
-                        <p class="text-gray-600 mt-1">Aggiunta progressiva di nuovi bundle strategici basati
-                            sull'analisi dei dati di vendita e delle richieste dei clienti.</p>
-                    </div>
-                </li>
-                <li class="flex items-start">
-                    <div
-                        class="bg-teal-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold text-lg mr-4 flex-shrink-0">
-                        4</div>
-                    <div>
-                        <h3 class="text-xl font-semibold text-slate-700">Espansione Internazionale (2026)</h3>
-                        <p class="text-gray-600 mt-1">Valutazione del lancio su altri marketplace europei (DE, FR,
-                            ES) sulla base dei risultati consolidati in Italia.</p>
-                    </div>
-                </li>
-            </ol>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="text-center mt-16 border-t pt-8">
-        <p class="text-lg font-semibold text-slate-700">Grazie per la fiducia e la proficua collaborazione!</p>
-        <p class="text-gray-600">Team Mela Services</p>
-    </footer>
+  </section>
+  <section id="attivita" class="section" aria-labelledby="activities-title">
+    <div class="section-heading"><div><p class="eyebrow">03 / PROSSIMI PASSAGGI</p><h2 id="activities-title">Attività e attese.</h2></div></div><div id="activities" class="activities-grid"></div>
+  </section>
+  <section id="archivio" class="section" aria-labelledby="archive-title">
+    <div class="section-heading"><div><p class="eyebrow">04 / STORICO DEL PROGETTO</p><h2 id="archive-title">Archivio report.</h2></div><span class="date-tag">2025 &ndash; MARZO 2026</span></div>
+    <p class="section-intro">Report storici e documentazione già disponibili. I periodi di archivio non rappresentano lo stato attuale.</p>
+    <div class="archive">
+<details class="archive-period" open><summary>Marzo 2026</summary><div class="archive-links">
+<a href="vendor/report_vendite/vendite_vendor_2026_03.html">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="vendor/report_adv/adv_vendor_2026_03.html">Report Pubblicità Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://docs.google.com/spreadsheets/d/18qyzmYcu-BSdGWYgsn5radPUiBILcHRs/export?format=xlsx" target="_blank" rel="noopener noreferrer">Report Vendite Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="Seller/adv_seller_2026_03.html">Report Pubblicità Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Febbraio 2026</summary><div class="archive-links">
+<a href="vendor/report_vendite/vendite_vendor_2026_02.html">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="vendor/report_adv/adv_vendor_2026_02.html">Report Pubblicità Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="Seller/adv_seller_2026_02.html">Report Pubblicità Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Gennaio 2026</summary><div class="archive-links">
+<a href="vendor/report_vendite/vendite_vendor_2026_01.html">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="vendor/report_adv/adv_vendor_2026_01.html">Report Pubblicità Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://docs.google.com/spreadsheets/d/14qzZ_xTOYGYnn-PByPJLygQIx3J_AWuF/export?format=xlsx" target="_blank" rel="noopener noreferrer">Report Vendite Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="Seller/adv_seller_2026_01.html">Report Pubblicità Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Dicembre 2025</summary><div class="archive-links">
+<a href="vendor/report_vendite/vendite_vendor_2025_12.html">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="vendor/report_adv/adv_vendor_2025_12.html">Report Pubblicità Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://docs.google.com/spreadsheets/d/19Eyp0YBxRiZ2gT3OtNdmHCl73l6dBJ5F/export?format=xlsx" target="_blank" rel="noopener noreferrer">Report Vendite Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="Seller/adv_seller_2025_12.html">Report Pubblicità Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Novembre 2025</summary><div class="archive-links">
+<a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_11.html" target="_blank" rel="noopener noreferrer">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://melaservices.github.io/Naturwaren/vendor/report_adv/adv_vendor_2025_11.html" target="_blank" rel="noopener noreferrer">Report Pubblicità Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://docs.google.com/spreadsheets/d/1Tzb6Bj2yLkkniTgFMXQK3stpoDkGD0x3/export?format=xlsx" target="_blank" rel="noopener noreferrer">Report Vendite Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://melaservices.github.io/Naturwaren/Seller/adv_seller_2025_11.html" target="_blank" rel="noopener noreferrer">Report Pubblicità Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Ottobre 2025</summary><div class="archive-links">
+<a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_10.html" target="_blank" rel="noopener noreferrer">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://melaservices.github.io/Naturwaren/vendor/report_adv/adv_vendor_2025_10.html" target="_blank" rel="noopener noreferrer">Report Pubblicità Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://docs.google.com/spreadsheets/d/1RHbcDnya79xuNCiYooDDms5cQupZnHA9/export?format=xlsx" target="_blank" rel="noopener noreferrer">Report Vendite Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://melaservices.github.io/Naturwaren/Seller/adv_seller_2025_10.html" target="_blank" rel="noopener noreferrer">Report Pubblicità Seller<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Agosto 2025</summary><div class="archive-links">
+<a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_08.html" target="_blank" rel="noopener noreferrer">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Luglio 2025</summary><div class="archive-links">
+<a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_07.html" target="_blank" rel="noopener noreferrer">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Giugno 2025</summary><div class="archive-links">
+<a href="https://melaservices.github.io/Naturwaren/vendor/report_vendite/vendite_vendor_2025_06.html" target="_blank" rel="noopener noreferrer">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
+<details class="archive-period"><summary>Gennaio - Maggio 2025</summary><div class="archive-links">
+<a href="vendor/report_vendite/vendite_vendor_2025_01_05.html">Report Vendite Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="vendor/report_adv/adv_vendor_2025_01_05.html">Report Pubblicità Vendor<span aria-hidden="true"> &rarr;</span></a>
+<a href="https://drive.google.com/drive/folders/1XCafo3FO2387E1oFe9atILberPb9Bkk9?usp=drive_link" target="_blank" rel="noopener noreferrer">Minute Riunione<span aria-hidden="true"> &rarr;</span></a>
+</div></details>
     </div>
-
-    <script>
-        function toggleReports() {
-            const container = document.getElementById('reportsContainer');
-            const icon = document.getElementById('toggleIcon');
-            if (container.style.maxHeight === '0px' || container.style.maxHeight === '') {
-                container.style.maxHeight = container.scrollHeight + "px";
-                icon.classList.add('rotate-45');
-            } else {
-                container.style.maxHeight = '0px';
-                icon.classList.remove('rotate-45');
-            }
-        }
-    </script>
-
+  </section>
+  <footer><span class="wordmark">naturwaren</span><p>Report a cura di Mela Services<br>Solo dati aggregati. Fonti e limiti indicati per ciascun canale.</p><a href="#main">Torna all'inizio &uarr;</a></footer>
+</main>
 </body>
-
 </html>

@@ -1,0 +1,456 @@
+{
+  "schemaVersion": 1,
+  "reportPeriod": {
+    "id": "2026-09",
+    "start": "2026-09-01",
+    "end": "2026-09-30",
+    "timezone": "Europe/Rome"
+  },
+  "operationalAsOf": "2026-10-09",
+  "monthly": {
+    "seller": {
+      "title": "Amazon Seller",
+      "status": "unavailable",
+      "metrics": [
+        {
+          "key": "sales",
+          "label": "Vendite",
+          "value": null,
+          "format": "eur"
+        },
+        {
+          "key": "orders",
+          "label": "Ordini",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "key": "units",
+          "label": "Unità",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "key": "adSpend",
+          "label": "Spesa ADV",
+          "value": null,
+          "format": "eur"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Amazon SP-API e Advertising API · verifica 9 ottobre 2026",
+          "reference": "outputs/amazon/dashboard_data.json"
+        }
+      ],
+      "missing": [
+        "Vendite retail settembre non disponibili: accesso SP-API negato (403), nessun export verificato per il periodo.",
+        "ADV settembre non disponibile alla chiusura: report Sponsored Products, Brands e Display non completati."
+      ],
+      "note": "Dati non disponibili alla chiusura. Nessun valore zero o stima sostituisce il dato mancante."
+    },
+    "vendor": {
+      "title": "Amazon Vendor",
+      "status": "partial",
+      "metrics": [
+        {
+          "key": "sales",
+          "label": "Vendite",
+          "value": null,
+          "format": "eur"
+        },
+        {
+          "key": "orders",
+          "label": "Ordini",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "key": "units",
+          "label": "Unità",
+          "value": null,
+          "format": "integer"
+        },
+        {
+          "key": "adSpend",
+          "label": "Spesa ADV / solo Sponsored Products",
+          "value": 783.31,
+          "format": "eur"
+        }
+      ],
+      "sources": [
+        {
+          "label": "Amazon SP-API e Advertising API · verifica 9 ottobre 2026",
+          "reference": "outputs/amazon/dashboard_data.json"
+        }
+      ],
+      "missing": [
+        "Vendite retail settembre non disponibili: accesso SP-API negato (403), nessun export verificato per il periodo.",
+        "Altre componenti ADV non disponibili alla chiusura: report Sponsored Brands e Display non completati; totale ADV non disponibile."
+      ],
+      "note": "783,31 € è la sola spesa Sponsored Products di settembre, non il totale ADV Vendor. Le vendite attribuite alla pubblicità non sono vendite retail, sell-in o sell-out."
+    },
+    "ebay": {
+      "title": "eBay",
+      "status": "verified",
+      "metrics": [
+        {
+          "key": "orders",
+          "label": "Ordini creati",
+          "value": 0,
+          "format": "integer"
+        },
+        {
+          "key": "paidOrders",
+          "label": "Ordini pagati non annullati",
+          "value": 0,
+          "format": "integer"
+        },
+        {
+          "key": "sales",
+          "label": "Vendite lorde",
+          "value": 0,
+          "format": "eur"
+        },
+        {
+          "key": "units",
+          "label": "Unità pagate non annullate",
+          "value": 0,
+          "format": "integer"
+        }
+      ],
+      "sources": [
+        {
+          "label": "eBay Fulfillment API · ordini creati a settembre · verifica 9 ottobre 2026",
+          "reference": "outputs/allineamento_2026-10-09/ebay/report-data.json"
+        }
+      ],
+      "missing": [],
+      "note": "Query creationDate dal 1 al 30 settembre, fuso Europe/Rome. Vendite lorde comprensive di spedizione e imposte; non sono ricavi netti e non deducono rimborsi."
+    }
+  },
+  "adv2026": {
+    "status": "partial",
+    "coverage": [
+      "Storico pubblicato gennaio-marzo 2026, Seller e Vendor; non copertura gennaio-settembre"
+    ],
+    "metrics": [
+      {
+        "label": "Spesa ADV Seller / gennaio-settembre",
+        "value": null,
+        "format": "eur"
+      },
+      {
+        "label": "Spesa ADV Vendor / gennaio-settembre",
+        "value": null,
+        "format": "eur"
+      }
+    ],
+    "sources": [
+      {
+        "label": "Seller ADV / 2026-01",
+        "href": "Seller/adv_seller_2026_01.html"
+      },
+      {
+        "label": "Seller ADV / 2026-02",
+        "href": "Seller/adv_seller_2026_02.html"
+      },
+      {
+        "label": "Seller ADV / 2026-03",
+        "href": "Seller/adv_seller_2026_03.html"
+      },
+      {
+        "label": "Vendor ADV / 2026-01",
+        "href": "vendor/report_adv/adv_vendor_2026_01.html"
+      },
+      {
+        "label": "Vendor ADV / 2026-02",
+        "href": "vendor/report_adv/adv_vendor_2026_02.html"
+      },
+      {
+        "label": "Vendor ADV / 2026-03",
+        "href": "vendor/report_adv/adv_vendor_2026_03.html"
+      }
+    ],
+    "missing": [
+      "Totale gennaio-settembre non disponibile: copertura incompleta e limiti di conservazione API.",
+      "Copertura dei prodotti ADV e finestre di attribuzione dello storico HTML non certificate da dati grezzi."
+    ],
+    "series": [],
+    "annual": {
+      "period": "2026-01/2026-09",
+      "status": "unavailable",
+      "sellerCost": null,
+      "vendorCost": null
+    },
+    "historical_monthly": [
+      {
+        "role": "seller",
+        "month": "2026-01",
+        "cost": 102.03,
+        "ad_attributed_sales": 147.51,
+        "status": "available_historical_published",
+        "source": "Seller/adv_seller_2026_01.html"
+      },
+      {
+        "role": "seller",
+        "month": "2026-02",
+        "cost": 41.06,
+        "ad_attributed_sales": 49.17,
+        "status": "available_historical_published",
+        "source": "Seller/adv_seller_2026_02.html"
+      },
+      {
+        "role": "seller",
+        "month": "2026-03",
+        "cost": 243.89,
+        "ad_attributed_sales": 128.83,
+        "status": "available_historical_published",
+        "source": "Seller/adv_seller_2026_03.html"
+      },
+      {
+        "role": "vendor",
+        "month": "2026-01",
+        "cost": 1238.96,
+        "ad_attributed_sales": 3110.6,
+        "status": "available_historical_published",
+        "source": "vendor/report_adv/adv_vendor_2026_01.html"
+      },
+      {
+        "role": "vendor",
+        "month": "2026-02",
+        "cost": 976.59,
+        "ad_attributed_sales": 2222.53,
+        "status": "available_historical_published",
+        "source": "vendor/report_adv/adv_vendor_2026_02.html"
+      },
+      {
+        "role": "vendor",
+        "month": "2026-03",
+        "cost": 1087.01,
+        "ad_attributed_sales": 2171.12,
+        "status": "available_historical_published",
+        "source": "vendor/report_adv/adv_vendor_2026_03.html"
+      }
+    ],
+    "q1": {
+      "sellerCost": 386.98,
+      "vendorCost": 3302.56
+    },
+    "note": "Storico gennaio-marzo pubblicato, non ricalcolato da API. Spese ADV di performance, non fatture né importi IVA inclusa. Il cumulativo Vendor 1 gennaio-1 settembre si sovrappone al Q1: è escluso dalle somme; nessun totale annuale o gennaio-settembre viene ricostruito."
+  },
+  "operations": {
+    "ebay": {
+      "snapshots": [
+        {
+          "date": "2026-10-06",
+          "status": "pending",
+          "metrics": [
+            {
+              "label": "Inserzioni",
+              "value": null,
+              "format": "integer"
+            }
+          ],
+          "sources": [],
+          "missing": [
+            "Snapshot storico del 6 ottobre da integrare; non sostituisce lo stato del 9 ottobre."
+          ]
+        },
+        {
+          "date": "2026-10-09",
+          "status": "verified",
+          "metrics": [
+            {
+              "label": "Inserzioni",
+              "value": 123,
+              "format": "integer"
+            },
+            {
+              "label": "Comprabili",
+              "value": 114,
+              "format": "integer"
+            },
+            {
+              "label": "A stock zero",
+              "value": 9,
+              "format": "integer"
+            },
+            {
+              "label": "Campagne attive",
+              "value": 3,
+              "format": "integer"
+            },
+            {
+              "label": "Aliquota campagne",
+              "value": 10,
+              "format": "percent"
+            },
+            {
+              "label": "Campagne CPC create",
+              "value": 0,
+              "format": "integer"
+            },
+            {
+              "label": "Inserzioni uniche coperte",
+              "value": 123,
+              "format": "integer"
+            },
+            {
+              "label": "Sovrapposizioni",
+              "value": 0,
+              "format": "integer"
+            }
+          ],
+          "availability": {
+            "total": 123,
+            "purchasable": 114,
+            "zeroStock": 9
+          },
+          "sources": [
+            {
+              "label": "Verifica catalogo e campagne eBay del 9 ottobre 2026",
+              "reference": "outputs/ebay-quality-20261009/completed-verification.json"
+            }
+          ],
+          "missing": [],
+          "note": "Aliquota attuale 10% su tre gruppi da 14, 41 e 68 inserzioni. Nessuna sovrapposizione. Le inserzioni a stock zero sono conservate. Non è un risultato commerciale di settembre."
+        }
+      ],
+      "advertisingWindow": {
+        "start": "2026-10-03",
+        "end": "2026-10-09",
+        "status": "partial",
+        "metrics": [
+          {
+            "label": "Impression / ultimi 7 giorni",
+            "value": 412,
+            "format": "integer"
+          },
+          {
+            "label": "Click",
+            "value": 0,
+            "format": "integer"
+          },
+          {
+            "label": "Vendite attribuite (unità)",
+            "value": 0,
+            "format": "integer"
+          },
+          {
+            "label": "Vendite attribuite",
+            "value": 0,
+            "format": "eur"
+          },
+          {
+            "label": "Costi pubblicitari",
+            "value": 0,
+            "format": "eur"
+          }
+        ],
+        "daily": [
+          {
+            "date": "2026-10-06",
+            "impressions": 105,
+            "status": "verified"
+          },
+          {
+            "date": "2026-10-07",
+            "impressions": 84,
+            "status": "verified"
+          },
+          {
+            "date": "2026-10-08",
+            "impressions": 126,
+            "status": "verified"
+          },
+          {
+            "date": "2026-10-09",
+            "impressions": 97,
+            "status": "partial"
+          }
+        ],
+        "groups": [
+          {
+            "label": "Igiene",
+            "impressions": 18
+          },
+          {
+            "label": "Integratori",
+            "impressions": 147
+          },
+          {
+            "label": "Cosmesi",
+            "impressions": 247
+          }
+        ],
+        "sources": [
+          {
+            "label": "Dashboard eBay · ultimi 7 giorni (3-9 ottobre) · aggregati comunicati il 9 ottobre 2026"
+          }
+        ],
+        "missing": [],
+        "note": "Finestra di ottobre, esclusa dal report di settembre. Il 9 ottobre è parziale. Aliquota attuale verificata al 10%; le etichette storiche nei nomi delle campagne non indicano l'aliquota attuale."
+      }
+    },
+    "klaviyo": {
+      "status": "partial",
+      "metrics": [
+        {
+          "label": "Profili attivi (UI)",
+          "value": 4018,
+          "format": "integer"
+        },
+        {
+          "label": "Profili sospesi (UI)",
+          "value": 2581,
+          "format": "integer"
+        },
+        {
+          "label": "Profili totali (UI)",
+          "value": 6608,
+          "format": "integer"
+        },
+        {
+          "label": "Conteggio billing in cache",
+          "value": 6599,
+          "format": "integer"
+        }
+      ],
+      "sources": [
+        {
+          "label": "UI profili e checkout Klaviyo verificati su 4.018 profili attivi · aggiornamento comunicato il 9 ottobre 2026"
+        }
+      ],
+      "missing": [
+        "Autorizzazione del cliente all'acquisto in attesa; imposte da confermare.",
+        "Richiesta DNS inoltrata al referente tecnico; configurazione non ancora eseguita.",
+        "Flussi ancora in bozza/test."
+      ],
+      "plan": {
+        "monthlyUsd": 100,
+        "profiles": 5000,
+        "sends": 50000,
+        "purchased": false
+      },
+      "note": "Checkout verificato: 100 USD/mese per 5.000 profili e 50.000 invii, compatibile con 4.018 attivi. Nessun acquisto effettuato. Il conteggio billing 6.599 è in cache e non blocca il piano verificato. Attivi e sospesi non esauriscono il totale UI; nessuna categoria residua viene inferita."
+    }
+  },
+  "activities": [
+    {
+      "title": "Recuperare le vendite Amazon",
+      "status": "Dati non disponibili",
+      "description": "Vendite retail settembre non disponibili per accesso SP-API negato (403). ADV Seller e altre componenti Vendor non disponibili alla chiusura; solo Sponsored Products Vendor recuperato."
+    },
+    {
+      "title": "Completare il perimetro ADV 2026",
+      "status": "Da verificare",
+      "description": "Storico gennaio-marzo pubblicato disponibile. Totale gennaio-settembre non disponibile: colmare la copertura senza sommare intervalli sovrapposti."
+    },
+    {
+      "title": "Autorizzare il piano Klaviyo",
+      "status": "In attesa cliente",
+      "description": "Checkout da 100 USD/mese verificato; attendere autorizzazione all'acquisto e conferma delle imposte. DNS inoltrato al referente tecnico ma non configurato; flussi in bozza/test."
+    }
+  ]
+}
