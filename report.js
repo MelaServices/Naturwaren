@@ -58,8 +58,10 @@ function badge(status) {
 
 function renderMonthly(data) {
   const target = document.getElementById("monthly-channels");
+  if (!target) return;
   target.replaceChildren();
-  for (const key of ["seller", "vendor", "ebay"]) {
+  const channels = document.body.dataset.channel === "ebay" ? ["ebay"] : ["seller", "vendor", "ebay"];
+  for (const key of channels) {
     const channel = data.monthly[key];
     const card = element("article", "panel");
     const heading = element("div", "panel-heading");
@@ -81,6 +83,7 @@ function renderMonthly(data) {
 
 function renderAdv(data) {
   const target = document.getElementById("adv-data");
+  if (!target) return;
   target.replaceChildren(metrics(data.metrics));
   if (data.coverage?.length) target.append(element("p", "note", "Copertura documentata: " + data.coverage.join(", ")));
   const headingBadge = target.parentElement.querySelector(".badge");
@@ -146,8 +149,10 @@ function barRow(label, value, total, format = "integer") {
 
 function renderEbay(data) {
   const target = document.getElementById("ebay-snapshots");
+  if (!target) return;
   target.replaceChildren();
   for (const snapshot of data.snapshots || []) {
+    if (snapshot.status !== "verified") continue;
     const section = element("section", "snapshot");
     section.append(element("h4", "", "Snapshot " + snapshot.date.split("-").reverse().join(".") + " / " + (labels[snapshot.status] || missingValue)), metrics(snapshot.metrics));
     const counts = snapshot.availability;
@@ -183,6 +188,7 @@ function renderEbay(data) {
 
 function renderKlaviyo(data) {
   const target = document.getElementById("klaviyo-data");
+  if (!target) return;
   target.replaceChildren(metrics(data.metrics));
   if (data.plan) {
     const plan = element("div", "plan");
@@ -198,6 +204,7 @@ function renderKlaviyo(data) {
 
 function renderActivities(items) {
   const target = document.getElementById("activities");
+  if (!target) return;
   target.replaceChildren();
   for (const item of items || []) {
     const card = element("article", "activity");
@@ -227,11 +234,15 @@ async function loadReport() {
     const verified = Object.values(data.monthly)
       .filter(channel => channel.status === "verified" || channel.retailStatus === "verified")
       .map(channel => channel.title + (channel.retailStatus === "verified" ? " / retail" : ""));
-    status.textContent = "Settembre 2026 / canali verificati: " + (verified.join(", ") || "Da verificare") +
-      ". I dati mancanti sono indicati come «Da verificare», mai come zero. Stato operativo separato al 9 ottobre.";
+    status.textContent = document.body.dataset.channel === "ebay"
+      ? "eBay: settembre e aggiornamento al 9 ottobre sono distinti. Fonti e periodi indicati in ogni sezione."
+      : document.getElementById("klaviyo-data")
+        ? "Stato operativo al 9 ottobre 2026. Piani proposti e attività in attesa non sono acquisti o lavori completati."
+        : "Settembre 2026 / canali verificati: " + (verified.join(", ") || "Da verificare") +
+          ". I dati mancanti sono indicati come «Da verificare», mai come zero.";
   } catch (error) {
     for (const id of ["monthly-channels", "adv-data", "ebay-snapshots", "klaviyo-data", "activities"]) {
-      document.getElementById(id).replaceChildren(element("p", "data-notice", missingValue + ": dati non disponibili. Ricaricare la pagina o verificare il file report-data.json."));
+      document.getElementById(id)?.replaceChildren(element("p", "data-notice", missingValue + ": dati non disponibili. Ricaricare la pagina o verificare il file report-data.json."));
     }
     status.textContent = "Dati del report non disponibili. Nessun valore sostitutivo mostrato; l'archivio resta accessibile.";
   }
