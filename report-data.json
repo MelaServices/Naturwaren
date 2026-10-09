@@ -52,23 +52,43 @@
     "vendor": {
       "title": "Amazon Vendor",
       "status": "partial",
+      "retailStatus": "verified",
+      "advertisingStatus": "partial",
       "metrics": [
         {
-          "key": "sales",
-          "label": "Vendite",
-          "value": null,
+          "key": "orderedRevenue",
+          "label": "Ricavi ordinati",
+          "value": 17342.76,
           "format": "eur"
         },
         {
-          "key": "orders",
-          "label": "Ordini",
-          "value": null,
+          "key": "orderedUnits",
+          "label": "Unità ordinate",
+          "value": 3286,
           "format": "integer"
         },
         {
-          "key": "units",
-          "label": "Unità",
-          "value": null,
+          "key": "shippedRevenue",
+          "label": "Ricavi spedizioni",
+          "value": 16978.48,
+          "format": "eur"
+        },
+        {
+          "key": "shippedCogs",
+          "label": "Costo del venduto delle spedizioni",
+          "value": 16202.43,
+          "format": "eur"
+        },
+        {
+          "key": "shippedUnits",
+          "label": "Unità spedite",
+          "value": 3225,
+          "format": "integer"
+        },
+        {
+          "key": "customerReturns",
+          "label": "Resi cliente",
+          "value": 23,
           "format": "integer"
         },
         {
@@ -76,19 +96,28 @@
           "label": "Spesa ADV / solo Sponsored Products",
           "value": 783.31,
           "format": "eur"
+        },
+        {
+          "key": "adSpendTotal",
+          "label": "Spesa ADV totale",
+          "value": null,
+          "format": "eur"
         }
       ],
       "sources": [
         {
-          "label": "Amazon SP-API e Advertising API · verifica 9 ottobre 2026",
+          "label": "Vendor Retail Analytics · Produzione / Retail Italia · settembre 2026 · UI ed export XLSX riconciliati il 9 ottobre 2026 · dati aggiornati al 7 ottobre",
+          "reference": "outputs/amazon/vendor_september_browser.json"
+        },
+        {
+          "label": "Amazon Advertising API · verifica 9 ottobre 2026",
           "reference": "outputs/amazon/dashboard_data.json"
         }
       ],
       "missing": [
-        "Vendite retail settembre non disponibili: accesso SP-API negato (403), nessun export verificato per il periodo.",
         "Altre componenti ADV non disponibili alla chiusura: report Sponsored Brands e Display non completati; totale ADV non disponibile."
       ],
-      "note": "783,31 € è la sola spesa Sponsored Products di settembre, non il totale ADV Vendor. Le vendite attribuite alla pubblicità non sono vendite retail, sell-in o sell-out."
+      "note": "Retail verificato sulla riga Totale di Vendor Retail Analytics, vista Produzione / programma Retail Italia, account Naturwaren Italia, periodo 1-30 settembre 2026. Le unità ordinate non sono un numero di ordini; ricavi ordinati, ricavi spedizioni e costo del venduto sono metriche distinte e non vanno sommati. ADV parziale: 783,31 € è la sola spesa Sponsored Products, non il totale ADV Vendor. Le vendite attribuite alla pubblicità non sono ricavi retail."
     },
     "ebay": {
       "title": "eBay",
@@ -438,9 +467,9 @@
   },
   "activities": [
     {
-      "title": "Recuperare le vendite Amazon",
+      "title": "Completare i dati Amazon mancanti",
       "status": "Dati non disponibili",
-      "description": "Vendite retail settembre non disponibili per accesso SP-API negato (403). ADV Seller e altre componenti Vendor non disponibili alla chiusura; solo Sponsored Products Vendor recuperato."
+      "description": "Retail Vendor settembre recuperato e verificato via Retail Analytics. Retail Seller non disponibile per accesso SP-API negato (403). ADV Seller e altre componenti Vendor non disponibili alla chiusura; Sponsored Products Vendor recuperato."
     },
     {
       "title": "Completare il perimetro ADV 2026",

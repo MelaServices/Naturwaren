@@ -63,7 +63,16 @@ function renderMonthly(data) {
     const channel = data.monthly[key];
     const card = element("article", "panel");
     const heading = element("div", "panel-heading");
-    heading.append(element("h3", "", channel.title), badge(channel.status));
+    heading.append(element("h3", "", channel.title));
+    if (channel.retailStatus) {
+      const retail = badge(channel.retailStatus);
+      retail.textContent = "Retail / " + (labels[channel.retailStatus] || missingValue);
+      const advertising = badge(channel.advertisingStatus);
+      advertising.textContent = "ADV / " + (labels[channel.advertisingStatus] || missingValue);
+      heading.append(retail, advertising);
+    } else {
+      heading.append(badge(channel.status));
+    }
     card.append(heading, metrics(channel.metrics));
     provenance(card, channel);
     target.append(card);
@@ -215,7 +224,9 @@ async function loadReport() {
     renderKlaviyo(data.operations.klaviyo);
     renderActivities(data.activities);
     // Coverage text follows the JSON, including future parent integrations.
-    const verified = Object.values(data.monthly).filter(channel => channel.status === "verified").map(channel => channel.title);
+    const verified = Object.values(data.monthly)
+      .filter(channel => channel.status === "verified" || channel.retailStatus === "verified")
+      .map(channel => channel.title + (channel.retailStatus === "verified" ? " / retail" : ""));
     status.textContent = "Settembre 2026 / canali verificati: " + (verified.join(", ") || "Da verificare") +
       ". I dati mancanti sono indicati come «Da verificare», mai come zero. Stato operativo separato al 9 ottobre.";
   } catch (error) {
