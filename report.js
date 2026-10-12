@@ -14,7 +14,7 @@ function element(tag, className, text) {
 function formatMetric(metric) {
   const value = metric.value;
   if (typeof value !== "number" || !Number.isFinite(value)) return missingValue;
-  if (metric.format === "eur") return new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR" }).format(value);
+  if (metric.format === "eur") return new Intl.NumberFormat("it-IT", { style: "currency", currency: "EUR", useGrouping: "always" }).format(value);
   if (metric.format === "percent") return number.format(value) + "%";
   if (metric.format === "integer") return new Intl.NumberFormat("it-IT", { maximumFractionDigits: 0, useGrouping: "always" }).format(value);
   return number.format(value);
@@ -213,6 +213,78 @@ function renderActivities(items) {
   }
 }
 
+function renderSellerDetail(data) {
+  const target = document.getElementById("seller-detail");
+  if (!target) return;
+  target.replaceChildren();
+  const days = (data.daily || []).filter(day => /^2026-09-\d{2}$/.test(day.date) &&
+    typeof day.sales === "number" && Number.isFinite(day.sales) && day.sales >= 0);
+  if (days.length === 30 && new Set(days.map(day => day.date)).size === 30) {
+    const figure = element("figure", "seller-trend");
+    figure.append(element("figcaption", "note", "Vendite di prodotti ordinati / andamento giornaliero in EUR"));
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 540 155");
+    svg.setAttribute("role", "img");
+    svg.setAttribute("aria-label", "Vendite Seller dal primo al trenta settembre. Valori esatti nella tabella giornaliera.");
+    const max = Math.max(1, ...days.map(day => day.sales));
+    for (const [index, day] of days.entries()) {
+      const bar = document.createElementNS(svg.namespaceURI, "rect");
+      const height = day.sales / max * 115;
+      for (const [key, value] of Object.entries({ x: 10 + index * 17.5, y: 125 - height, width: 12, height, rx: 2, fill: "#164e38" })) bar.setAttribute(key, value);
+      const title = document.createElementNS(svg.namespaceURI, "title");
+      title.textContent = day.date + ": " + formatMetric({ value: day.sales, format: "eur" });
+      bar.append(title);
+      svg.append(bar);
+    }
+    for (const [x, text] of [[10, "01/09"], [249, "15/09"], [488, "30/09"]]) {
+      const label = document.createElementNS(svg.namespaceURI, "text");
+      label.setAttribute("x", x); label.setAttribute("y", 149); label.setAttribute("font-size", "11"); label.setAttribute("fill", "#5c6c61");
+      label.textContent = text; svg.append(label);
+    }
+    figure.append(svg);
+    target.append(figure);
+    const details = element("details", "seller-table-detail");
+    details.append(element("summary", "", "Apri i 30 giorni: vendite e unità"));
+    details.append(sellerTable(["Data", "Vendite prodotti", "Unità"], days.map(day =>
+      [day.date.split("-").reverse().join("/"), formatMetric({value: day.sales, format: "eur"}), String(day.units)])));
+    target.append(details);
+  }
+  const shipped = data.shippedSummary;
+  if (shipped) {
+    const section = element("section", "snapshot");
+    section.append(element("h3", "", "Ordini e corrispettivi / perimetro distinto"), element("p", "note", shipped.note));
+    section.append(metrics([
+      {label: "Ordini di vendita spediti", value: shipped.orders, format: "integer"},
+      {label: "Lordo con spedizione", value: shipped.gross, format: "eur"},
+      {label: "Spedizione", value: shipped.shipping, format: "eur"},
+      {label: "IVA originale Amazon", value: shipped.vat, format: "eur"}
+    ]));
+    if (data.products?.length) {
+      const details = element("details", "seller-table-detail");
+      details.append(element("summary", "", "Apri le " + data.products.length + " referenze vendute"));
+      details.append(sellerTable(["SKU / ASIN", "Prodotto", "Unità", "Ordini", "Lordo con spedizione"], data.products.map(product =>
+        [product.sku + " / " + product.asin, product.name, String(product.units), String(product.orders), formatMetric({value: product.gross, format: "eur"})])));
+      section.append(details);
+    }
+    target.append(section);
+  }
+}
+
+function sellerTable(headers, rows) {
+  const wrapper = element("div", "seller-table-scroll");
+  wrapper.tabIndex = 0;
+  wrapper.setAttribute("role", "region");
+  wrapper.setAttribute("aria-label", "Dettaglio dati Seller, tabella scorribile");
+  const table = element("table", "historical-table");
+  const head = element("thead");
+  const heading = element("tr");
+  for (const header of headers) { const th = element("th", "", header); th.scope = "col"; heading.append(th); }
+  head.append(heading);
+  const body = element("tbody");
+  for (const row of rows) { const tr = element("tr"); for (const value of row) tr.append(element("td", "", value)); body.append(tr); }
+  table.append(head, body); wrapper.append(table); return wrapper;
+}
+
 async function loadReport() {
   const status = document.getElementById("load-status");
   try {
@@ -230,6 +302,7 @@ async function loadReport() {
     renderEbay(data.operations.ebay);
     renderKlaviyo(data.operations.klaviyo);
     renderActivities(data.activities);
+    renderSellerDetail(data.monthly.seller);
     // Coverage text follows the JSON, including future parent integrations.
     const verified = Object.values(data.monthly)
       .filter(channel => channel.status === "verified" || channel.retailStatus === "verified")
@@ -241,7 +314,7 @@ async function loadReport() {
         : "Settembre 2026 / canali verificati: " + (verified.join(", ") || "Da verificare") +
           ". I dati mancanti sono indicati come «Da verificare», mai come zero.";
   } catch (error) {
-    for (const id of ["monthly-channels", "adv-data", "ebay-snapshots", "klaviyo-data", "activities"]) {
+    for (const id of ["monthly-channels", "adv-data", "ebay-snapshots", "klaviyo-data", "activities", "seller-detail"]) {
       document.getElementById(id)?.replaceChildren(element("p", "data-notice", missingValue + ": dati non disponibili. Ricaricare la pagina o verificare il file report-data.json."));
     }
     status.textContent = "Dati del report non disponibili. Nessun valore sostitutivo mostrato; l'archivio resta accessibile.";

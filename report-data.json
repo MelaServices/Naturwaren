@@ -10,50 +10,319 @@
   "monthly": {
     "seller": {
       "title": "Amazon Seller",
-      "status": "unavailable",
+      "status": "verified",
+      "retailStatus": "verified",
+      "advertisingStatus": "verified",
+      "verifiedAt": "2026-10-12",
       "metrics": [
         {
           "key": "sales",
-          "label": "Vendite",
-          "value": null,
+          "label": "Vendite di prodotti ordinati",
+          "value": 1513.6,
           "format": "eur"
         },
         {
-          "key": "orders",
-          "label": "Ordini",
-          "value": null,
+          "key": "orderedOrderItems",
+          "label": "Articoli di ordine",
+          "value": 52,
           "format": "integer"
         },
         {
           "key": "units",
-          "label": "Unità",
-          "value": null,
+          "label": "Unità ordinate",
+          "value": 54,
           "format": "integer"
         },
         {
-          "key": "adSpend",
-          "label": "Spesa ADV",
-          "value": null,
+          "key": "averageItemSale",
+          "label": "Vendite medie / articolo di ordine",
+          "value": 29.11,
           "format": "eur"
+        },
+        {
+          "key": "adSpend",
+          "label": "Spesa ADV / SP + SB + SD",
+          "value": 0,
+          "format": "eur"
+        },
+        {
+          "key": "lastYearSales",
+          "label": "Vendite prodotti / settembre 2025",
+          "value": 203,
+          "format": "eur"
+        },
+        {
+          "key": "salesGrowth",
+          "label": "Variazione vendite / settembre 2025",
+          "value": 645.62,
+          "format": "percent"
         }
       ],
       "sources": [
         {
-          "label": "Amazon SP-API e Advertising API · verifica 9 ottobre 2026",
-          "reference": "outputs/amazon/dashboard_data.json"
+          "label": "Seller Business Reports · Naturwaren Italia · entrambi i canali logistici · 1-30 settembre · UI e CSV riconciliati il 12 ottobre 2026",
+          "reference": "outputs/aggiornamento_2026-10-12/seller"
+        },
+        {
+          "label": "Amazon Advertising API · SP, SB e SD settembre completati e verificati il 12 ottobre 2026",
+          "reference": "outputs/amazon/september_2026.json"
+        },
+        {
+          "label": "Seller Central · Tutti gli ordini · acquisti settembre, stato al 12 ottobre 2026 · corrispettivi riconciliati",
+          "reference": "outputs/aggiornamento_2026-10-12/corrispettivi/seller_settembre_aggregato.json"
         }
       ],
-      "missing": [
-        "Vendite retail settembre non disponibili: accesso SP-API negato (403), nessun export verificato per il periodo.",
-        "ADV settembre non disponibile alla chiusura: report Sponsored Products, Brands e Display non completati."
+      "missing": [],
+      "note": "Il conteggio 52 è relativo agli articoli di ordine, non un numero di ordini unici dedotto. Le vendite sono la metrica prodotti ordinati di Business Reports, non accrediti netti, e non deducono commissioni o rimborsi. ADV Seller settembre verificato a zero; ROAS e ACOS non calcolabili con spesa e vendite attribuite zero.",
+      "daily": [
+        {
+          "date": "2026-09-01",
+          "sales": 29.0,
+          "units": 1
+        },
+        {
+          "date": "2026-09-02",
+          "sales": 54.0,
+          "units": 2
+        },
+        {
+          "date": "2026-09-03",
+          "sales": 58.7,
+          "units": 2
+        },
+        {
+          "date": "2026-09-04",
+          "sales": 98.7,
+          "units": 4
+        },
+        {
+          "date": "2026-09-05",
+          "sales": 29.0,
+          "units": 1
+        },
+        {
+          "date": "2026-09-06",
+          "sales": 0.0,
+          "units": 0
+        },
+        {
+          "date": "2026-09-07",
+          "sales": 78.0,
+          "units": 3
+        },
+        {
+          "date": "2026-09-08",
+          "sales": 0.0,
+          "units": 0
+        },
+        {
+          "date": "2026-09-09",
+          "sales": 49.0,
+          "units": 2
+        },
+        {
+          "date": "2026-09-10",
+          "sales": 59.4,
+          "units": 2
+        },
+        {
+          "date": "2026-09-11",
+          "sales": 0.0,
+          "units": 0
+        },
+        {
+          "date": "2026-09-12",
+          "sales": 84.0,
+          "units": 3
+        },
+        {
+          "date": "2026-09-13",
+          "sales": 116.0,
+          "units": 4
+        },
+        {
+          "date": "2026-09-14",
+          "sales": 116.0,
+          "units": 4
+        },
+        {
+          "date": "2026-09-15",
+          "sales": 29.0,
+          "units": 1
+        },
+        {
+          "date": "2026-09-16",
+          "sales": 145.0,
+          "units": 5
+        },
+        {
+          "date": "2026-09-17",
+          "sales": 54.0,
+          "units": 2
+        },
+        {
+          "date": "2026-09-18",
+          "sales": 18.0,
+          "units": 1
+        },
+        {
+          "date": "2026-09-19",
+          "sales": 0.0,
+          "units": 0
+        },
+        {
+          "date": "2026-09-20",
+          "sales": 29.0,
+          "units": 1
+        },
+        {
+          "date": "2026-09-21",
+          "sales": 29.0,
+          "units": 1
+        },
+        {
+          "date": "2026-09-22",
+          "sales": 29.0,
+          "units": 1
+        },
+        {
+          "date": "2026-09-23",
+          "sales": 87.0,
+          "units": 3
+        },
+        {
+          "date": "2026-09-24",
+          "sales": 58.0,
+          "units": 2
+        },
+        {
+          "date": "2026-09-25",
+          "sales": 58.0,
+          "units": 2
+        },
+        {
+          "date": "2026-09-26",
+          "sales": 0.0,
+          "units": 0
+        },
+        {
+          "date": "2026-09-27",
+          "sales": 29.7,
+          "units": 1
+        },
+        {
+          "date": "2026-09-28",
+          "sales": 29.0,
+          "units": 1
+        },
+        {
+          "date": "2026-09-29",
+          "sales": 88.4,
+          "units": 3
+        },
+        {
+          "date": "2026-09-30",
+          "sales": 58.7,
+          "units": 2
+        }
       ],
-      "note": "Dati non disponibili alla chiusura. Nessun valore zero o stima sostituisce il dato mancante."
+      "shippedSummary": {
+        "orders": 52,
+        "gross": 1517.59,
+        "shipping": 3.99,
+        "vat": 273.72,
+        "excludedRows": 5,
+        "note": "Ordini acquistati a settembre, stati verificati al 12 ottobre: 52 righe di vendita spedite, 54 unità. Lordo 1.517,59 EUR = prodotti 1.513,60 EUR + spedizione 3,99 EUR. IVA originale Amazon 273,72 EUR. Escluse 2 righe Non-Amazon senza importi, 2 ordini annullati e 1 riga annullata in un ordine Shipped. Non è una riconciliazione di rimborsi, commissioni o pagamenti."
+      },
+      "products": [
+        {
+          "sku": "600619",
+          "asin": "B0GTZBQ5PG",
+          "name": "Dr. Theiss - 18 Patch (3x6) Arnica e Artiglio del Diavolo - Cerotti Lenitivi Effetto Caldo Riattivabile (24 Ore) per Tensioni Muscolari, Cervicale e S",
+          "units": 16,
+          "orders": 16,
+          "gross": 464.0,
+          "tax": 83.68
+        },
+        {
+          "sku": "600620",
+          "asin": "B0GTYZWVNK",
+          "name": "Dr. Theiss - 18 Patch (3x6) Arnica, Mentolo ed Equiseto - Cerotti Lenitivi Effetto Freddo Riattivabile (24 Ore) per Traumi Sportivi, Recupero Muscolar",
+          "units": 11,
+          "orders": 11,
+          "gross": 322.99,
+          "tax": 58.25
+        },
+        {
+          "sku": "600578",
+          "asin": "B0F9WVJ288",
+          "name": "Dr Theiss - Arnica & Artiglio del Diavolo Crema Gel 2x100ml - Sollievo Naturale per Collo, Spalle e Schiena - Azione Lenitiva e Rilassante con Arnica",
+          "units": 11,
+          "orders": 11,
+          "gross": 319.0,
+          "tax": 57.53
+        },
+        {
+          "sku": "600582",
+          "asin": "B0F9YCR6GF",
+          "name": "Dr Theiss - Arni Patch - 3 Confezioni da 5 Cerotti - Sollievo Naturale per fastidi Muscolari e Articolari - Arnica, Artiglio del Diavolo e Salice - Az",
+          "units": 8,
+          "orders": 6,
+          "gross": 237.6,
+          "tax": 42.86
+        },
+        {
+          "sku": "600575",
+          "asin": "B0F9PS77JM",
+          "name": "AllgaSan - Kit Sollievo e Recupero Muscolare - Crema Ginocchia 50ml + Mobil Gel Intensive 100ml - Azione Lenitiva, Rilassante e Rigenerante con Pino M",
+          "units": 2,
+          "orders": 2,
+          "gross": 50.0,
+          "tax": 9.02
+        },
+        {
+          "sku": "600599",
+          "asin": "B0FTFS3TJD",
+          "name": "Dr. Theiss - Mucoplant - Bundle Soluzioni Orali con Piantaggine per Vie Respiratorie - Fluidificante Calmante e Lenitivo - 2 Flaconi - 250ml + 100ml",
+          "units": 2,
+          "orders": 2,
+          "gross": 40.0,
+          "tax": 7.22
+        },
+        {
+          "sku": "600600",
+          "asin": "B0FTFXSF1G",
+          "name": "Dr. Theiss - Mucoplant Kids - Routine Prevenzione Sollievo Gola e Difese Immunitarie - Bundle Lecca Lecca Gola e Tuss + Soluzione Orale Immun Aktiv -",
+          "units": 2,
+          "orders": 2,
+          "gross": 40.0,
+          "tax": 7.22
+        },
+        {
+          "sku": "600572",
+          "asin": "B0F8RC3FZ2",
+          "name": "AllgaSan - Kit Cura per Piedi e Pelle Secca - Trattamento Idratante e Rigenerante con Protezione e Rinfrescamento - Sali per Pediluvio 350g + Active B",
+          "units": 1,
+          "orders": 1,
+          "gross": 26.0,
+          "tax": 4.69
+        },
+        {
+          "sku": "600577",
+          "asin": "B0F9YGX152",
+          "name": "Dr. Theiss - Balsamo al Timo - Kit 2 Pezzi da 50ml - Azione Balsamica per Petto e Schiena, per una sensazione di sollievo e benessere Naturale con Oli",
+          "units": 1,
+          "orders": 1,
+          "gross": 18.0,
+          "tax": 3.25
+        }
+      ]
     },
     "vendor": {
       "title": "Amazon Vendor",
-      "status": "partial",
+      "status": "verified",
       "retailStatus": "verified",
-      "advertisingStatus": "partial",
+      "advertisingStatus": "verified",
       "metrics": [
         {
           "key": "orderedRevenue",
@@ -106,7 +375,13 @@
         {
           "key": "adSpendTotal",
           "label": "Spesa ADV totale",
-          "value": null,
+          "value": 783.31,
+          "format": "eur"
+        },
+        {
+          "key": "brandsSpend",
+          "label": "Spesa ADV / Sponsored Brands",
+          "value": 0,
           "format": "eur"
         }
       ],
@@ -116,14 +391,13 @@
           "reference": "outputs/amazon/vendor_september_browser.json"
         },
         {
-          "label": "Amazon Advertising API · verifica 9 ottobre 2026",
+          "label": "Amazon Advertising API · SP, SB e SD settembre verificati il 12 ottobre 2026",
           "reference": "outputs/amazon/dashboard_data.json"
         }
       ],
-      "missing": [
-        "Sponsored Brands non disponibile alla chiusura: report non completato; totale ADV non disponibile. Sponsored Display recuperato: nessuna riga nel report di settembre, costo zero."
-      ],
-      "note": "Retail verificato sulla riga Totale di Vendor Retail Analytics, vista Produzione / programma Retail Italia, account Naturwaren Italia, periodo 1-30 settembre 2026. Le unità ordinate non sono un numero di ordini; ricavi ordinati, ricavi spedizioni e costo del venduto sono metriche distinte e non vanno sommati. ADV parziale: 783,31 € è la sola spesa Sponsored Products, non il totale ADV Vendor. Le vendite attribuite alla pubblicità non sono ricavi retail."
+      "missing": [],
+      "note": "Retail verificato in Vendor Retail Analytics, Produzione / Retail Italia, periodo 1-30 settembre. Ricavi ordinati, ricavi spedizioni e COGS sono metriche distinte e non si sommano. Le unità non sono un numero di ordini. ADV settembre SP + SB + SD completato: 783,31 EUR, interamente Sponsored Products. Non è un totale ADV annuale.",
+      "verifiedAt": "2026-10-12"
     },
     "ebay": {
       "title": "eBay",
@@ -473,9 +747,9 @@
   },
   "activities": [
     {
-      "title": "Completare i dati Amazon mancanti",
-      "status": "Dati non disponibili",
-      "description": "Retail Vendor settembre recuperato e verificato via Retail Analytics. Retail Seller non disponibile per accesso SP-API negato (403). ADV Seller e altre componenti Vendor non disponibili alla chiusura; Sponsored Products Vendor recuperato."
+      "title": "Dati Amazon settembre recuperati",
+      "status": "Verificato",
+      "description": "Vendite Seller e Vendor e report ADV settembre recuperati e verificati. La copertura annuale ADV 2026 resta incompleta e distinta da settembre."
     },
     {
       "title": "Completare il perimetro ADV 2026",
