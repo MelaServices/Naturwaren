@@ -1,0 +1,337 @@
+{
+  "updatedAt": "2026-11-16",
+  "vendor": {
+    "2025": [
+      48059.63,
+      78234.68,
+      89274.91,
+      86150.71,
+      67454.0,
+      73227.62,
+      125017.69,
+      42986.0,
+      105736.31,
+      60720.49,
+      119763.55,
+      97387.91
+    ],
+    "2026": [
+      20952.15,
+      58390.89,
+      50756.76,
+      47286.29,
+      69751.74,
+      81466.08,
+      61486.77,
+      18248.12,
+      93526.48,
+      42135.85,
+      9574.45,
+      null
+    ]
+  },
+  "seller": {
+    "2025": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      20,
+      306.2,
+      730.5,
+      203,
+      846,
+      1243.17,
+      904.8
+    ],
+    "2026": [
+      1983,
+      1076.5,
+      843.4,
+      1008.9,
+      880.92,
+      795.55,
+      966.5,
+      1182.3,
+      1513.6,
+      1499.38,
+      531.2,
+      null
+    ]
+  },
+  "cogs": {
+    "2025": 470887.21,
+    "2026": 418990.65
+  },
+  "tiktok": {
+    "months": [
+      5.2,
+      0,
+      0,
+      24.8,
+      0,
+      0,
+      11.0,
+      0,
+      7.9,
+      0,
+      0,
+      null
+    ],
+    "saleOrderSettlement": 43.35
+  },
+  "productCoverage": "12 maggiori perdite note e 4 crescite; base completa verificata: 107 ASIN vendite 2025, 94 nel 2026. Nessuna somma di questa selezione e' presentata come totale catalogo.",
+  "products": [
+    {
+      "asin": "B00H2LLLQW",
+      "title": "Allga San Burro Speciale Piedi 200 ml",
+      "cogs25": 120479.92,
+      "cogs26": 87987.94,
+      "received25": 142446.26,
+      "received26": 92425.54,
+      "stock25": 3133,
+      "stock26": 3096,
+      "confirmation26": 85.69,
+      "openPO26": 12,
+      "delta": -32491.98,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B00VXD970W",
+      "title": "Dr. Theiss Arnica Pomata Riscaldante 50 ml",
+      "cogs25": 113979.36,
+      "cogs26": 90361.92,
+      "received25": 144856.8,
+      "received26": 70202.88,
+      "stock25": 4797,
+      "stock26": 3699,
+      "confirmation26": 100,
+      "openPO26": 1,
+      "delta": -23617.44,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B00H2L44Q6",
+      "title": "Allga San Sali da Bagno per Pediluvio",
+      "cogs25": 33052.3,
+      "cogs26": 25464.14,
+      "received25": 34989,
+      "received26": 25689.14,
+      "stock25": 643,
+      "stock26": 632,
+      "confirmation26": 80.76,
+      "openPO26": 1,
+      "delta": -7588.16,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B01M24Q2L8",
+      "title": "Active Nutrient Magnesio Forte 379 mg",
+      "cogs25": 6336.96,
+      "cogs26": 898.8,
+      "received25": 6955.2,
+      "received26": 1108.8,
+      "stock25": 92,
+      "stock26": null,
+      "confirmation26": 28.57,
+      "openPO26": null,
+      "delta": -5438.16,
+      "signal": "Conferma fornitore 28,57%; stock zero documentato al 30 agosto. Candidato a criticita' di fornitura, non causa quantificata."
+    },
+    {
+      "asin": "B00H7Z7ZAO",
+      "title": "Allga San Activ Balm 50 ml",
+      "cogs25": 12287.8,
+      "cogs26": 7479.36,
+      "received25": 14577.12,
+      "received26": 9745.11,
+      "stock25": 231,
+      "stock26": 369,
+      "confirmation26": 100,
+      "openPO26": null,
+      "delta": -4808.44,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B00IPA2QZO",
+      "title": "Allga San Deospray 100 ml",
+      "cogs25": 5663.56,
+      "cogs26": 1771.84,
+      "received25": 4529.04,
+      "received26": 1979.76,
+      "stock25": 0,
+      "stock26": 99,
+      "confirmation26": 97.33,
+      "openPO26": null,
+      "delta": -3891.72,
+      "signal": "Avviso stop acquisti del 30 luglio negli archivi; 99 unita' a fine ottobre. Non prova stop totale dei PO."
+    },
+    {
+      "asin": "B0168SF5IE",
+      "title": "Dr. Theiss Arnica Gel Rapido 200 ml",
+      "cogs25": 3347.61,
+      "cogs26": 0,
+      "received25": 3528.3,
+      "received26": 267.12,
+      "stock25": 2,
+      "stock26": 12,
+      "confirmation26": 0,
+      "openPO26": null,
+      "delta": -3347.61,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B0006NYCVY",
+      "title": "Allga San Crema Gambe 100 ml",
+      "cogs25": 4777.58,
+      "cogs26": 1603.41,
+      "received25": 7232.41,
+      "received26": 1520.76,
+      "stock25": 336,
+      "stock26": 66,
+      "confirmation26": 100,
+      "openPO26": null,
+      "delta": -3174.17,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B08VTBHH3B",
+      "title": "Dr. Theiss Dormitum+ Melatonina 30 ml",
+      "cogs25": 12968.43,
+      "cogs26": 10443.5,
+      "received25": 16739.13,
+      "received26": 8564.88,
+      "stock25": 727,
+      "stock26": 110,
+      "confirmation26": 97.88,
+      "openPO26": null,
+      "delta": -2524.93,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B071LHXZ4V",
+      "title": "Dr. Theiss Magnella 28 compresse",
+      "cogs25": 2499.59,
+      "cogs26": 0,
+      "received25": 2375.28,
+      "received26": null,
+      "stock25": null,
+      "stock26": null,
+      "confirmation26": null,
+      "openPO26": null,
+      "delta": -2499.59,
+      "signal": "Nessuna attivita' nel report vendite 2026; disponibilita' non determinabile."
+    },
+    {
+      "asin": "B08ZFLHBT4",
+      "title": "Active Nutrient Vitamina C Max",
+      "cogs25": 2194.54,
+      "cogs26": 0,
+      "received25": 1624.46,
+      "received26": 0,
+      "stock25": null,
+      "stock26": null,
+      "confirmation26": 0,
+      "openPO26": null,
+      "delta": -2194.54,
+      "signal": "Dato stock non valorizzato; non equivale a zero."
+    },
+    {
+      "asin": "B07F4GPX9Q",
+      "title": "Lacalut Multi-Effect 5in1 75 ml",
+      "cogs25": 2063.1,
+      "cogs26": 0,
+      "received25": 7322.25,
+      "received26": 11943.75,
+      "stock25": 332,
+      "stock26": 1132,
+      "confirmation26": 0,
+      "openPO26": null,
+      "delta": -2063.1,
+      "signal": "COGS assente nel report vendite 2026, ma ricevuto e stock presenti: verificare listing o sostituzione ASIN."
+    },
+    {
+      "asin": "B00H2L2D14",
+      "title": "Allga San Bagno Riducente Anti Callosita'",
+      "cogs25": 7015,
+      "cogs26": 16915,
+      "received25": 11130,
+      "received26": 19520,
+      "stock25": 167,
+      "stock26": 369,
+      "confirmation26": 31.72,
+      "openPO26": null,
+      "delta": 9900,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B0CVQQMQ9D",
+      "title": "Allga San Cerotti Rimozione Verruche",
+      "cogs25": 3278.04,
+      "cogs26": 10547.88,
+      "received25": 5738.94,
+      "received26": 10932.5,
+      "stock25": 683,
+      "stock26": 863,
+      "confirmation26": 99.79,
+      "openPO26": 614,
+      "delta": 7269.84,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B08ZFJSSZ7",
+      "title": "Dr. Theiss Vitamina D3 K2 spray",
+      "cogs25": 6863.43,
+      "cogs26": 11239.2,
+      "received25": 7700.34,
+      "received26": 11604.6,
+      "stock25": 213,
+      "stock26": 337,
+      "confirmation26": 100,
+      "openPO26": null,
+      "delta": 4375.77,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    },
+    {
+      "asin": "B09R7W8DGJ",
+      "title": "Dr. Theiss Mucoplant Voce Aktiv",
+      "cogs25": 1663.54,
+      "cogs26": 4731.78,
+      "received25": 2475.3,
+      "received26": 6254.25,
+      "stock25": 366,
+      "stock26": 290,
+      "confirmation26": 100,
+      "openPO26": null,
+      "delta": 3068.24,
+      "signal": "Stock presente a fine ottobre; non prova disponibilita' continua."
+    }
+  ],
+  "findings": [
+    {
+      "title": "Meno merce ricevuta da Amazon",
+      "text": "Netto ricevuto gennaio-ottobre: 689.435,28 euro nel 2025 e 460.859,18 nel 2026 (-33,2%). Unita' ricevute: 122.550 contro 90.663 (-26,0%). E' coerente con minori rifornimenti, ma non distingue da solo meno ordini da minore evasione."
+    },
+    {
+      "title": "Il sell-out cala meno delle fatture",
+      "text": "COGS -11,0%, unita' spedite da Amazon 86.959 contro 78.529 (-9,7%). Fatture -30,0%. Tempistiche di fatturazione, acquisti e scorte sono diverse: non attribuire tutto alla domanda finale."
+    },
+    {
+      "title": "Burro Piedi e Arnica pesano di piu'",
+      "text": "COGS in calo di 32.491,98 e 23.617,44 euro. Insieme -56.109,42 euro, piu' del calo netto catalogo di 51.896,56 euro, grazie alla compensazione degli altri ASIN. Ricevuto dei due prodotti: -124.674,64 euro."
+    },
+    {
+      "title": "Non emerge uno stock-out generalizzato",
+      "text": "Stock vendibile finale: 19.249 contro 20.139 unita'. Burro Piedi: 3.096; Arnica: 3.699 nel 2026. Conferma fornitore aggregata 68,75% -> 81,64%; lead time 9,04 -> 5,74 giorni. Questi dati non escludono carenze temporanee o specifiche."
+    },
+    {
+      "title": "Magnesio Forte richiede verifica mirata",
+      "text": "COGS 6.336,96 -> 898,80 euro; ricevuto 6.955,20 -> 1.108,80; conferma fornitore 28,57%. Lo storico del 30 agosto documentava stock zero. Il dato stock ottobre non e' valorizzato: non lo trasformiamo in zero."
+    },
+    {
+      "title": "Ordini ridotti: evidenza parziale, non verdetto",
+      "text": "Lo storico gennaio-30 agosto riportava 81.241 -> 59.007 unita' confermate (-27,4%). Gli avvisi stop acquisti di giugno-settembre riguardano solo alcuni ASIN. Per stabilire chi non ha ordinato o consegnato servono le righe PO richieste/confermate/annullate e la disponibilita' giorno per giorno."
+    }
+  ]
+}
