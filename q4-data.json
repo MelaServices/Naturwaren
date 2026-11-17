@@ -1,0 +1,906 @@
+{
+  "asOf": "2026-11-17",
+  "adsThrough": "2026-11-16",
+  "stockThrough": "2026-11-15",
+  "vendor": {
+    "oct01_16": {
+      "cost": 461.18,
+      "impressions": 177520.0,
+      "clicks": 1407.0,
+      "purchases14d": 278.0,
+      "sales14d": 1971.87,
+      "purchases7d": 271.0,
+      "sales7d": 1894.58,
+      "roas": 4.275705798169912,
+      "cpc": 0.3277754086709311,
+      "ctr": 0.007925867507886436,
+      "order_per_click": 0.19758351101634683
+    },
+    "nov01_16": {
+      "cost": 425.05,
+      "impressions": 172258.0,
+      "clicks": 1166.0,
+      "purchases14d": 198.0,
+      "sales14d": 1556.03,
+      "purchases7d": 194.0,
+      "sales7d": 1526.52,
+      "roas": 3.6608163745441713,
+      "cpc": 0.3645368782161235,
+      "ctr": 0.006768916392852582,
+      "order_per_click": 0.16981132075471697
+    }
+  },
+  "campaigns": [
+    {
+      "name": "NW_Vendor_SP_MAN_DifesaBrand_PiediCore_IT",
+      "budget": {
+        "budget": 10.0,
+        "budgetType": "DAILY"
+      },
+      "oct01_16": {
+        "cost": 141.82,
+        "impressions": 32414.0,
+        "clicks": 290.0,
+        "purchases14d": 73.0,
+        "sales14d": 506.66,
+        "purchases7d": 72.0,
+        "sales7d": 498.87,
+        "roas": 3.572556762092794,
+        "cpc": 0.4890344827586207,
+        "ctr": 0.008946751403714445,
+        "order_per_click": 0.2517241379310345
+      },
+      "nov01_16": {
+        "cost": 160.68,
+        "impressions": 40624.0,
+        "clicks": 287.0,
+        "purchases14d": 64.0,
+        "sales14d": 536.63,
+        "purchases7d": 62.0,
+        "sales7d": 521.64,
+        "roas": 3.33974358974359,
+        "cpc": 0.5598606271777004,
+        "ctr": 0.007064789287120914,
+        "order_per_click": 0.2229965156794425
+      }
+    },
+    {
+      "name": "NW_Vendor_SP_MAN_Piedi_KeywordExact_IT",
+      "budget": {
+        "budget": 5.0,
+        "budgetType": "DAILY"
+      },
+      "oct01_16": {
+        "cost": 80.37,
+        "impressions": 31658.0,
+        "clicks": 130.0,
+        "purchases14d": 36.0,
+        "sales14d": 226.44,
+        "purchases7d": 36.0,
+        "sales7d": 226.44,
+        "roas": 2.8174692049272116,
+        "cpc": 0.6182307692307693,
+        "ctr": 0.004106387011182008,
+        "order_per_click": 0.27692307692307694
+      },
+      "nov01_16": {
+        "cost": 80.26,
+        "impressions": 29869.0,
+        "clicks": 125.0,
+        "purchases14d": 27.0,
+        "sales14d": 219.13,
+        "purchases7d": 27.0,
+        "sales7d": 219.13,
+        "roas": 2.7302516820333915,
+        "cpc": 0.64208,
+        "ctr": 0.00418494090863437,
+        "order_per_click": 0.216
+      }
+    },
+    {
+      "name": "NW_Vendor_SP_AUTO_Q4_Adulti_GolaTosse_Discovery_IT",
+      "budget": {
+        "budget": 5.0,
+        "budgetType": "DAILY"
+      },
+      "oct01_16": {
+        "cost": 78.51,
+        "impressions": 35207.0,
+        "clicks": 313.0,
+        "purchases14d": 39.0,
+        "sales14d": 258.46,
+        "purchases7d": 38.0,
+        "sales7d": 252.27,
+        "roas": 3.2920647051331042,
+        "cpc": 0.25083067092651756,
+        "ctr": 0.008890277501633199,
+        "order_per_click": 0.12460063897763578
+      },
+      "nov01_16": {
+        "cost": 54.76,
+        "impressions": 25466.0,
+        "clicks": 211.0,
+        "purchases14d": 15.0,
+        "sales14d": 124.8,
+        "purchases7d": 15.0,
+        "sales7d": 124.8,
+        "roas": 2.279035792549306,
+        "cpc": 0.2595260663507109,
+        "ctr": 0.00828555721353962,
+        "order_per_click": 0.07109004739336493
+      }
+    },
+    {
+      "name": "NW_Vendor_SP_AUTO_Q4_Adulti_Difese_Discovery_IT",
+      "budget": {
+        "budget": 5.0,
+        "budgetType": "DAILY"
+      },
+      "oct01_16": {
+        "cost": 80.2,
+        "impressions": 38601.0,
+        "clicks": 314.0,
+        "purchases14d": 65.0,
+        "sales14d": 506.91,
+        "purchases7d": 64.0,
+        "sales7d": 498.94,
+        "roas": 6.320573566084788,
+        "cpc": 0.2554140127388535,
+        "ctr": 0.008134504287453694,
+        "order_per_click": 0.2070063694267516
+      },
+      "nov01_16": {
+        "cost": 49.25,
+        "impressions": 31802.0,
+        "clicks": 199.0,
+        "purchases14d": 35.0,
+        "sales14d": 313.62,
+        "purchases7d": 34.0,
+        "sales7d": 304.4,
+        "roas": 6.367918781725888,
+        "cpc": 0.24748743718592964,
+        "ctr": 0.0062574680837683165,
+        "order_per_click": 0.17587939698492464
+      }
+    },
+    {
+      "name": "NW_Vendor_SP_AUTO_Q4_Kids_GolaDifese_Discovery_IT",
+      "budget": {
+        "budget": 5.0,
+        "budgetType": "DAILY"
+      },
+      "oct01_16": {
+        "cost": 80.28,
+        "impressions": 39640.0,
+        "clicks": 360.0,
+        "purchases14d": 65.0,
+        "sales14d": 473.4,
+        "purchases7d": 61.0,
+        "sales7d": 418.06,
+        "roas": 5.896860986547085,
+        "cpc": 0.223,
+        "ctr": 0.009081735620585268,
+        "order_per_click": 0.18055555555555555
+      },
+      "nov01_16": {
+        "cost": 80.1,
+        "impressions": 44497.0,
+        "clicks": 344.0,
+        "purchases14d": 57.0,
+        "sales14d": 361.85,
+        "purchases7d": 56.0,
+        "sales7d": 356.55,
+        "roas": 4.517478152309613,
+        "cpc": 0.23284883720930233,
+        "ctr": 0.007730858260107423,
+        "order_per_click": 0.16569767441860464
+      }
+    }
+  ],
+  "planned": [
+    {
+      "name": "Mucoplant Kids Tuss Lecca Lecca",
+      "asin": "B08VT6RYFL",
+      "group": "TOSSE & GOLA",
+      "original": "ADV SÌ",
+      "revised": "SELLER/FBA CONDIZIONATO",
+      "enabled": true,
+      "status": "Eroga",
+      "spend": 45.13,
+      "clicks": 193.0,
+      "impressions": 23396.0,
+      "stock": 1121.0,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Mucoplant Piantaggine 250ml",
+      "asin": "B08D6SW7GR",
+      "group": "TOSSE & GOLA",
+      "original": "ADV SÌ",
+      "revised": "BLOCCATO BUY BOX",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 148.0,
+      "note": "Non coperto dalle cinque campagne attuali. La precedente esclusione Buy Box va ricontrollata, non assunta ancora valida."
+    },
+    {
+      "name": "Echinacea Forte Gocce 50ml",
+      "asin": "B01MQPK0LU",
+      "group": "TOSSE & GOLA",
+      "original": "ADV SÌ",
+      "revised": "HARVEST + SELLER",
+      "enabled": true,
+      "status": "Eroga",
+      "spend": 33.96,
+      "clicks": 142.0,
+      "impressions": 23779.0,
+      "stock": 486.0,
+      "note": "Eroga, ma richiesta di avvertenze/sicurezza aperta: proteggere una campagna che converte."
+    },
+    {
+      "name": "Mucoplant Soluzione Orale Sedi",
+      "asin": "B01ELKX7ZY",
+      "group": "TOSSE & GOLA",
+      "original": "ADV SÌ",
+      "revised": "BLOCCATO BUY BOX",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 569.0,
+      "note": "Non coperto dalle cinque campagne attuali. Verificare offerta in evidenza prima di inserirlo."
+    },
+    {
+      "name": "Pastiglie Duo Timo",
+      "asin": "B08YM34RJP",
+      "group": "TOSSE & GOLA",
+      "original": "ADV SÌ",
+      "revised": "BLOCCATO DISPONIBILITA",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": null,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Mucoplant Voce Aktiv Spray 30ml",
+      "asin": "B09R7W8DGJ",
+      "group": "TOSSE & GOLA",
+      "original": "ADV SÌ",
+      "revised": "HARVEST + SELLER",
+      "enabled": true,
+      "status": "Eroga",
+      "spend": 54.76,
+      "clicks": 211.0,
+      "impressions": 25466.0,
+      "stock": 276.0,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Mucoplant Gola Lecca Lecca",
+      "asin": "B08VTB7D9F",
+      "group": "TOSSE & GOLA",
+      "original": "ADV SÌ",
+      "revised": "GO CONTROLLATO",
+      "enabled": true,
+      "status": "Eroga",
+      "spend": 25.68,
+      "clicks": 115.0,
+      "impressions": 15001.0,
+      "stock": 335.0,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Mucoplant Kids Immun Aktiv 200ml",
+      "asin": "B094PB4MB2",
+      "group": "TOSSE & GOLA",
+      "original": "LISTING PRIMA",
+      "revised": "BLOCCATO BUY BOX",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 36.0,
+      "note": "Immun Aktiv 200 ml non e il lecca-lecca Kids Immun B08VT9BNL5 che oggi riceve ADV."
+    },
+    {
+      "name": "Vitamina D3+K2 Spray 20ml",
+      "asin": "B08ZFJSSZ7",
+      "group": "INTEGRATORI",
+      "original": "ADV SÌ",
+      "revised": "HARVEST + SELLER",
+      "enabled": true,
+      "status": "Eroga",
+      "spend": 15.29,
+      "clicks": 57.0,
+      "impressions": 8023.0,
+      "stock": 353.0,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Active Nutrient C Maxi effervescente",
+      "asin": "B09GPF8D2J",
+      "group": "INTEGRATORI",
+      "original": "LISTING PRIMA",
+      "revised": "BLOCCATO DISPONIBILITA",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": null,
+      "note": "Nel piano: listing prima. Verificare referenza/ASIN e disponibilita prima di un lancio."
+    },
+    {
+      "name": "Active Nutrient C Maxi 30cpr",
+      "asin": "da listare",
+      "group": "INTEGRATORI",
+      "original": "DA LISTARE",
+      "revised": "LISTING DA CREARE",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": null,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Tisana Pino Mugo",
+      "asin": "B08MXDR81V",
+      "group": "TISANE",
+      "original": "ADV SÌ",
+      "revised": "HARVEST + SELLER",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": null,
+      "note": "Gruppo in pausa; offerta Vendor rimossa nella richiesta biologico. Correggere classificazione, non acquistare un certificato inesistente."
+    },
+    {
+      "name": "Tisana Dolce Notte 20 filtri",
+      "asin": "B08D6VFFMS",
+      "group": "TISANE",
+      "original": "ADV SÌ",
+      "revised": "BLOCCATO DISPONIBILITA",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 1.0,
+      "note": "Fuori erogazione; richiesta biologico con offerta rimossa. Nessuna riattivazione prima della risoluzione."
+    },
+    {
+      "name": "Tisana al Finocchio",
+      "asin": "B08D6T7TTS",
+      "group": "TISANE",
+      "original": "LISTING PRIMA",
+      "revised": "BLOCCATO DISPONIBILITA",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": null,
+      "note": "Nel piano storico ASIN non coerente con Finocchio: identita prodotto da chiarire prima di ADV."
+    },
+    {
+      "name": "Crema Mani Riparatrice 100ml",
+      "asin": "B098PR7RQF",
+      "group": "SKINCARE",
+      "original": "ADV SÌ",
+      "revised": "SELLER/FBA CONDIZIONATO",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 111.0,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Olivenol Intensive Cream",
+      "asin": "B098PSVW79",
+      "group": "SKINCARE",
+      "original": "ADV SÌ",
+      "revised": "HARVEST + SELLER",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 250.0,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Olivenol Night Cream",
+      "asin": "B098PRDTLR",
+      "group": "SKINCARE",
+      "original": "ADV SÌ",
+      "revised": "ESCLUSA · rettifica 15-16/09",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 111.0,
+      "note": "ESCLUSA dalla decisione cliente del 15-16 settembre: questa scelta supera ADV SI e GO controllato dei primi file. Non riattivare."
+    },
+    {
+      "name": "Hyaluron Crema Mani 75ml",
+      "asin": "B09KCPYS32",
+      "group": "SKINCARE",
+      "original": "ADV SÌ",
+      "revised": "BLOCCATO BUY BOX",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": null,
+      "note": "Verificare stock, offerta e priorita corrente: non e autorizzato un avvio automatico."
+    },
+    {
+      "name": "Burro Speciale Piedi",
+      "asin": "B00H2LLLQW",
+      "group": "PIEDI INVERNALI",
+      "original": "ADV DIFESA",
+      "revised": "GO CONTROLLATO",
+      "enabled": true,
+      "status": "Eroga",
+      "spend": 136.44,
+      "clicks": 236.0,
+      "impressions": 36401.0,
+      "stock": 2861.0,
+      "note": "Difesa ed Exact attive. Il 17/11 offerta Amazon a 10,39 euro, disponibile: nessuna perdita Buy Box osservata in questo controllo. Restano da analizzare traffico e conversione."
+    },
+    {
+      "name": "Balsamo Piedi Caldi 75ml",
+      "asin": "B088G15JLT",
+      "group": "PIEDI INVERNALI",
+      "original": "LISTING PRIMA",
+      "revised": "BLOCCATO STOCK",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 14.0,
+      "note": "Nel piano: listing prima e stock condizionale. Non presente nelle cinque campagne che erogano."
+    },
+    {
+      "name": "Mobil Crema 50ml",
+      "asin": "B00H806WYI",
+      "group": "PIEDI INVERNALI",
+      "original": "ADV SÌ",
+      "revised": "BLOCCATO DISPONIBILITA",
+      "enabled": false,
+      "status": "Non in erogazione",
+      "spend": 0,
+      "clicks": 0,
+      "impressions": 0,
+      "stock": 228.0,
+      "note": "Nel piano rivisto era bloccato dalla disponibilita/offerta. Nessuna riattivazione automatica."
+    }
+  ],
+  "adProducts": [
+    {
+      "asin": "B00H2L44Q6",
+      "group": "BrandKW_PiediCore_Sali-Burro",
+      "campaign": "NW_Vendor_SP_MAN_DifesaBrand_PiediCore_IT",
+      "stock": 579.0,
+      "cost": 39.18,
+      "sales14d": 147.22,
+      "clicks": 79.0,
+      "impressions": 11046.0,
+      "purchases14d": 20.0,
+      "roas": 3.757529351710056
+    },
+    {
+      "asin": "B00H2LLLQW",
+      "group": "BrandKW_PiediCore_Sali-Burro",
+      "campaign": "NW_Vendor_SP_MAN_DifesaBrand_PiediCore_IT",
+      "stock": 2861.0,
+      "cost": 121.5,
+      "sales14d": 389.41,
+      "clicks": 208.0,
+      "impressions": 29578.0,
+      "purchases14d": 44.0,
+      "roas": 3.2050205761316874
+    },
+    {
+      "asin": "B01MQPK0LU",
+      "group": "Echinacea Forte | Discovery",
+      "campaign": "NW_Vendor_SP_AUTO_Q4_Adulti_Difese_Discovery_IT",
+      "stock": 486.0,
+      "cost": 33.96,
+      "sales14d": 175.32,
+      "clicks": 142.0,
+      "impressions": 23779.0,
+      "purchases14d": 21.0,
+      "roas": 5.162544169611308
+    },
+    {
+      "asin": "B00H2LLLQW",
+      "group": "Burro | Keyword Exact",
+      "campaign": "NW_Vendor_SP_MAN_Piedi_KeywordExact_IT",
+      "stock": 2861.0,
+      "cost": 14.94,
+      "sales14d": 59.62,
+      "clicks": 28.0,
+      "impressions": 6823.0,
+      "purchases14d": 6.0,
+      "roas": 3.9906291834002676
+    },
+    {
+      "asin": "B00H7Z6LIQ",
+      "group": "Lipidizzante | Keyword Exact",
+      "campaign": "NW_Vendor_SP_MAN_Piedi_KeywordExact_IT",
+      "stock": 361.0,
+      "cost": 0.0,
+      "sales14d": 0.0,
+      "clicks": 0.0,
+      "impressions": 145.0,
+      "purchases14d": 0.0,
+      "roas": null
+    },
+    {
+      "asin": "B09R7W8DGJ",
+      "group": "Mucoplant Voce Aktiv | Discovery",
+      "campaign": "NW_Vendor_SP_AUTO_Q4_Adulti_GolaTosse_Discovery_IT",
+      "stock": 276.0,
+      "cost": 54.76,
+      "sales14d": 124.8,
+      "clicks": 211.0,
+      "impressions": 25466.0,
+      "purchases14d": 15.0,
+      "roas": 2.279035792549306
+    },
+    {
+      "asin": "B00H2L44Q6",
+      "group": "Sali | Keyword Exact",
+      "campaign": "NW_Vendor_SP_MAN_Piedi_KeywordExact_IT",
+      "stock": 579.0,
+      "cost": 65.32,
+      "sales14d": 159.51,
+      "clicks": 97.0,
+      "impressions": 22901.0,
+      "purchases14d": 21.0,
+      "roas": 2.4419779546846296
+    },
+    {
+      "asin": "B08ZFJSSZ7",
+      "group": "Vitamina D3+K2 | Discovery",
+      "campaign": "NW_Vendor_SP_AUTO_Q4_Adulti_Difese_Discovery_IT",
+      "stock": 353.0,
+      "cost": 15.29,
+      "sales14d": 138.3,
+      "clicks": 57.0,
+      "impressions": 8023.0,
+      "purchases14d": 14.0,
+      "roas": 9.045127534336167
+    },
+    {
+      "asin": "B08VT6RYFL",
+      "group": "Kids Tuss | Discovery",
+      "campaign": "NW_Vendor_SP_AUTO_Q4_Kids_GolaDifese_Discovery_IT",
+      "stock": 1121.0,
+      "cost": 45.13,
+      "sales14d": 207.78,
+      "clicks": 193.0,
+      "impressions": 23396.0,
+      "purchases14d": 33.0,
+      "roas": 4.604032794150233
+    },
+    {
+      "asin": "B08VT9BNL5",
+      "group": "Kids Immun Lecca Lecca | Discovery",
+      "campaign": "NW_Vendor_SP_AUTO_Q4_Kids_GolaDifese_Discovery_IT",
+      "stock": 44.0,
+      "cost": 9.29,
+      "sales14d": 6.04,
+      "clicks": 36.0,
+      "impressions": 6100.0,
+      "purchases14d": 1.0,
+      "roas": 0.6501614639397201
+    },
+    {
+      "asin": "B08VTB7D9F",
+      "group": "Kids Gola | Discovery",
+      "campaign": "NW_Vendor_SP_AUTO_Q4_Kids_GolaDifese_Discovery_IT",
+      "stock": 335.0,
+      "cost": 25.68,
+      "sales14d": 148.03,
+      "clicks": 115.0,
+      "impressions": 15001.0,
+      "purchases14d": 23.0,
+      "roas": 5.764408099688474
+    }
+  ],
+  "promo": [
+    {
+      "name": "Arnica & Artiglio",
+      "asin": "B0F9WVJ288",
+      "sku": "600578",
+      "price": 24.65,
+      "approved": 22,
+      "discount": 15,
+      "available": 22,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "name": "Arni Patch",
+      "asin": "B0F9YCR6GF",
+      "sku": "600582",
+      "price": 25.25,
+      "approved": 21,
+      "discount": 15,
+      "available": 18,
+      "reserved": 1,
+      "incoming": 0
+    },
+    {
+      "name": "Mucoplant adulti",
+      "asin": "B0FTFS3TJD",
+      "sku": "600599",
+      "price": 17.0,
+      "approved": 4,
+      "discount": 15,
+      "available": 7,
+      "reserved": 11,
+      "incoming": 0
+    },
+    {
+      "name": "Balsamo al timo",
+      "asin": "B0F9YGX152",
+      "sku": "600577",
+      "price": 14.4,
+      "approved": 16,
+      "discount": 20,
+      "available": 16,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "name": "Tisane invernali",
+      "asin": "B0FV3R79KD",
+      "sku": "600601",
+      "price": 10.2,
+      "approved": 34,
+      "discount": 15,
+      "available": 34,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "name": "Echinacea Forte",
+      "asin": "B0F9YPY8R6",
+      "sku": "600583",
+      "price": 17.85,
+      "approved": 18,
+      "discount": 15,
+      "available": 18,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "name": "Kit pelle secca",
+      "asin": "B0F93SBBNJ",
+      "sku": "600569",
+      "price": 24.0,
+      "approved": 8,
+      "discount": 20,
+      "available": 8,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "name": "Kit recupero muscolare",
+      "asin": "B0F9PS77JM",
+      "sku": "600575",
+      "price": 21.25,
+      "approved": 5,
+      "discount": 15,
+      "available": 5,
+      "reserved": 0,
+      "incoming": 0
+    }
+  ],
+  "promoStatus": "Pubblicato / In arrivo",
+  "promoStart": "2026-11-19",
+  "promoEnd": "2026-11-30",
+  "retail": {
+    "nov2026": {
+      "asin": "Totale:",
+      "name": "",
+      "revenue": 22981.39,
+      "units": 3533.0
+    },
+    "oct2026": {
+      "asin": "Totale:",
+      "name": "",
+      "revenue": 24053.71,
+      "units": 4347.0
+    },
+    "nov2025": {
+      "asin": "Totale:",
+      "name": "",
+      "revenue": 24155.48,
+      "units": 4826.0
+    }
+  },
+  "sellerExtraStock": [
+    {
+      "asin": "B0GK35WPPT",
+      "name": "Kids Gola x2",
+      "available": 0,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "asin": "B0GK3132R8",
+      "name": "Kids Tuss x2",
+      "available": 0,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "asin": "B0GKGPY9JJ",
+      "name": "Olivenol Intensive x2",
+      "available": 2,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "asin": "B0GKGHB7QG",
+      "name": "Olivenol Moisturizing x2",
+      "available": 5,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "asin": "B0GKGCXQ8W",
+      "name": "Piantaggine x2",
+      "available": 3,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "asin": "B0GTZBQ5PG",
+      "name": "Patch caldo 3x6",
+      "available": 0,
+      "reserved": 0,
+      "incoming": 0
+    },
+    {
+      "asin": "B0GTYZWVNK",
+      "name": "Patch freddo 3x6",
+      "available": 15,
+      "reserved": 0,
+      "incoming": 0
+    }
+  ],
+  "moisturizing": {
+    "asin": "B094W3HMVK",
+    "stock": 73.0,
+    "enabled": false
+  },
+  "budget": {
+    "summary": [
+      "Verifica del 17/11/2026, spesa in EUR dal 01/01 al 16/11 incluso; fonti annuali primarie: console ufficiali, tutte le campagne/formati presenti e archiviate incluse.",
+      "YTD Vendor EUR 9734.69 + Seller EUR 386.98 = EUR 10121.67; somma degli undici mesi quadrata con i due totali console.",
+      "Q4 realizzato 01/10-16/11: EUR 1208.18; ottobre EUR 783.13 + novembre 01-16 EUR 425.05.",
+      "Riferimento di pianificazione Amazon EUR 20000.00: differenza aritmetica EUR 9878.33, non disponibilita autorizzata o plafond formalmente verificato.",
+      "Report API SP/SB/SD integrativi ancora PENDING alla chiusura; gap espliciti, nessun dato mancante sostituito con zero."
+    ],
+    "months": [
+      {
+        "month": "2026-01",
+        "vendor": 1238.96,
+        "seller": 102.03,
+        "total": 1340.99,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-02",
+        "vendor": 976.59,
+        "seller": 41.06,
+        "total": 1017.65,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-03",
+        "vendor": 1087.01,
+        "seller": 243.89,
+        "total": 1330.9,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-04",
+        "vendor": 253.93,
+        "seller": 0.0,
+        "total": 253.93,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-05",
+        "vendor": 759.96,
+        "seller": 0.0,
+        "total": 759.96,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-06",
+        "vendor": 1149.54,
+        "seller": 0.0,
+        "total": 1149.54,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-07",
+        "vendor": 1138.51,
+        "seller": 0.0,
+        "total": 1138.51,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-08",
+        "vendor": 1138.84,
+        "seller": 0.0,
+        "total": 1138.84,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-09",
+        "vendor": 783.17,
+        "seller": 0.0,
+        "total": 783.17,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-10",
+        "vendor": 783.13,
+        "seller": 0.0,
+        "total": 783.13,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; mese completo."
+      },
+      {
+        "month": "2026-11",
+        "vendor": 425.05,
+        "seller": 0.0,
+        "total": 425.05,
+        "coverage": "Console ufficiale Vendor e Seller: tutte le campagne/formati presenti, archiviate incluse; 01-16/11 incluso. Seller letto fino al 17 con novembre a zero: stesso importo fino al 16."
+      }
+    ],
+    "limitations": [
+      "Consuntivo annuale primario da console ufficiale all-campaigns/all-formats; non ricostruito integralmente da report API.",
+      "Retention API osservata per entrambi i profili: SP dal 14/08/2026, SB dal 18/09/2026, SD dal 13/09/2026. Nessun dettaglio annuale SP/SB/SD certificato per i mesi precedenti.",
+      "Novembre e Q4 comprendono spesa soltanto fino al 16/11 incluso; non rappresentano il trimestre completo fino al 31/12.",
+      "Costo pubblicitario riportato: nessuna riconciliazione contabile con fatture Ads, IVA, accrediti o pagamenti.",
+      "Il riferimento EUR 20.000 riguarda Amazon Vendor+Seller, non un budget multicanale; approvazione formale del plafond non verificata. La differenza aritmetica non autorizza spesa.",
+      "Lo scenario EUR 2.190 per 20/10-31/12 e una previsione storica non vincolante, non un impegno residuo da sottrarre di nuovo.",
+      "Costi recenti modificabili per invalidazione del traffico; fonti console/API rilevate in orari differenti.",
+      "Le vendite attribuite non sono state usate per calcolare spesa: attribuzione SP normalmente 7 giorni Seller e 14 giorni Vendor, conversioni recenti non mature e non equivalenti a vendite retail deduplicate.",
+      "Report API integrativi ancora PENDING alla chiusura: il dettaglio SP/SB/SD mancante resta non verificato; i totali annuali e mensili sono console, non una falsa ricostruzione API completa."
+    ],
+    "ytd": {
+      "vendor_eur": 9734.69,
+      "seller_eur": 386.98,
+      "total_eur": 10121.67
+    },
+    "q4": 1208.18,
+    "reference": 20000.0,
+    "difference": 9878.33
+  }
+}
